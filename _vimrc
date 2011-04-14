@@ -1,0 +1,17 @@
+" interface
+set number
+set showcmd
+set ruler
+ 
+" indenting
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set smartindent
+set expandtab
+set autoindent
+
+" colours
+syntax enable
+set background=dark
+colorscheme solarized
