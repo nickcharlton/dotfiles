@@ -20,3 +20,5 @@ ln -s $directory/_vim ~/.vim
 # mutt
 ln -s $directory/_muttrc ~/.muttrc
 ln -s $directory/_mutt ~/.mutt
+# screen
+ln -s $directory/_screenrc ~/.screenrc
