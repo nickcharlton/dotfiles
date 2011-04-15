@@ -12,6 +12,11 @@
 
 directory=`dirname $(readlink -f $0)`
 
+# git
 ln -s $directory/_gitconfig ~/.gitconfig
+# vim
 ln -s $directory/_vimrc ~/.vimrc
 ln -s $directory/_vim ~/.vim
+# mutt
+ln -s $directory/_muttrc ~/.muttrc
+ln -s $directory/_mutt ~/.mutt
