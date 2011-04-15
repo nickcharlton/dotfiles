@@ -12,6 +12,8 @@
 
 directory=`dirname $(readlink -f $0)`
 
+# bash
+ln -s $directory/_bashrc ~/.bashrc
 # git
 ln -s $directory/_gitconfig ~/.gitconfig
 # vim

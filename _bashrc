@@ -1,0 +1,2 @@
+# set the prompt
+export PS1="[\u@\h:\W]\$ "
