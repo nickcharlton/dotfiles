@@ -15,3 +15,7 @@ set autoindent
 syntax enable
 set background=dark
 colorscheme solarized
+
+" status bar ([filename] [type] [position])
+set statusline=%F%m%r%h%w\ [%Y]\ [%p%%]\ [%L]
+set laststatus=2
