@@ -17,5 +17,5 @@ set background=dark
 colorscheme solarized
 
 " status bar ([filename] [type] [position])
-set statusline=%F%m%r%h%w\ [Type: %Y]\ [Lines: %L]\ [%p%%]
+set statusline=%F%m%r%h%w\ [Filetype:\ %Y]\ [Lines:\ %L]\ [%p%%]
 set laststatus=2
