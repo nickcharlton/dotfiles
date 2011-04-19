@@ -24,3 +24,8 @@ ln -is $directory/_muttrc ~/.muttrc
 ln -is $directory/_mutt ~/.mutt
 # screen
 ln -is $directory/_screenrc ~/.screenrc
+# gnome-terminal
+if [ -f /usr/bin/gnome-terminal ]
+    then
+        `$directory/_gnome_terminal/set_dark.sh`
+fi
