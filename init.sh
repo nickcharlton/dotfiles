@@ -10,7 +10,7 @@
 #                                                #
 ##################################################
 
-directory=`dirname $(readlink -f $0)`
+directory=`pwd`
 
 # bash
 #ln -is $directory/_bashrc ~/.bashrc
