@@ -6,7 +6,6 @@ I use these on both Mac OS X and Debian, so there might be a few specifics to ea
 
 ## Dependencies
 
-### Debian
+## Debian/Ubuntu
 
-Vim: vim, vim-scripts
-
+vim, vim-scripts
