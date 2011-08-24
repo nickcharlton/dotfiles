@@ -38,10 +38,10 @@ autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bu
 " specific language support
 
 " ruby
-autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2 colorcolumn=79
+autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2 
 
 " CSS
 autocmd FileType css setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
 
 " Markdown
-autocmd BufNewFile,BufRead *.txt,*.markdown,*.md setlocal ft=markdown colorcolumn=79
+autocmd BufNewFile,BufRead *.txt,*.markdown,*.md setlocal ft=markdown
