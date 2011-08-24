@@ -1,3 +1,7 @@
+" enable pathogen
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
 " interface
 set number " show line numbers
 set showcmd
