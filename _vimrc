@@ -24,3 +24,9 @@ colorscheme solarized
 " status bar ([filename] [type] [position])
 set statusline=%F%m%r%h%w\ [Filetype:\ %Y]\ [Lines:\ %L]\ [%p%%]
 set laststatus=2
+
+" plugins
+
+" only enable CloseTag for HTML/XML like files
+autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
+autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/closetag/plugin/closetag.vim
