@@ -1,8 +1,8 @@
 " interface
-set number ' show line numbers
+set number " show line numbers
 set showcmd
 set ruler
-set cursorline ' indicate what line we're on
+set cursorline " indicate what line we're on
 
 " indenting
 set tabstop=4
