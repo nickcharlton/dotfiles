@@ -1,9 +1,6 @@
 [submodule "_vim/bundle/delmitmate"]
 	path = _vim/bundle/delmitmate
 	url = git://github.com/Raimondi/delimitMate.git
-[submodule "bundle/closetag"]
-	path = bundle/closetag
-	url = git://github.com/docunext/closetag.vim.git
 [submodule "_vim/bundle/closetag"]
 	path = _vim/bundle/closetag
 	url = git://github.com/docunext/closetag.vim.git
