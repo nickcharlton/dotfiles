@@ -29,6 +29,11 @@ set laststatus=2
 filetype on
 filetype plugin on
 
+" system paste (disable autoindenting when pasting from the system)
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+set showmode
+
 " plugins
 
 " only enable CloseTag for HTML/XML like files
