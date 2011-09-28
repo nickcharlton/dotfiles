@@ -1,58 +1,15 @@
 servers = (
-  { address = "irc.stealth.net"; chatnet = "IRCnet"; port = "6668"; },
-  { address = "irc.efnet.org"; chatnet = "EFNet"; port = "6667"; },
-  { 
-    address = "irc.undernet.org";
-    chatnet = "Undernet";
-    port = "6667";
-  },
-  { address = "irc.dal.net"; chatnet = "DALnet"; port = "6667"; },
-  { 
-    address = "irc.quakenet.org";
-    chatnet = "QuakeNet";
-    port = "6667";
-  },
-  { address = "silc.silcnet.org"; chatnet = "SILC"; port = "706"; }
+  { address = "irc.oftc.net"; chatnet = "termisoc"; port = "6667"; autoconnect = "Yes" }
 );
 
 chatnets = {
-  IRCnet = {
+  termisoc = {
     type = "IRC";
-    max_kicks = "4";
-    max_msgs = "5";
-    max_whois = "4";
-    max_query_chans = "5";
   };
-  EFNet = { 
-    type = "IRC";
-    max_kicks = "4";
-    max_msgs = "3";
-    max_whois = "1";
-  };
-  Undernet = {
-    type = "IRC";
-    max_kicks = "1";
-    max_msgs = "3";
-    max_whois = "30";
-  };
-  DALnet = {
-    type = "IRC";
-    max_kicks = "4";
-    max_msgs = "3";
-    max_whois = "30";
-  };
-  QuakeNet = {
-    type = "IRC";
-    max_kicks = "1";
-    max_msgs = "3";
-    max_whois = "30";
-  };
-  SILC = { type = "SILC"; };
 };
 
 channels = (
-  { name = "#irssi"; chatnet = "ircnet"; autojoin = "No"; },
-  { name = "silc"; chatnet = "silc"; autojoin = "No"; }
+  { name = "#termisoc"; chatnet = "termisoc"; autojoin = "Yes"; }
 );
 
 aliases = {
@@ -219,6 +176,7 @@ settings = {
     real_name = "Nick Charlton";
     user_name = "nickcharlton";
     nick = "nickcharlton";
+    quit_message = "Bollocks. I broke something.";
   };
   "fe-text" = { actlist_sort = "refnum"; };
   "fe-common/core" = { theme = "solarized-universal"; };
