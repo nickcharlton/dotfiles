@@ -29,3 +29,5 @@ if [ -f /usr/bin/gnome-terminal ]
     then
         `$directory/_gnome_terminal/set_dark.sh`
 fi
+# irssi
+ln -is $directory/_irssi ~/.irssi/
