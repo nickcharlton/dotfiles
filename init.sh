@@ -22,8 +22,6 @@ ln -is $directory/_vim ~/.vim
 # mutt
 ln -is $directory/_muttrc ~/.muttrc
 ln -is $directory/_mutt ~/.mutt
-# screen
-ln -is $directory/_screenrc ~/.screenrc
 # gnome-terminal
 if [ -f /usr/bin/gnome-terminal ]
     then
@@ -31,3 +29,5 @@ if [ -f /usr/bin/gnome-terminal ]
 fi
 # irssi
 ln -is $directory/_irssi ~/.irssi/
+# tmux
+ln -is $directory/tmux.conf ~/.tmux.conf
