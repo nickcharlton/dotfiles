@@ -13,3 +13,6 @@
 [submodule "_irssi/solarized"]
 	path = _irssi/solarized
 	url = git://github.com/huyz/irssi-colors-solarized.git
+[submodule "_vim/bundle/vim-less"]
+	path = _vim/bundle/vim-less
+	url = git://github.com/groenewege/vim-less.git
