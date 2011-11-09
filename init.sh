@@ -30,4 +30,4 @@ fi
 # irssi
 ln -is $directory/_irssi ~/.irssi/
 # tmux
-ln -is $directory/tmux.conf ~/.tmux.conf
+ln -is $directory/_tmux.conf ~/.tmux.conf
