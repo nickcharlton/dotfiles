@@ -24,7 +24,7 @@ ln -is $directory/_vim ~/.vim
 ln -is $directory/_muttrc ~/.muttrc
 ln -is $directory/_mutt ~/.mutt
 # irssi
-ln -is $directory/_irssi ~/.irssi/
+ln -is $directory/_irssi ~/.irssi
 # tmux
 ln -is $directory/_tmux.conf ~/.tmux.conf
 # gnome-terminal

@@ -15,13 +15,14 @@ directory=`pwd`
 # call the right system setup script
 # for Mac OS X
 if [ "$(uname -s)" == 'Darwin' ]; then
-	`$directory/_setup/osx.sh`
+	echo "You're on a Mac";
+    #`$directory/setup/osx.sh`
 fi
 
 # for Linux (this is enough, for now)
 if [ "$(uname -s)" == 'Linux' ]; then
-	`$directory/_setup/debian.sh`
+	`$directory/setup/debian.sh`
 fi
 
 # then setup the symlinks
-`$directory/_setup/symlinks.sh`
+`$directory/setup/symlinks.sh`
