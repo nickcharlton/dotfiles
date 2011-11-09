@@ -1,5 +1,0 @@
-# set the history to be huge
-defscrollback 10000
-
-# add (12hr, UK format) time to the message bar
-time "%C%a %d/%m/%y"

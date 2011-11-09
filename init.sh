@@ -2,32 +2,26 @@
 
 ##################################################
 #                                                #
-# A little bash script to setup the dotfiles     #
+# Bootstrap the setup process.                   #
 #                                                #
 # Author: Nick Charlton <hello@nickcharlton.net> #
-# Date: 15/04/11                                 #
-# Version: 1.0                                   #
+# Date: 09/11/11                                 #
+# Version: 2.0                                   #
 #                                                #
 ##################################################
 
 directory=`pwd`
 
-# bash
-#ln -is $directory/_bashrc ~/.bashrc
-# git
-ln -is $directory/_gitconfig ~/.gitconfig
-# vim
-ln -is $directory/_vimrc ~/.vimrc
-ln -is $directory/_vim ~/.vim
-# mutt
-ln -is $directory/_muttrc ~/.muttrc
-ln -is $directory/_mutt ~/.mutt
-# gnome-terminal
-if [ -f /usr/bin/gnome-terminal ]
-    then
-        `$directory/_gnome_terminal/set_dark.sh`
+# call the right system setup script
+# for Mac OS X
+if [ "$(uname -s)" == 'Darwin' ]; then
+	
 fi
-# irssi
-ln -is $directory/_irssi ~/.irssi/
-# tmux
-ln -is $directory/_tmux.conf ~/.tmux.conf
+
+# for Linux (this is enough, for now)
+if [ "$(uname -s)" == 'Linux' ]; then
+	
+fi
+
+# then setup the symlinks
+`$directory/_setup/symlinks.sh`
