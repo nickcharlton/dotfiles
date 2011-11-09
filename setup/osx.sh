@@ -2,7 +2,7 @@
 
 ##################################################
 #                                                #
-# Bootstrap the setup process.                   #
+# Setup Mac OS X environment                     #
 #                                                #
 # Author: Nick Charlton <hello@nickcharlton.net> #
 # Date: 09/11/11                                 #
@@ -12,16 +12,13 @@
 
 directory=`pwd`
 
-# call the right system setup script
-# for Mac OS X
-if [ "$(uname -s)" == 'Darwin' ]; then
-	`$directory/_setup/osx.sh`
+# first, homebrew
+`/usr/bin/ruby -e "$(curl -fsSL https://raw.github.com/gist/323731)"`
+
+if [[ "$(which brew)" != "/usr/local/bin/brew" ]]; then
+    echo "Homebrew failed. Stopping before any more errors happen."
+    exit 1
 fi
 
-# for Linux (this is enough, for now)
-if [ "$(uname -s)" == 'Linux' ]; then
-	`$directory/_setup/debian.sh`
-fi
-
-# then setup the symlinks
-`$directory/_setup/symlinks.sh`
+# then install any packages
+`brew install tmux rbenv ruby-build`
