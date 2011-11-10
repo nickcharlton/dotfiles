@@ -14,7 +14,7 @@
 directory=`pwd`
 
 # bash
-ln -is $directory/_bashrc ~/.bashrc
+ln -is $directory/_bash_profile ~/.bash_profile
 # git
 ln -is $directory/_gitconfig ~/.gitconfig
 # vim
