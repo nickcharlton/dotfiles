@@ -23,24 +23,14 @@ The install script does a few things, both differ in what is setup per OS. It ca
 1. First installs homebrew.
 2. Installs tmux, rbenv and ruby-build.
 3. Symlinks the dotfiles.
-4. Sets up Terminal.app
-    - sets Solarized as the default theme.
-    - sets the text to Monaco 12pt.
-    - sets a blinking block cursor.
-    - mentions MouseTerm for mouse support.
-5. Sets some OS X specifics.
 
 ### Debian
 
-1. Installs the build environment.
-2. Installs tmux, vim, vim-scripts.
-3. Sets up and installs rbenv, ruby-build and a sensible ruby version.
 4. Symlinks the dotfiles.
 5. Configures gnome-terminal, if it exists.
 
-### But...
+## License
 
-**Isn't there a better thing to use to configure half of this stuff?**
+Copyright Nick Charlton 2011. Licensed under the MIT license.
 
-Probably. But, all of these are my personal preferences. In most cases I won't be deploying a new machine to input my opinion on how it is setup.
-
+Inspired by dotfiles from: [Zach Holman](https://github.com/holman/dotfiles), [Ryan Bates](https://github.com/ryanb/dotfiles), [Mathias Bynens](https://github.com/mathiasbynens/dotfiles). And probably countless others that I can't remember (yes, that's bad, I know. >_>).
