@@ -8,12 +8,6 @@ set showcmd
 set ruler
 set cursorline " indicate what line we're on
 
-" mouse support, makes scrolling nicer
-if has("mouse")
-  set mouse=a
-	set mousehide
-endif
-
 " indenting
 set tabstop=4
 set shiftwidth=4
