@@ -50,3 +50,6 @@ autocmd FileType css setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
 
 " Markdown
 autocmd BufNewFile,BufRead *.txt,*.markdown,*.md setlocal ft=markdown
+
+" Nginx Conf
+au BufRead,BufNewFile /etc/nginx/conf/* set ft=nginx
