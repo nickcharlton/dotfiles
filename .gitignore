@@ -1,0 +1,5 @@
+*.DS_Store
+*.swp
+*.swo
+
+_vim/bundle/snipmate/doc/tags
