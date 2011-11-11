@@ -15,8 +15,7 @@ directory=`pwd`
 # call the right system setup script
 # for Mac OS X
 if [ "$(uname -s)" == 'Darwin' ]; then
-	echo "You're on a Mac";
-    #`$directory/setup/osx.sh`
+    `$directory/setup/osx.sh`
 fi
 
 # for Linux (this is enough, for now)

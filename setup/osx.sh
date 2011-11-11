@@ -13,12 +13,17 @@
 directory=`pwd`
 
 # first, homebrew
-`/usr/bin/ruby -e "$(curl -fsSL https://raw.github.com/gist/323731)"`
-
 if [[ "$(which brew)" != "/usr/local/bin/brew" ]]; then
-    echo "Homebrew failed. Stopping before any more errors happen."
-    exit 1
+    `/usr/bin/ruby -e "$(curl -fsSL https://raw.github.com/gist/323731)"`
+
+    if [[ "$(which brew)" != "/usr/local/bin/brew" ]]; then
+        echo "Homebrew failed. Stopping before any more errors happen."
+        exit 1
+    fi
 fi
+
+# update homebrew
+`brew update`
 
 # then install any packages
 `brew install tmux rbenv ruby-build`
