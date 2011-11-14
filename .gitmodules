@@ -16,3 +16,6 @@
 [submodule "_vim/bundle/vim-less"]
 	path = _vim/bundle/vim-less
 	url = git://github.com/groenewege/vim-less.git
+[submodule "_vim/bundle/Vagrantfile"]
+	path = _vim/bundle/Vagrantfile
+	url = git://github.com/robbevan/Vagrantfile.vim.git
