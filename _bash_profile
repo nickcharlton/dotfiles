@@ -3,3 +3,8 @@ export PS1="[\u@\h:\W]\$ "
 
 # make sure rbenv works
 eval "$(rbenv init -)"
+
+# pull in the aliases
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi

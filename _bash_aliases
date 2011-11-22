@@ -1,0 +1,11 @@
+#!/bin/bash
+# a few aliases to make certain commands better
+
+# a more useful git log, mostly inline with branches, remotes and merges shown
+alias log='git log --graph --pretty="format:%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset"'
+
+# shorten a few commands:
+alias gc='git commit'
+alias gca='git commit -a'
+# a far simpler status message
+alias gs='git status -sb'
