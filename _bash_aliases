@@ -13,3 +13,8 @@ alias gs='git status -sb'
 # show more useful sizes, indicate directories/executables/symlinks and force colours
 alias ll='ls -lhFg'
 alias la='ls -alhFg'
+
+# postgres stuff (for OS X)
+export PGDATA='/usr/local/var/postgres'
+alias pgstart='pg_ctl -l $PGDATA/server.log start'
+alias pgstop='pg_ctl stop -m fast'
