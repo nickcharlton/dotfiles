@@ -2,6 +2,7 @@
 export PS1="[\u@\h:\W]\$ "
 
 # make sure rbenv works
+export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 # pull in the aliases
