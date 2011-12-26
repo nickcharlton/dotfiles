@@ -1,0 +1,9 @@
+[user]
+    name = Nick Charlton
+    email = hello@nickcharlton.net
+[github]
+    user = nickcharlton
+[color]
+    ui = auto
+[core]
+    editor = /usr/bin/vim
