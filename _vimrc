@@ -2,13 +2,12 @@
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
-" enable unicode
-set encoding=utf-8
+set encoding=utf-8 " have some unicode
 
 " interface
 set number " show line numbers
-set showcmd
-set ruler
+set showcmd " show the current command
+set ruler " show standard line/column numbers
 set cursorline " indicate what line we're on
 
 " indenting
@@ -25,7 +24,6 @@ set background=dark
 colorscheme solarized
 
 " status bar ([filename] [type] [position])
-set statusline=%F%m%r%h%w\ [Filetype:\ %Y]\ [Lines:\ %L]\ [%p%%]
 set laststatus=2
 let g:Powerline_symbols = 'fancy'
 
