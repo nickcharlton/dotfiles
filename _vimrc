@@ -2,6 +2,9 @@
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+" enable unicode
+set encoding=utf-8
+
 " interface
 set number " show line numbers
 set showcmd
@@ -24,6 +27,7 @@ colorscheme solarized
 " status bar ([filename] [type] [position])
 set statusline=%F%m%r%h%w\ [Filetype:\ %Y]\ [Lines:\ %L]\ [%p%%]
 set laststatus=2
+let g:Powerline_symbols = 'fancy'
 
 " enable filetype plugins
 filetype on

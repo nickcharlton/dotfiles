@@ -19,3 +19,6 @@
 [submodule "_vim/bundle/Vagrantfile"]
 	path = _vim/bundle/Vagrantfile
 	url = git://github.com/robbevan/Vagrantfile.vim.git
+[submodule "_vim/bundle/vim-powerline"]
+	path = _vim/bundle/vim-powerline
+	url = https://github.com/Lokaltog/vim-powerline.git
