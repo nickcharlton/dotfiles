@@ -5,6 +5,9 @@ export PS1="[\u@\h:\W]\$ "
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
+# for tmux powerline
+export PLATFORM="mac"
+
 # pull in the aliases
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
