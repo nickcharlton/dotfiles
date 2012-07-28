@@ -7,9 +7,6 @@
 [submodule "_vim/bundle/supertab"]
 	path = _vim/bundle/supertab
 	url = git://github.com/ervandew/supertab.git
-[submodule "_vim/bundle/snipmate"]
-	path = _vim/bundle/snipmate
-	url = git://github.com/msanders/snipmate.vim.git
 [submodule "_irssi/solarized"]
 	path = _irssi/solarized
 	url = git://github.com/huyz/irssi-colors-solarized.git
