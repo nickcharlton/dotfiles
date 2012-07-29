@@ -2,7 +2,8 @@
 
 A bunch of impossible to live without config files. `init.sh` bootstraps everything.
 
-Currently includes: tmux, vim, mutt, git, bash, irssi.
+Currently includes: tmux, vim, mutt, git, bash, irssi. See `USAGE.md` for
+specific commands (and reminders for some tools.)
 
 ## Install/Setup
 
