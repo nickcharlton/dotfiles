@@ -1,12 +1,13 @@
 servers = (
-  { address = "irc.oftc.net"; chatnet = "termisoc"; port = "6667"; autoconnect = "Yes"; }
+  {
+    address = "irc.oftc.net";
+    chatnet = "termisoc";
+    port = "6667";
+    autoconnect = "Yes";
+  }
 );
 
-chatnets = {
-  termisoc = {
-    type = "IRC";
-  };
-};
+chatnets = { termisoc = { type = "IRC"; }; };
 
 channels = (
   { name = "#termisoc"; chatnet = "termisoc"; autojoin = "Yes"; }
@@ -179,12 +180,13 @@ settings = {
     quit_message = "Bollocks. I broke something.";
   };
   "fe-text" = { actlist_sort = "refnum"; };
-  "fe-common/core" = { 
-      theme = "solarized-universal"; 
-      hilight_color = "= %R";
+  "fe-common/core" = {
+    theme = "solarized-universal";
+    hilight_color = "= %R";
   };
+  "perl/core/scripts" = { trackbar_style = "%B"; };
 };
 
 hilights = (
-    { text = "nickcharlton"; color = "%M"; nick = "yes"; word = "yes"; }
+  { text = "nickcharlton"; color = "%M"; nick = "yes"; word = "yes"; }
 );
