@@ -7,8 +7,24 @@ set encoding=utf-8 " have some unicode
 " interface
 set number " show line numbers
 set showcmd " show the current command
+set showmode
 set ruler " show standard line/column numbers
 set cursorline " indicate what line we're on
+set scrolloff=3
+set hidden
+set ttyfast
+set backspace=indent,eol,start
+set undofile
+
+" go and down by screenline
+nnoremap j gj
+nnoremap k gk
+
+" search
+set wrap
+set textwidth=79
+set formatoptions=qrn1
+set colorcolumn=85
 
 " indenting
 set tabstop=4
@@ -18,12 +34,25 @@ set smartindent
 set expandtab
 set autoindent
 
+" search
+nnoremap / /\v
+vnoremap / /\v
+set ignorecase
+set smartcase
+set gdefault
+set incsearch
+set showmatch
+set hlsearch
+nnoremap <leader><space> :noh<cr>
+nnoremap <tab> %
+vnoremap <tab> %
+
 " colours
 syntax enable
 set background=dark
 colorscheme solarized
 
-" status bar ([filename] [type] [position])
+" status bar (powerline)
 set laststatus=2
 let g:Powerline_symbols = 'fancy'
 
@@ -35,6 +64,14 @@ filetype plugin on
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 set showmode
+
+" better copy/paste support
+" Yank text to the OS X clipboard
+noremap <leader>y "*y
+noremap <leader>yy "*Y
+
+" Preserve indentation while pasting text from the OS X clipboard
+noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
 
 " plugins
 
