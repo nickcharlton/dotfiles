@@ -1,5 +1,5 @@
 servers = (
-  { address = "irc.oftc.net"; chatnet = "termisoc"; port = "6667"; autoconnect = "Yes" }
+  { address = "irc.oftc.net"; chatnet = "termisoc"; port = "6667"; autoconnect = "Yes"; }
 );
 
 chatnets = {
@@ -88,9 +88,9 @@ statusbar = {
     topic_empty = " Irssi v$J - http://www.irssi.org";
 
     # all of these treated specially, they're only displayed when needed
-    lag = "{sb Lag: $0-}";
+    lag = "{sb Lag: %m$0-%n}";
     act = "{sb Act: $0-}";
-    more = "-- more --";
+    more = "%k%3-- more --%n";
   };
 
   # there's two type of statusbars. root statusbars are either at the top
@@ -179,5 +179,12 @@ settings = {
     quit_message = "Bollocks. I broke something.";
   };
   "fe-text" = { actlist_sort = "refnum"; };
-  "fe-common/core" = { theme = "solarized-universal"; };
+  "fe-common/core" = { 
+      theme = "solarized-universal"; 
+      hilight_color = "= %R";
+  };
 };
+
+hilights = (
+    { text = "nickcharlton"; color = "%M"; nick = "yes"; word = "yes"; }
+);
