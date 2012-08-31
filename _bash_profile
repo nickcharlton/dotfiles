@@ -7,10 +7,17 @@ export PLATFORM="mac"
 # fix a bug with OS X bash and EDITOR
 export EDITOR=vim
 
-# set the path, fully, manually
-export PATH="$HOME/.rbenv/bin:/usr/local/share/python:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
+# set the path
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
 
-# make sure rbenv works
+# ruby
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+# python
+export PATH="/usr/local/share/python:$PATH"
+# haskell
+export PATH="$HOME/Library/Haskell/bin:$PATH"
+
 eval "$(rbenv init -)"
 
 # pull in the aliases
