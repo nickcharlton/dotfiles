@@ -45,3 +45,8 @@ Load script: /script load file.pl
 Reload config: /reload
 Mark position: /mark
 
+Connect a server: /connect <url>
+Join a channel: /join <chan>
+
+Set op: /msg ChanServ op <chan> [user]
+
