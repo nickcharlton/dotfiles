@@ -19,7 +19,6 @@ export PATH="/usr/local/share/python:$PATH"
 export PATH="$HOME/Library/Haskell/bin:$PATH"
 # CUDA
 export PATH="/usr/local/cuda/bin:$PATH"
-export DYLD_LIBRARY_PATH="/usr/local/cuda/lib:$DYLD_LIBRARY_PATH"
 # LaTeX
 export PATH="/usr/local/texlive/2012/bin/x86_64-darwin:$PATH"
 
