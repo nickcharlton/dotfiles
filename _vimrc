@@ -14,7 +14,9 @@ set scrolloff=3
 set hidden
 set ttyfast
 set backspace=indent,eol,start
-set undofile
+if has("undofile")
+    set undofile
+endif
 
 " go and down by screenline
 nnoremap j gj
@@ -24,7 +26,9 @@ nnoremap k gk
 set wrap
 set textwidth=79
 set formatoptions=qrn1
-set colorcolumn=85
+if has("colorcolumn")
+    set colorcolumn=85
+endif
 
 " indenting
 set tabstop=4
