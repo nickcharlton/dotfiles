@@ -1,10 +1,10 @@
 # shell color excapes
-COLOR_MAGENTA='\e[35m'
+COLOR_YELLOW='\e[33m'
 COLOR_CYAN='\e[36m'
 COLOR_RESET='\e[0m'
 
 # provide the git branch, if present
-# a clean branch uses cyan, a dirty branch magenta
+# a clean branch uses cyan, a dirty branch yellow
 prompt_git() {
     git branch &>/dev/null || return 1
     HEAD="$(git symbolic-ref HEAD 2>/dev/null)"
