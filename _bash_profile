@@ -19,7 +19,7 @@ prompt_git() {
     HEAD="$(git symbolic-ref HEAD 2>/dev/null)"
     BRANCH="${HEAD##*/}"
     [[ -n "$(git status 2>/dev/null | \
-        grep -F 'working directory clean')" ]] || STATUS=${COLOR_MAGENTA}
+        grep -F 'working directory clean')" ]] || STATUS=${COLOR_YELLOW}
     printf ${COLOR_CYAN}${STATUS}'(%s)'${COLOR_RESET} "${BRANCH:-unknown}"
 }
 
