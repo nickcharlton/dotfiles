@@ -1,5 +1,33 @@
-# set the prompt (like: [user@machine:Current Directory]$)
-export PS1="[\u@\h:\W]\$ "
+##
+## .bash_profile
+##
+## This is vaguely split into sections.
+## With my custom prompt first,
+## followed by shell options
+## then path variables for everything I use.
+## 
+
+# shell color excapes
+COLOR_YELLOW='\e[33m'
+COLOR_CYAN='\e[36m'
+COLOR_RESET='\e[0m'
+
+# provide the git branch, if present
+# a clean branch uses cyan, a dirty branch yellow
+prompt_git() {
+    git branch &>/dev/null || return 1
+    HEAD="$(git symbolic-ref HEAD 2>/dev/null)"
+    BRANCH="${HEAD##*/}"
+    [[ -n "$(git status 2>/dev/null | \
+        grep -F 'working directory clean')" ]] || STATUS=${COLOR_YELLOW}
+    printf ${COLOR_CYAN}${STATUS}'(%s)'${COLOR_RESET} "${BRANCH:-unknown}"
+}
+
+# enable variables and commands in the prompt
+shopt -s promptvars
+
+# set the prompt (like: [user@machine:Current Directory](gitbranch)$)
+export PS1='[\u@\h:\W]$(prompt_git)\$ '
 
 # for tmux powerline
 export PLATFORM="mac"
