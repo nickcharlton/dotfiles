@@ -2,8 +2,12 @@ servers = (
   {
     address = "irc.oftc.net";
     chatnet = "termisoc";
-    port = "6667";
+    port = "6697";
     autoconnect = "Yes";
+    use_ssl = "yes";
+    ssl_cert = "~/.irssi/certs/nick.pem";
+    ssl_verify = "yes";
+    ssl_cafile = "/etc/ssl/certs/spi-cacert-2008.pem";
   }
 );
 
