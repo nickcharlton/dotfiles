@@ -38,9 +38,6 @@ export EDITOR=vim
 # set the path
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
 
-# ruby
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
 # python
 export PATH="/usr/local/share/python:$PATH"
 export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
@@ -50,8 +47,6 @@ export PATH="$HOME/Library/Haskell/bin:$PATH"
 export PATH="/usr/local/cuda/bin:$PATH"
 # LaTeX
 export PATH="/usr/local/texlive/2012/bin/x86_64-darwin:$PATH"
-
-eval "$(rbenv init -)"
 
 # pull in the aliases
 if [ -f ~/.bash_aliases ]; then
