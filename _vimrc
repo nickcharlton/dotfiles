@@ -79,6 +79,9 @@ noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
 autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
 autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/closetag/plugin/closetag.vim
 
+" don't autofold pandoc docs
+let g:pandoc_no_folding = 1
+
 " specific language support
 
 " ruby
@@ -86,9 +89,6 @@ autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 
 " CSS
 autocmd FileType css setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
-
-" Markdown
-autocmd BufNewFile,BufRead *.txt,*.markdown,*.md setlocal ft=markdown
 
 " Nginx Conf
 au BufRead,BufNewFile /etc/nginx/* set ft=nginx
