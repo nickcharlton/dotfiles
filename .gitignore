@@ -3,4 +3,9 @@
 *.swo
 *.un~
 
+# vim
 _vim/bundle/snipmate/doc/tags
+
+# irssi
+_irssi/away.log
+_irssi/certs/*
