@@ -2,8 +2,10 @@
 
 A bunch of impossible to live without config files. `init.sh` bootstraps everything.
 
-Currently includes: tmux, vim, mutt, git, bash, irssi. See `USAGE.md` for
-specific commands (and reminders for some tools.)
+Currently includes terminal utilities: tmux, vim, mutt, git, bash, irssi. And
+a half-assed configuration for dwm.
+
+See `USAGE.md` for specific commands (and common options/flags for some tools.)
 
 ## Install/Setup
 
@@ -13,8 +15,9 @@ specific commands (and reminders for some tools.)
 
 ## Dependencies
 
-Both: tmux, vim, git, rbenv, ruby-build
-Mac only: [Homebrew](https://github.com/mxcl/homebrew), bash 4, [Python](http://docs.python-guide.org/en/latest/starting/install/osx/)
+* Debian: apt-get install tmux vim git
+* Debian (dwm): apt-get install libx11-dev libxinerama-dev x11-xserver-utils
+* Mac only: [Homebrew](https://github.com/mxcl/homebrew), bash 4, [Python](http://docs.python-guide.org/en/latest/starting/install/osx/)
 
 ## License
 
