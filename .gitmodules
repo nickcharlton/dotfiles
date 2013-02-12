@@ -22,6 +22,3 @@
 [submodule "tmux/tmux-powerline"]
 	path = tmux/tmux-powerline
 	url = git://github.com/erikw/tmux-powerline.git
-[submodule "_vim/bundle/vim-markdown"]
-	path = _vim/bundle/vim-markdown
-	url = git://github.com/plasticboy/vim-markdown.git
