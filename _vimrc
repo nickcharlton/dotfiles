@@ -82,6 +82,30 @@ autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bu
 " don't autofold pandoc docs
 let g:pandoc_no_folding = 1
 
+" syntastic
+
+" show in the status line
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
+
+" show fancy errors in the margin
+let g:syntastic_enable_signs=1
+let g:syntastic_error_symbol='✗'
+let g:syntastic_warning_symbol='⚠'
+
+" make it automatic
+let g:syntastic_check_on_open=1
+
+" active is automatic
+" passive can be triggered
+let g:syntastic_mode_map = { 'mode': 'active',
+                            \ 'active_filetypes': ['python', 'c', 'cpp', 'css', 
+                            \ 'javascript', 'cuda', 'haskell', 'html', 
+                            \ 'matlab', 'less', 'objc', 'php', 'sh'],
+                            \ 'passive_filetypes': ['json', 'xml', 'yaml'] }
+
 " specific language support
 
 " ruby
