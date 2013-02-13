@@ -28,6 +28,8 @@ ln -is $directory/_mutt ~/.mutt
 ln -is $directory/_irssi ~/.irssi
 # tmux
 ln -is $directory/_tmux.conf ~/.tmux.conf
+# matplotlib
+ln -is $directory/_matplotlib ~/.matplotlib
 # gnome-terminal
 if [ -f /usr/bin/gnome-terminal ]
     then

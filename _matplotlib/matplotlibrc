@@ -1,0 +1,65 @@
+####
+# Matplotlib Overrides
+# Mostly nicer colours.
+# Taken from: http://www.huyng.com/posts/sane-color-scheme-for-matplotlib/
+####
+
+### Backend
+backend                 : Qt4Agg
+
+### Lines
+
+lines.linewidth         : 1.0       # line width in points
+lines.antialiased       : True      # render lines in antialiased
+
+## Patches
+# (Graphical objects that fill 2D space, like polygons or circles.)
+patch.linewidth         : 0.5       # edge width in points
+patch.facecolor         : 348ABD    # blue
+patch.edgecolor         : EEEEEE
+patch.antialiased       : True      # render patches in antialiased
+
+### Font
+font.family             : monospace
+font.size               : 12.0
+font.monospace          : Monaco, Courier New, Courier, Fixed, Terminal, monospace
+
+### Axes
+axes.facecolor          : EEEEEE    # axes background color
+axes.edgecolor          : BCBCBC    # axes edge color
+axes.linewidth          : 1         # edge line width
+axes.grid               : True      # display grid or not
+axes.titlesize          : x-large   # fontsize of the axes title
+axes.labelsize          : large     # fontsize of the x/y labels
+axes.labelcolor         : 555555
+axes.axisbelow          : True      # whether axis gridlines and ticks are below
+                                    # the axes elements (lines, text, etc.)
+axes.color_cycle        : 348ABD, 7A68A6, A60628, 467821, CF4457, 188487, E24A33
+# E24A33 (Orange), 7A68A6 (Purple), 348ABD (Blue), 188487 (Turquoise), 
+# A60628 (Red), CF4457 (Pink), 467821 (Green)
+
+### Ticks
+
+xtick.major.size        : 0         # major tick size in points
+xtick.minor.size        : 0         # minor tick size in points
+xtick.major.pad         : 6         # distance to major tick label in points
+xtick.minor.pad         : 6         # distance to the minor tick label in points
+xtick.color             : 555555    # color of the tick labels
+xtick.direction         : in        # direction: in or out
+ytick.major.size        : 0         # major tick size in points
+ytick.minor.size        : 0         # minor tick size in points
+ytick.major.pad         : 6         # distance to major tick label in points
+ytick.minor.pad         : 6         # distance to the minor tick label in points
+ytick.color             : 555555    # color of the tick labels
+ytick.direction         : in        # direction: in or out
+
+### Legend
+
+legend.fancybox         : True      # use a rounded box
+
+### Figure
+
+figure.figsize          : 11, 8     # figure size in inches
+figure.facecolor        : 0.85      # figure facecolor; 0.75 is scalar grey
+figure.edgecolor        : 0.50
+figure.subplot.hspace   : 0.5       # amount of height reserved for whitespace between subplots
