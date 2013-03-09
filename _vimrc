@@ -78,6 +78,7 @@ noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
 " only enable CloseTag for HTML/XML like files
 autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
 autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/closetag/plugin/closetag.vim
+autocmd FileType html,xhtml,htmldjango,jinjahtml setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
 " don't autofold pandoc docs
 let g:pandoc_no_folding = 1
