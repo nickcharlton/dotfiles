@@ -47,6 +47,8 @@ export PATH="$HOME/Library/Haskell/bin:$PATH"
 export PATH="/usr/local/cuda/bin:$PATH"
 # LaTeX
 export PATH="/usr/local/texlive/2012/bin/x86_64-darwin:$PATH"
+# Ruby (gems, specifically)
+export PATH="/usr/local/opt/ruby/bin:$PATH"
 
 # pull in the aliases
 if [ -f ~/.bash_aliases ]; then
