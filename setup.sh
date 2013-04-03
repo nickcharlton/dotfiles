@@ -1,9 +1,15 @@
 #!/bin/bash
 
+if [ -n "$1" ]; then
+    HOME_DIR=$1
+else
+    HOME_DIR=$HOME
+fi
+
 # where to link
-SOURCE_PATH="$HOME/dotfiles"
+SOURCE_PATH="$HOME_DIR/dotfiles"
 # ~ if no flag
-TARGET_PATH="$HOME"
+TARGET_PATH="$HOME_DIR"
 
 # osx specifics
 if [ "$(uname -s)" == 'Darwin' ]; then
@@ -37,4 +43,5 @@ ln -sf $SOURCE_PATH/_irssi $TARGET_PATH/.irssi
 ln -sf $SOURCE_PATH/_tmux.conf $TARGET_PATH/.tmux.conf
 # matplotlib
 ln -sf $SOURCE_PATH/_matplotlib/ $TARGET_PATH/.matplotlib
+
 
