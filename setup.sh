@@ -1,15 +1,9 @@
 #!/bin/bash
 
-if [ -n "$1" ]; then
-    HOME_DIR=$1
-else
-    HOME_DIR=$HOME
-fi
-
 # where to link
-SOURCE_PATH="$HOME_DIR/dotfiles"
+SOURCE_PATH="$HOME/dotfiles"
 # ~ if no flag
-TARGET_PATH="$HOME_DIR"
+TARGET_PATH="$HOME"
 
 # osx specifics
 if [ "$(uname -s)" == 'Darwin' ]; then
