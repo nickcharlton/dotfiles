@@ -1,27 +1,42 @@
 #!/bin/bash
 
-##################################################
-#                                                #
-# Bootstrap the setup process.                   #
-#                                                #
-# Author: Nick Charlton <hello@nickcharlton.net> #
-# Date: 09/11/11                                 #
-# Version: 2.0                                   #
-#                                                #
-##################################################
-
 directory=`pwd`
 
-# call the right system setup script
-# for Mac OS X
+# osx specifics
 if [ "$(uname -s)" == 'Darwin' ]; then
-    `$directory/setup/osx.sh`
+    # screenshots
+    defaults write com.apple.screencapture disable-shadow -bool true
+    
+    # xcode
+    defaults write com.apple.Xcode PBXCustomTemplateMacroDefinitions '{ORGANIZATIONNAME = "Nick Charlton"; }'
+
+    # then restart anything that needs restarting
+    killall SystemUIServer
 fi
 
-# for Linux (this is enough, for now)
-if [ "$(uname -s)" == 'Linux' ]; then
-	`$directory/setup/debian.sh`
+
+# then symlinks
+# bash
+ln -is $directory/_bash_profile ~/.bash_profile
+ln -is $directory/_bash_aliases ~/.bash_aliases
+# git
+ln -is $directory/_gitconfig ~/.gitconfig
+ln -is $directory/_gitignore ~/.gitignore
+# vim
+ln -is $directory/_vimrc ~/.vimrc
+ln -is $directory/_vim ~/.vim
+# mutt
+ln -is $directory/_muttrc ~/.muttrc
+ln -is $directory/_mutt ~/.mutt
+# irssi
+ln -is $directory/_irssi ~/.irssi
+# tmux
+ln -is $directory/_tmux.conf ~/.tmux.conf
+# matplotlib
+ln -is $directory/_matplotlib ~/.matplotlib
+# gnome-terminal
+if [ -f /usr/bin/gnome-terminal ]
+    then
+		`$directory/_gnome_terminal/set_dark.sh`
 fi
 
-# then setup the symlinks
-`$directory/setup/symlinks.sh`
