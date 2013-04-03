@@ -34,9 +34,4 @@ ln -is $directory/_irssi ~/.irssi
 ln -is $directory/_tmux.conf ~/.tmux.conf
 # matplotlib
 ln -is $directory/_matplotlib ~/.matplotlib
-# gnome-terminal
-if [ -f /usr/bin/gnome-terminal ]
-    then
-		`$directory/_gnome_terminal/set_dark.sh`
-fi
 
