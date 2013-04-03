@@ -1,6 +1,9 @@
 #!/bin/bash
 
-directory=`pwd`
+# where to link
+SOURCE_PATH="$HOME/dotfiles"
+# ~ if no flag
+TARGET_PATH="$HOME"
 
 # osx specifics
 if [ "$(uname -s)" == 'Darwin' ]; then
@@ -17,21 +20,21 @@ fi
 
 # then symlinks
 # bash
-ln -is $directory/_bash_profile ~/.bash_profile
-ln -is $directory/_bash_aliases ~/.bash_aliases
+ln -sf $SOURCE_PATH/_bash_profile $TARGET_PATH/.bash_profile
+ln -sf $SOURCE_PATH/_bash_aliases $TARGET_PATH/.bash_aliases
 # git
-ln -is $directory/_gitconfig ~/.gitconfig
-ln -is $directory/_gitignore ~/.gitignore
+ln -sf $SOURCE_PATH/_gitconfig $TARGET_PATH/.gitconfig
+ln -sf $SOURCE_PATH/_gitignore $TARGET_PATH/.gitignore
 # vim
-ln -is $directory/_vimrc ~/.vimrc
-ln -is $directory/_vim ~/.vim
+ln -sf $SOURCE_PATH/_vimrc $TARGET_PATH/.vimrc
+ln -sf $SOURCE_PATH/_vim/ $TARGET_PATH/.vim
 # mutt
-ln -is $directory/_muttrc ~/.muttrc
-ln -is $directory/_mutt ~/.mutt
+ln -sf $SOURCE_PATH/_muttrc $TARGET_PATH/.muttrc
+ln -sf $SOURCE_PATH/_mutt/ $TARGET_PATH/.mutt
 # irssi
-ln -is $directory/_irssi ~/.irssi
+ln -sf $SOURCE_PATH/_irssi $TARGET_PATH/.irssi
 # tmux
-ln -is $directory/_tmux.conf ~/.tmux.conf
+ln -sf $SOURCE_PATH/_tmux.conf $TARGET_PATH/.tmux.conf
 # matplotlib
-ln -is $directory/_matplotlib ~/.matplotlib
+ln -sf $SOURCE_PATH/_matplotlib/ $TARGET_PATH/.matplotlib
 
