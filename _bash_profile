@@ -50,6 +50,11 @@ export PATH="/usr/local/texlive/2012/bin/x86_64-darwin:$PATH"
 # Ruby (gems, specifically)
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 
+# AWS secret bits
+if [ -f ~/.aws_vars ]; then
+    . ~/.aws_secrets
+fi
+
 # pull in the aliases
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
