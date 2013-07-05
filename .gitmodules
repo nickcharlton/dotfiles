@@ -28,3 +28,6 @@
 [submodule "_vim/bundle/syntastic"]
 	path = _vim/bundle/syntastic
 	url = git://github.com/scrooloose/syntastic.git
+[submodule "_vim/bundle/vim-json"]
+	path = _vim/bundle/vim-json
+	url = git@github.com:elzr/vim-json.git
