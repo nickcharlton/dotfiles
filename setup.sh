@@ -37,5 +37,7 @@ ln -sf $SOURCE_PATH/_irssi $TARGET_PATH/.irssi
 ln -sf $SOURCE_PATH/_tmux.conf $TARGET_PATH/.tmux.conf
 # matplotlib
 ln -sf $SOURCE_PATH/_matplotlib/ $TARGET_PATH/.matplotlib
+# gemrc
+ln -sf $SOURCE_PATH/_gemrc $TARGET_PATH/.gemrc
 
 
