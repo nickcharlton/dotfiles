@@ -48,6 +48,8 @@ export PATH="/usr/local/cuda/bin:$PATH"
 export PATH="/usr/local/texlive/2012/bin/x86_64-darwin:$PATH"
 # Ruby (gems, specifically)
 export PATH="/usr/local/opt/ruby/bin:$PATH"
+# Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
 
 # AWS secret bits
 if [ -f ~/.aws_vars ]; then
@@ -58,3 +60,4 @@ fi
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
+
