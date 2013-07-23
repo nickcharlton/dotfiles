@@ -51,9 +51,9 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 # Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-# AWS secret bits
-if [ -f ~/.aws_vars ]; then
-    . ~/.aws_secrets
+# AWS (et. al.) secrets
+if [ -f ~/.secrets ]; then
+    . ~/.secrets
 fi
 
 # pull in the aliases
