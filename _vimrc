@@ -73,6 +73,10 @@ noremap <leader>yy "*Y
 " Preserve indentation while pasting text from the OS X clipboard
 noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
 
+" store swap files in a fixed directory
+set dir=~/.vimswap//,/var/tmp//,/tmp//,.
+set undodir=~/.vimundo//
+
 " plugins
 
 " only enable CloseTag for HTML/XML like files
