@@ -18,3 +18,6 @@ alias la='ls -alhFg'
 export PGDATA='/usr/local/var/postgres'
 alias pgstart='pg_ctl -l $PGDATA/server.log start'
 alias pgstop='pg_ctl stop -m fast'
+
+# default some of the gist options
+alias gist='gist -cps'
