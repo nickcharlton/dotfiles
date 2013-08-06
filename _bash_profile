@@ -41,7 +41,7 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
 # python
 export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
 # haskell
-export PATH="$HOME/Library/Haskell/bin:$PATH"
+export PATH="$HOME/.cabal/bin:$PATH"
 # CUDA
 export PATH="/usr/local/cuda/bin:$PATH"
 # LaTeX
