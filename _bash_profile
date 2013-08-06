@@ -42,10 +42,8 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
 export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
 # haskell
 export PATH="$HOME/.cabal/bin:$PATH"
-# CUDA
-export PATH="/usr/local/cuda/bin:$PATH"
 # LaTeX
-export PATH="/usr/local/texlive/2012/bin/x86_64-darwin:$PATH"
+export PATH="/usr/local/texlive/2013/bin/x86_64-darwin:$PATH"
 # Ruby (gems, specifically)
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 # Heroku Toolbelt
