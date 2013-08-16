@@ -5,6 +5,7 @@
 alias log='git log --graph --pretty="format:%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset"'
 
 # shorten a few commands:
+alias ga='git add'
 alias gc='git commit'
 alias gca='git commit -a'
 # a far simpler status message
