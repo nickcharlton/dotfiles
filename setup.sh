@@ -39,5 +39,7 @@ ln -sf $SOURCE_PATH/_tmux.conf $TARGET_PATH/.tmux.conf
 ln -sf $SOURCE_PATH/_matplotlib/ $TARGET_PATH/.matplotlib
 # gemrc
 ln -sf $SOURCE_PATH/_gemrc $TARGET_PATH/.gemrc
+# bin/
+ln -sf $SOURCE_PATH/bin/ $TARGET_PATH/bin
 
 
