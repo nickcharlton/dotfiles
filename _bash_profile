@@ -50,7 +50,7 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="/usr/local/heroku/bin:$PATH"
 
 # proxy ENV functions
-source bin/proxy.sh
+source ~/bin/proxy.sh
 
 # AWS (et. al.) secrets
 if [ -f ~/.secrets ]; then
