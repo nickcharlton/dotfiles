@@ -49,8 +49,9 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 # Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-# proxy ENV functions
+# load in collection of functions
 source ~/bin/proxy.sh
+source ~/bin/osx.sh
 
 # AWS (et. al.) secrets
 if [ -f ~/.secrets ]; then
