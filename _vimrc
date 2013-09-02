@@ -121,3 +121,6 @@ autocmd FileType css setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
 
 " Nginx Conf
 au BufRead,BufNewFile /etc/nginx/* set ft=nginx
+
+" CocoaPods
+au BufNewFile,BufRead Podfile,*.podspec set filetype=ruby
