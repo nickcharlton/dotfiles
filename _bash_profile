@@ -36,7 +36,7 @@ export PLATFORM="mac"
 export EDITOR=vim
 
 # set the path
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
 
 # python
 export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
