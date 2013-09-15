@@ -124,3 +124,5 @@ au BufRead,BufNewFile /etc/nginx/* set ft=nginx
 
 " CocoaPods
 au BufNewFile,BufRead Podfile,*.podspec set filetype=ruby
+" Vagrant
+au BufNewFile,BufRead Vagrantfile set filetype=ruby
