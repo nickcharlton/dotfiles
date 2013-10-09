@@ -49,6 +49,9 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 # Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
+# os x/ruby 2.0 ssl fix
+export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
+
 # load in collection of functions
 source ~/bin/proxy.sh
 source ~/bin/osx.sh
