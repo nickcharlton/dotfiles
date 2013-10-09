@@ -10,6 +10,8 @@ alias gc='git commit'
 alias gca='git commit -a'
 # a far simpler status message
 alias gs='git status -sb'
+# undo the last commit
+alias gu='git reset HEAD~1'
 
 # show more useful sizes, indicate directories/executables/symlinks and force colours
 alias ll='ls -lhFg'
