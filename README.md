@@ -1,27 +1,46 @@
 # dotfiles
 
-A bunch of impossible to live without config files. `init.sh` bootstraps everything.
-
-Currently includes terminal utilities: tmux, vim, mutt, git, bash, irssi. And
-a half-assed configuration for dwm.
-
-See `USAGE.md` for specific commands (and common options/flags for some tools.)
+A bunch of impossible to live without config files. `setup.sh` symlinks everything.
+`USAGE.md` gives some often handy commands.
 
 ## Install/Setup
 
-    git clone --recursive git://github.com/nickcharlton/dotfiles.git ~/dotfiles
-    cd ~/dotfiles
-    sh init.sh
+```bash
+git clone --recursive git://github.com/nickcharlton/dotfiles.git ~/dotfiles
+cd ~/dotfiles
+./setup.sh
+```
 
 ## Dependencies
 
-* Debian: apt-get install tmux vim git
-* Debian (dwm): apt-get install libx11-dev libxinerama-dev x11-xserver-utils
-* Mac only: [Homebrew](https://github.com/mxcl/homebrew), bash 4, [Python](http://docs.python-guide.org/en/latest/starting/install/osx/)
+It tries to work with both Debian (and so Ubuntu too) as well as OS X. But, OS X is
+mostly used.
+
+### Debian
+
+```bash
+apt-get install vim vim-scripts tmux git
+```
+
+### OS X
+
+```bash
+brew install ruby python
+brew install vim tmux tree reattach-to-user-namespace
+```
+
+### Ruby / Python
+
+At a sort of 'operational minimum':
+
+```bash
+gem install pry
+pip install awscli flake8 ipython virtualenv
+```
 
 ## License
 
-Copyright Nick Charlton 2011. Licensed under the MIT license.
+Copyright (c) Nick Charlton 2011. Licensed under the MIT license.
 
 Inspired by dotfiles from: [Zach Holman](https://github.com/holman/dotfiles), [Ryan Bates](https://github.com/ryanb/dotfiles), [Mathias Bynens](https://github.com/mathiasbynens/dotfiles), et. al.
 
