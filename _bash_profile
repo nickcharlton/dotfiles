@@ -56,6 +56,10 @@ export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 source ~/bin/proxy.sh
 source ~/bin/osx.sh
 
+# environment variables for building debian packages
+export DEBFULLNAME="Nick Charlton"
+export DEBEMAIL=nick@nickcharlton.net
+
 # AWS (et. al.) secrets
 if [ -f ~/.secrets ]; then
     . ~/.secrets
