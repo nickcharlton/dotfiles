@@ -26,7 +26,8 @@ apt-get install vim vim-scripts tmux git
 
 ```bash
 brew install ruby python
-brew install vim tmux tree reattach-to-user-namespace
+brew install vim tmux tree reattach-to-user-namespace curl-ca-bundle
+brew install haskell-platform gfortran
 ```
 
 ### Ruby / Python
