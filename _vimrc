@@ -126,3 +126,5 @@ au BufRead,BufNewFile /etc/nginx/* set ft=nginx
 au BufNewFile,BufRead Podfile,*.podspec set filetype=ruby
 " Vagrant
 au BufNewFile,BufRead Vagrantfile set filetype=ruby
+" Berkshelf
+au BufNewFile,BufRead Berksfile set filetype=ruby
