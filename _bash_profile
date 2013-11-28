@@ -67,6 +67,6 @@ fi
 
 # pull in the aliases
 if [ -f ~/.aliases ]; then
-    . ~/aliases
+    . ~/.aliases
 fi
 
