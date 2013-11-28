@@ -21,7 +21,7 @@ fi
 # then symlinks
 # bash
 ln -sf $SOURCE_PATH/_bash_profile $TARGET_PATH/.bash_profile
-ln -sf $SOURCE_PATH/_bash_aliases $TARGET_PATH/.bash_aliases
+ln -sf $SOURCE_PATH/_aliases $TARGET_PATH/.aliases
 # git
 ln -sf $SOURCE_PATH/_gitconfig $TARGET_PATH/.gitconfig
 ln -sf $SOURCE_PATH/_gitignore $TARGET_PATH/.gitignore

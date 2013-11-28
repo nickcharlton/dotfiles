@@ -1,4 +1,3 @@
-#!/bin/bash
 # a few aliases to make certain commands better
 
 # a more useful git log, mostly inline with branches, remotes and merges shown
