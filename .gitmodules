@@ -28,3 +28,6 @@
 [submodule "_vim/bundle/vim-json"]
 	path = _vim/bundle/vim-json
 	url = git://github.com/elzr/vim-json.git
+[submodule "zsh/zprezto"]
+	path = zsh/zprezto
+	url = git://github.com/sorin-ionescu/prezto.git
