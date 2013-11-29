@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # where to link
 SOURCE_PATH="$HOME/dotfiles"
