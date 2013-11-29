@@ -21,7 +21,7 @@ fi
 # then symlinks
 # bash
 ln -sf $SOURCE_PATH/_bash_profile $TARGET_PATH/.bash_profile
-ln -sf $SOURCE_PATH/_aliases $TARGET_PATH/.aliases
+ln -sf $SOURCE_PATH/aliases $TARGET_PATH/.aliases
 # zsh
 ln -sf $SOURCE_PATH/zsh/zprezto/ $TARGET_PATH/.zprezto
 ln -sf $SOURCE_PATH/zsh/zlogin $TARGET_PATH/.zlogin
