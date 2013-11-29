@@ -1,25 +1,20 @@
-# a few aliases to make certain commands better
+# 
+# Git
+#
 
 # a more useful git log, mostly inline with branches, remotes and merges shown
 alias log='git log --graph --pretty="format:%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset"'
 
-# shorten a few commands:
-alias ga='git add'
-alias gc='git commit'
-alias gca='git commit -a'
-# a far simpler status message
-alias gs='git status -sb'
 # undo the last commit
 alias gu='git reset HEAD~1'
 
-# show more useful sizes, indicate directories/executables/symlinks and force colours
+#
+# ls
+# 
 alias ll='ls -lhFg'
 alias la='ls -alhFg'
 
-# postgres stuff (for OS X)
-export PGDATA='/usr/local/var/postgres'
-alias pgstart='pg_ctl -l $PGDATA/server.log start'
-alias pgstop='pg_ctl stop -m fast'
-
-# default some of the gist options
+#
+# Gist
+#
 alias gist='gist -cps'
