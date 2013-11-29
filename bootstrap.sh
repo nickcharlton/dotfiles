@@ -35,8 +35,8 @@ ln -sf $SOURCE_PATH/_tmux.conf $TARGET_PATH/.tmux.conf
 ln -sf $SOURCE_PATH/_tmux-powerlinerc $TARGET_PATH/.tmux-powerlinerc
 # matplotlib
 ln -sf $SOURCE_PATH/_matplotlib/ $TARGET_PATH/.matplotlib
-# gemrc
-ln -sf $SOURCE_PATH/_gemrc $TARGET_PATH/.gemrc
+# ruby
+ln -sf $SOURCE_PATH/ruby/gemrc $TARGET_PATH/.gemrc
 # lldbinit
 ln -sf $SOURCE_PATH/_lldbinit $TARGET_PATH/.lldbinit
 # bin/
