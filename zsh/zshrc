@@ -2,6 +2,9 @@
 # Executes commands at the start of an interactive session.
 #
 
+# add the custom function path
+fpath=(~/.dotfiles/zsh/functions $fpath)
+
 # source prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"

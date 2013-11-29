@@ -37,7 +37,7 @@ zstyle ':prezto:module:editor' key-bindings 'emacs'
 #
 
 # set the prompt theme.
-zstyle ':prezto:module:prompt' theme 'sorin'
+zstyle ':prezto:module:prompt' theme 'nickcharlton'
 
 #
 # Terminal
