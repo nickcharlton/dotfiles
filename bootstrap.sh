@@ -23,7 +23,7 @@ fi
 ln -sf $SOURCE_PATH/_bash_profile $TARGET_PATH/.bash_profile
 ln -sf $SOURCE_PATH/_aliases $TARGET_PATH/.aliases
 # zsh
-ln -sf $SOURCE_PATH/zsh/zprezto $TARGET_PATH/.zprezto
+ln -sf $SOURCE_PATH/zsh/zprezto/ $TARGET_PATH/.zprezto
 ln -sf $SOURCE_PATH/zsh/zlogin $TARGET_PATH/.zlogin
 ln -sf $SOURCE_PATH/zsh/zshenv $TARGET_PATH/.zshenv
 ln -sf $SOURCE_PATH/zsh/zshrc $TARGET_PATH/.zshrc
@@ -35,7 +35,7 @@ ln -sf $SOURCE_PATH/_gitignore $TARGET_PATH/.gitignore
 ln -sf $SOURCE_PATH/_vimrc $TARGET_PATH/.vimrc
 ln -sf $SOURCE_PATH/_vim/ $TARGET_PATH/.vim
 # irssi
-ln -sf $SOURCE_PATH/_irssi $TARGET_PATH/.irssi
+ln -sf $SOURCE_PATH/_irssi/ $TARGET_PATH/.irssi
 # tmux
 ln -sf $SOURCE_PATH/_tmux.conf $TARGET_PATH/.tmux.conf
 ln -sf $SOURCE_PATH/_tmux-powerlinerc $TARGET_PATH/.tmux-powerlinerc
