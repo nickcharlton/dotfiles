@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # where to link
-SOURCE_PATH="$HOME/dotfiles"
+SOURCE_PATH="$HOME/.dotfiles"
 # ~ if no flag
 TARGET_PATH="$HOME"
 
