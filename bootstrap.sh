@@ -28,9 +28,6 @@ ln -sf $SOURCE_PATH/_gitignore $TARGET_PATH/.gitignore
 # vim
 ln -sf $SOURCE_PATH/_vimrc $TARGET_PATH/.vimrc
 ln -sf $SOURCE_PATH/_vim/ $TARGET_PATH/.vim
-# mutt
-ln -sf $SOURCE_PATH/_muttrc $TARGET_PATH/.muttrc
-ln -sf $SOURCE_PATH/_mutt/ $TARGET_PATH/.mutt
 # irssi
 ln -sf $SOURCE_PATH/_irssi $TARGET_PATH/.irssi
 # tmux
