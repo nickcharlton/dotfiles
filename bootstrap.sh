@@ -29,8 +29,8 @@ ln -sf $SOURCE_PATH/zsh/zshenv $TARGET_PATH/.zshenv
 ln -sf $SOURCE_PATH/zsh/zshrc $TARGET_PATH/.zshrc
 ln -sf $SOURCE_PATH/zsh/zpreztorc $TARGET_PATH/.zpreztorc
 # git
-ln -sf $SOURCE_PATH/_gitconfig $TARGET_PATH/.gitconfig
-ln -sf $SOURCE_PATH/_gitignore $TARGET_PATH/.gitignore
+ln -sf $SOURCE_PATH/git/gitconfig $TARGET_PATH/.gitconfig
+ln -sf $SOURCE_PATH/git/gitignore $TARGET_PATH/.gitignore
 # vim
 ln -sf $SOURCE_PATH/_vimrc $TARGET_PATH/.vimrc
 ln -sf $SOURCE_PATH/_vim/ $TARGET_PATH/.vim
