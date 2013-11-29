@@ -1,14 +1,14 @@
 # dotfiles
 
-A bunch of impossible to live without config files. `setup.sh` symlinks everything.
-`USAGE.md` gives some often handy commands.
+A bunch of impossible to live without config files. `bootstrap.sh` symlinks 
+everything. `USAGE.md` gives some often handy commands.
 
 ## Install/Setup
 
 ```bash
-git clone --recursive git://github.com/nickcharlton/dotfiles.git ~/dotfiles
-cd ~/dotfiles
-./setup.sh
+git clone --recursive git://github.com/nickcharlton/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
+./bootstrap.sh
 ```
 
 ## Dependencies
