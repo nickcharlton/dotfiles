@@ -44,7 +44,7 @@ ln -sf $SOURCE_PATH/_matplotlib/ $TARGET_PATH/.matplotlib
 # ruby
 ln -sf $SOURCE_PATH/ruby/gemrc $TARGET_PATH/.gemrc
 # lldbinit
-ln -sf $SOURCE_PATH/_lldbinit $TARGET_PATH/.lldbinit
+ln -sf $SOURCE_PATH/lldbinit $TARGET_PATH/.lldbinit
 # bin/
 ln -sf $SOURCE_PATH/bin/ $TARGET_PATH/bin
 
