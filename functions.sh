@@ -1,13 +1,11 @@
-#!/bin/bash
-
 #
-# Useful functions for OS X
+# A collection of useful functions.
 #
 
 #
-# Reset the 'Open with...' dialog.
+# Reset OS X's 'Open with...' dialog.
 #
-function resetOpenWith() {
+function resetOpenWith {
     /System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
 
     killall Finder
