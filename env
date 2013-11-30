@@ -1,0 +1,52 @@
+# vim: set filetype=sh:
+
+#
+# General
+#
+export DOTFILES="~/.dotfiles"
+
+#
+# System
+#
+export PLATFORM='unknown'
+uname_str=$(uname)
+if [[ "$uname_str" == 'Darwin' ]]; then
+    export PLATFORM='osx'
+elif [[ "$uname_str" == 'Linux' ]]; then
+    export PLATFORM='linux'
+elif [[ "$uname_str" == 'FreeBSD' ]]; then
+    export PLATFORM='freebsd'
+fi
+
+#
+# User
+#
+export EDITOR=vim
+
+export DEBFULLNAME="Nick Charlton"
+export DEBEMAIL=nick@nickcharlton.net
+
+#
+# Path
+#
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/bin:/sbin"
+
+# haskell
+export PATH="$HOME/.cabal/bin:$PATH"
+# heroku toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+if [ "$PLATFORM" == "osx" ]; then
+    # ruby gems
+    export PATH="/usr/local/opt/ruby/bin:$PATH"
+    # ruby ssl fix
+    export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
+fi
+
+#
+# Secrets
+#
+if [ -f ~/.secrets ]; then
+    source ~/.secrets
+fi
+
