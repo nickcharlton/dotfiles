@@ -3,7 +3,7 @@
 #
 # General
 #
-export DOTFILES="~/.dotfiles"
+export DOTFILES="$HOME/.dotfiles"
 
 #
 # System

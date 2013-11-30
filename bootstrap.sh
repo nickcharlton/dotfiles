@@ -1,37 +1,44 @@
 #!/usr/bin/env bash
 
-# where to link
-SOURCE_PATH="$HOME/.dotfiles"
-# ~ if no flag
-TARGET_PATH="$HOME"
+source ./env
 
-# then symlinks
+# shell
+ln -sf $DOTFILES/aliases $HOME/.aliases
+ln -sf $DOTFILES/env $HOME/.env
+
 # bash
-ln -sf $SOURCE_PATH/_bash_profile $TARGET_PATH/.bash_profile
-ln -sf $SOURCE_PATH/aliases $TARGET_PATH/.aliases
-ln -sf $SOURCE_PATH/env $TARGET_PATH/.env
+ln -sf $DOTFILES/bash_profile $HOME/.bash_profile
+
 # zsh
-ln -sf $SOURCE_PATH/zsh/zprezto/ $TARGET_PATH/.zprezto
-ln -sf $SOURCE_PATH/zsh/zlogin $TARGET_PATH/.zlogin
-ln -sf $SOURCE_PATH/zsh/zshenv $TARGET_PATH/.zshenv
-ln -sf $SOURCE_PATH/zsh/zshrc $TARGET_PATH/.zshrc
-ln -sf $SOURCE_PATH/zsh/zpreztorc $TARGET_PATH/.zpreztorc
+ln -sf $DOTFILES/zsh/zprezto/ $HOME/.zprezto
+ln -sf $DOTFILES/zsh/zlogin $HOME/.zlogin
+ln -sf $DOTFILES/zsh/zshenv $HOME/.zshenv
+ln -sf $DOTFILES/zsh/zshrc $HOME/.zshrc
+ln -sf $DOTFILES/zsh/zpreztorc $HOME/.zpreztorc
+
 # git
-ln -sf $SOURCE_PATH/git/gitconfig $TARGET_PATH/.gitconfig
-ln -sf $SOURCE_PATH/git/gitignore $TARGET_PATH/.gitignore
+ln -sf $DOTFILES/git/gitconfig $HOME/.gitconfig
+ln -sf $DOTFILES/git/gitignore $HOME/.gitignore
+
 # vim
-ln -sf $SOURCE_PATH/_vimrc $TARGET_PATH/.vimrc
-ln -sf $SOURCE_PATH/_vim/ $TARGET_PATH/.vim
+ln -sf $DOTFILES/_vimrc $HOME/.vimrc
+ln -sf $DOTFILES/_vim/ $HOME/.vim
+
 # irssi
-ln -sf $SOURCE_PATH/_irssi/ $TARGET_PATH/.irssi
+ln -sf $DOTFILES/_irssi/ $HOME/.irssi
+
 # tmux
-ln -sf $SOURCE_PATH/tmux/tmux.conf $TARGET_PATH/.tmux.conf
-ln -sf $SOURCE_PATH/tmux/tmux-powerlinerc $TARGET_PATH/.tmux-powerlinerc
+ln -sf $DOTFILES/tmux/tmux.conf $HOME/.tmux.conf
+ln -sf $DOTFILES/tmux/tmux-powerlinerc $HOME/.tmux-powerlinerc
+
 # ruby
-ln -sf $SOURCE_PATH/ruby/gemrc $TARGET_PATH/.gemrc
+ln -sf $DOTFILES/ruby/gemrc $HOME/.gemrc
+
 # lldbinit
-ln -sf $SOURCE_PATH/lldbinit $TARGET_PATH/.lldbinit
+ln -sf $DOTFILES/lldbinit $HOME/.lldbinit
+
 # bin/
-ln -sf $SOURCE_PATH/bin/ $TARGET_PATH/bin
+ln -sf $DOTFILES/bin/ $HOME/bin
+
 
 
