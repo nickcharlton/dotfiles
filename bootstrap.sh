@@ -22,6 +22,7 @@ fi
 # bash
 ln -sf $SOURCE_PATH/_bash_profile $TARGET_PATH/.bash_profile
 ln -sf $SOURCE_PATH/aliases $TARGET_PATH/.aliases
+ln -sf $SOURCE_PATH/env $TARGET_PATH/.env
 # zsh
 ln -sf $SOURCE_PATH/zsh/zprezto/ $TARGET_PATH/.zprezto
 ln -sf $SOURCE_PATH/zsh/zlogin $TARGET_PATH/.zlogin

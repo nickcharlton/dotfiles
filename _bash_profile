@@ -13,6 +13,11 @@ if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi
 
+# pull in the environment variables
+if [ -f ~/.env ]; then
+    . ~/.env
+fi
+
 # AWS (et. al.) secrets
 if [ -f ~/.secrets ]; then
     . ~/.secrets

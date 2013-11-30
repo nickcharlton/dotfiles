@@ -7,3 +7,8 @@ if [[ "$SHLVL" -eq 1 && ! -o LOGIN ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
 
+# load in the share environment variables
+if [[ -f ~/.env ]]; then
+    source ~/.env
+fi
+
