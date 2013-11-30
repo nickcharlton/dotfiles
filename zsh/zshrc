@@ -3,7 +3,10 @@
 #
 
 # add the custom function path
-fpath=(~/.dotfiles/zsh/functions $fpath)
+fpath=($DOTFILES/functions $DOTFILES/zsh/functions $fpath)
+
+# autoload all of the custom functions
+autoload -U $DOTFILES/functions/*(:t)
 
 # source prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
