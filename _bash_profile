@@ -8,44 +8,14 @@ shopt -s promptvars
 # set the prompt (like: [user@machine:Current Directory]$)
 export PS1='[\u@\h:\W]\$ '
 
-# for tmux powerline
-export PLATFORM="mac"
-
-# fix a bug with OS X bash and EDITOR
-export EDITOR=vim
-
-# set the path
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
-
-# python
-export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
-# haskell
-export PATH="$HOME/.cabal/bin:$PATH"
-# LaTeX
-export PATH="/usr/local/texlive/2013/bin/x86_64-darwin:$PATH"
-# Ruby (gems, specifically)
-export PATH="/usr/local/opt/ruby/bin:$PATH"
-# Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-# os x/ruby 2.0 ssl fix
-export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
-
-# load in collection of functions
-source ~/bin/proxy.sh
-source ~/bin/osx.sh
-
-# environment variables for building debian packages
-export DEBFULLNAME="Nick Charlton"
-export DEBEMAIL=nick@nickcharlton.net
+# pull in the aliases
+if [ -f ~/.aliases ]; then
+    . ~/.aliases
+fi
 
 # AWS (et. al.) secrets
 if [ -f ~/.secrets ]; then
     . ~/.secrets
 fi
 
-# pull in the aliases
-if [ -f ~/.aliases ]; then
-    . ~/.aliases
-fi
 
