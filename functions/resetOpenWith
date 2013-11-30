@@ -1,8 +1,4 @@
 #
-# A collection of useful functions.
-#
-
-#
 # Reset OS X's 'Open with...' dialog.
 #
 function resetOpenWith {
