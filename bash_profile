@@ -23,7 +23,3 @@ if [ -f ~/.secrets ]; then
     . ~/.secrets
 fi
 
-# load in the custom functions
-source $DOTFILES/functions.sh
-
-
