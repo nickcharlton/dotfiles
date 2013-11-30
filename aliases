@@ -5,6 +5,9 @@
 # a more useful git log, mostly inline with branches, remotes and merges shown
 alias log='git log --graph --pretty="format:%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset"'
 
+# better standard status line
+alias gws='git status -sb'
+
 # undo the last commit
 alias gu='git reset HEAD~1'
 
