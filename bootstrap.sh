@@ -5,19 +5,6 @@ SOURCE_PATH="$HOME/.dotfiles"
 # ~ if no flag
 TARGET_PATH="$HOME"
 
-# osx specifics
-if [ "$(uname -s)" == 'Darwin' ]; then
-    # screenshots
-    defaults write com.apple.screencapture disable-shadow -bool true
-    
-    # xcode
-    defaults write com.apple.Xcode PBXCustomTemplateMacroDefinitions '{ORGANIZATIONNAME = "Nick Charlton"; }'
-
-    # then restart anything that needs restarting
-    killall SystemUIServer
-fi
-
-
 # then symlinks
 # bash
 ln -sf $SOURCE_PATH/_bash_profile $TARGET_PATH/.bash_profile
