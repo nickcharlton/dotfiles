@@ -59,6 +59,8 @@ let g:Powerline_symbols = 'fancy'
 " enable filetype plugins
 filetype on
 filetype plugin on
+set modeline " enable the mode line
+set modelines=2 " and look for the first two lines
 
 " system paste (disable autoindenting when pasting from the system)
 nnoremap <F2> :set invpaste paste?<CR>
