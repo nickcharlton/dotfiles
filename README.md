@@ -24,10 +24,10 @@ apt-get install vim vim-scripts tmux git
 
 ### OS X
 
+The included `Brewfile` lists all of the dependencies and extra taps:
+
 ```bash
-brew install ruby python
-brew install vim tmux tree reattach-to-user-namespace curl-ca-bundle
-brew install haskell-platform gfortran
+brew bundle
 ```
 
 ### Ruby / Python
@@ -35,7 +35,7 @@ brew install haskell-platform gfortran
 At a sort of 'operational minimum':
 
 ```bash
-gem install pry
+gem install bundler pry
 pip install awscli flake8 ipython virtualenv
 ```
 
