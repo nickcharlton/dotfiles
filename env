@@ -29,7 +29,7 @@ export DEBEMAIL=nick@nickcharlton.net
 #
 # Path
 #
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/bin:/sbin"
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/bin:/usr/sbin:/sbin"
 
 # haskell
 export PATH="$HOME/.cabal/bin:$PATH"
