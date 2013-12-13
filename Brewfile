@@ -20,6 +20,7 @@ install gibo
 install nmap
 install packer
 install redis
+install jsonpp
 
 # osx fixes
 install curl-ca-bundle
