@@ -1,0 +1,57 @@
+# vim: ft=sh:
+
+#
+# user-namespace - A compatibility function for OS X.
+#
+# This ensures that reattach-to-user-namespace isn't called if it is not being
+# executed on OS X.
+#
+# Sadly, it's also a bit of a mess. But, hey, it's bash.
+#
+
+function usage() {
+    echo "Usage: user-namespace [options] command args"
+    echo "  -h          print this help"
+    echo "  -l          instruct reattach-to-user-namespace it should use a login shell"
+}
+
+function command_local() {
+    local login="$1"
+    local command_and_args="$2"
+
+    if [ $(uname) = 'Darwin' ]; then
+        if [ "$login" = 1 ]; then
+            eval "reattach-to-user-namespace -l $command_and_args"
+        else
+            eval "reattach-to-user-namespace $command_and_args"
+        fi
+    else
+        eval "$command_and_args"
+    fi
+}
+
+if [ $# -gt 0 ]; then
+    # see if they asked for help
+    if [ "$1" = "-h" ]; then
+        usage
+    elif [ "$1" = '-l' ]; then
+        shift
+        local command_and_args=""
+        for i in "$@"; do
+            command_and_args="$command_and_args $i"
+        done
+
+        command_local 1 $command_and_args 
+    else
+        local command_and_args=""
+        for i in "$@"; do
+            command_and_args="$command_and_args $i"
+        done
+
+        command_local 0 $command_and_args
+    fi
+else
+    printf "No command was specified.\n\n"
+    usage
+fi
+
