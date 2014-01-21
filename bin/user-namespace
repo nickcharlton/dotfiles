@@ -36,14 +36,14 @@ if [ $# -gt 0 ]; then
         usage
     elif [ "$1" = '-l' ]; then
         shift
-        local command_and_args=""
+        command_and_args=""
         for i in "$@"; do
             command_and_args="$command_and_args $i"
         done
 
         command_local 1 $command_and_args 
     else
-        local command_and_args=""
+        command_and_args=""
         for i in "$@"; do
             command_and_args="$command_and_args $i"
         done
