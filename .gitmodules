@@ -16,3 +16,6 @@
 [submodule "vim/bundle/vim-json"]
 	path = vim/bundle/vim-json
 	url = git://github.com/elzr/vim-json.git
+[submodule "vim/bundle/vim-pandoc"]
+	path = vim/bundle/vim-pandoc
+	url = git://github.com/vim-pandoc/vim-pandoc.git
