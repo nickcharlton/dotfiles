@@ -98,3 +98,15 @@ let g:syntastic_warning_symbol='⚠'
 let g:syntastic_style_warning_symbol='⚠'
 
 let g:syntastic_check_on_open=1 " automatically check
+
+""""""""""""""""
+" tmuxline.vim "
+""""""""""""""""
+let g:tmuxline_preset = {
+      \'a'    : '#S:#I.#P',
+      \'b'    : '#H',
+      \'win'  : ['#I', '#W'],
+      \'cwin' : ['#I', '#W', '#F'],
+      \'y'    : '#(uptime | cut -d "," -f 3- | cut -d ":" -f2 | sed -e "s/^[ \t]*//")',
+      \'z'    : ['%a %d %b %Y', '%H:%M'],
+      \'options' : {'status-justify' : 'left'}}
