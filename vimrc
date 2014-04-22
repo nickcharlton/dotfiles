@@ -79,3 +79,12 @@ let g:gitgutter_eager=1 " update when tab/buffer changes
 
 let g:pandoc_no_folding=1 " don't autofold pandoc
 let g:pandoc_use_conceal=0 " disable conceal
+
+" show syntastic errors in the margin
+let g:syntastic_enable_signs=1
+let g:syntastic_error_symbol='✗'
+let g:syntastic_style_rror_symbol='✗'
+let g:syntastic_warning_symbol='⚠'
+let g:syntastic_style_warning_symbol='⚠'
+
+let g:syntastic_check_on_open=1 " automatically check
