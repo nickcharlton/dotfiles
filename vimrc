@@ -15,6 +15,7 @@ set encoding=utf-8 " have some unicode
 set number " show line numbers
 set ruler " show line/column numbers
 set cursorline " draw a line where the cursor is
+set laststatus=2 " show a permanent status line (for Airline)
 set backspace=indent,eol,start " make backspace act normally
 " go up and down by screen line
 nnoremap j gj
@@ -64,4 +65,7 @@ set undoreload=10000 " number of lines to save for undo
 """"""""""""""""""""""""
 " Plugin Configuration "
 """"""""""""""""""""""""
+let  g:airline_powerline_fonts=1 " use powerline fonts
+set noshowmode " don't show the mode selector twice
+set ttimeoutlen=50 " speed up coming out of insert
 
