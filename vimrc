@@ -44,12 +44,6 @@ set textwidth=80 " lines should be wrapped at 80 chars
 set formatoptions+=t " wrap at word boundaries
 set colorcolumn=80 " show a marker on the 80 column line
 
-""""""""""""""""""""
-" Filetype Plugins "
-""""""""""""""""""""
-filetype on
-filetype plugin on
-
 """"""""
 " Undo "
 """"""""
@@ -57,6 +51,17 @@ set undofile " save undo files after closing
 set undodir=$HOME/.vimundo " place to save undo files
 set undolevels=1000 " how many undos
 set undoreload=10000 " number of lines to save for undo
+
+""""""""""""""
+" Copy/Paste "
+""""""""""""""
+set pastetoggle=<F2>
+
+""""""""""""""""""""
+" Filetype Plugins "
+""""""""""""""""""""
+filetype on
+filetype plugin on
 
 """""""""""""""""""""""""""""""
 " Filetype Specific Overrides "
