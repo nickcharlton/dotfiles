@@ -28,8 +28,7 @@ ln -sf $DOTFILES/vim/ $HOME/.vim
 ln -sf $DOTFILES/_irssi/ $HOME/.irssi
 
 # tmux
-ln -sf $DOTFILES/tmux/tmux.conf $HOME/.tmux.conf
-ln -sf $DOTFILES/tmux/tmux-powerlinerc $HOME/.tmux-powerlinerc
+ln -sf $DOTFILES/tmux.conf $HOME/.tmux.conf
 
 # ruby
 ln -sf $DOTFILES/ruby/gemrc $HOME/.gemrc
