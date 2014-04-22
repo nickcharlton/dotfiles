@@ -21,8 +21,8 @@ ln -sf $DOTFILES/git/gitconfig $HOME/.gitconfig
 ln -sf $DOTFILES/git/gitignore $HOME/.gitignore
 
 # vim
-ln -sf $DOTFILES/_vimrc $HOME/.vimrc
-ln -sf $DOTFILES/_vim/ $HOME/.vim
+ln -sf $DOTFILES/vimrc $HOME/.vimrc
+ln -sf $DOTFILES/vim/ $HOME/.vim
 
 # irssi
 ln -sf $DOTFILES/_irssi/ $HOME/.irssi
