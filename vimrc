@@ -1,3 +1,8 @@
+""""""""""""
+" Pathogen "
+""""""""""""
+execute pathogen#infect()
+
 """""""""""""""""
 " File Encoding "
 """""""""""""""""
