@@ -69,3 +69,5 @@ let  g:airline_powerline_fonts=1 " use powerline fonts
 set noshowmode " don't show the mode selector twice
 set ttimeoutlen=50 " speed up coming out of insert
 
+let g:gitgutter_realtime=1 " update when typing stops
+let g:gitgutter_eager=1 " update when tab/buffer changes
