@@ -39,6 +39,3 @@ ln -sf $DOTFILES/lldbinit $HOME/.lldbinit
 
 # bin/
 ln -sf $DOTFILES/bin/ $HOME/bin
-
-
-
