@@ -66,6 +66,16 @@ filetype plugin on " from plugins, too
 """""""""""""""""""""""""""""""
 " Filetype Specific Overrides "
 """""""""""""""""""""""""""""""
+" ruby should be two spaces per tab
+autocmd FileType ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2
+" XML/HTML should be two spaces per tab
+autocmd FileType html,xhtml,htmldjango,jinjahtml setlocal shiftwidth=2 tabstop=2 softtabstop=2
+" detect CocoaPods files
+au BufNewFile,BufRead Podfile,*.podspec set filetype=ruby
+" detect Vagrant files
+au BufNewFile,BufRead Vagrantfile set filetype=ruby
+" detect Homebrew files
+au BufNewFile,BufRead Berksfile set filetype=ruby
 
 """"""""""""""""""""""""
 " Plugin Configuration "
