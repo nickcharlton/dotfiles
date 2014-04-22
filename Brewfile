@@ -9,6 +9,7 @@ install gfortran
 install ruby
 install python
 install haskell-platform
+install go
 
 # utilities
 install tmux
