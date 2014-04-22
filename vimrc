@@ -2,6 +2,7 @@
 " Pathogen "
 """"""""""""
 execute pathogen#infect()
+call pathogen#helptags()
 
 """""""""""""""""
 " File Encoding "
