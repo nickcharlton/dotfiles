@@ -1,33 +1,9 @@
-[submodule "_vim/bundle/delmitmate"]
-	path = _vim/bundle/delmitmate
-	url = git://github.com/Raimondi/delimitMate.git
-[submodule "_vim/bundle/closetag"]
-	path = _vim/bundle/closetag
-	url = git://github.com/docunext/closetag.vim.git
 [submodule "_irssi/solarized"]
 	path = _irssi/solarized
 	url = git://github.com/huyz/irssi-colors-solarized.git
-[submodule "_vim/bundle/vim-less"]
-	path = _vim/bundle/vim-less
-	url = git://github.com/groenewege/vim-less.git
-[submodule "_vim/bundle/Vagrantfile"]
-	path = _vim/bundle/Vagrantfile
-	url = git://github.com/robbevan/Vagrantfile.vim.git
-[submodule "_vim/bundle/vim-powerline"]
-	path = _vim/bundle/vim-powerline
-	url = git://github.com/Lokaltog/vim-powerline.git
 [submodule "tmux/tmux-powerline"]
 	path = tmux/tmux-powerline
 	url = git://github.com/erikw/tmux-powerline.git
-[submodule "_vim/bundle/vim-pandoc"]
-	path = _vim/bundle/vim-pandoc
-	url = git://github.com/vim-pandoc/vim-pandoc.git
-[submodule "_vim/bundle/syntastic"]
-	path = _vim/bundle/syntastic
-	url = git://github.com/scrooloose/syntastic.git
-[submodule "_vim/bundle/vim-json"]
-	path = _vim/bundle/vim-json
-	url = git://github.com/elzr/vim-json.git
 [submodule "zsh/zprezto"]
 	path = zsh/zprezto
 	url = git://github.com/sorin-ionescu/prezto.git
