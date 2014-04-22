@@ -1,9 +1,6 @@
 [submodule "_irssi/solarized"]
 	path = _irssi/solarized
 	url = git://github.com/huyz/irssi-colors-solarized.git
-[submodule "tmux/tmux-powerline"]
-	path = tmux/tmux-powerline
-	url = git://github.com/erikw/tmux-powerline.git
 [submodule "zsh/zprezto"]
 	path = zsh/zprezto
 	url = git://github.com/sorin-ionescu/prezto.git
