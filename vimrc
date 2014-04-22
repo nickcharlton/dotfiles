@@ -102,11 +102,24 @@ let g:syntastic_check_on_open=1 " automatically check
 """"""""""""""""
 " tmuxline.vim "
 """"""""""""""""
+let g:airline#extensions#tmuxline#enabled=0 " define the theme from the snapshot
 let g:tmuxline_preset = {
       \'a'    : '#S:#I.#P',
       \'b'    : '#H',
-      \'win'  : ['#I', '#W'],
-      \'cwin' : ['#I', '#W', '#F'],
+      \'win'  : ['#I:#W'],
+      \'cwin' : ['#I:#W #F'],
       \'y'    : '#(uptime | cut -d "," -f 3- | cut -d ":" -f2 | sed -e "s/^[ \t]*//")',
       \'z'    : ['%a %d %b %Y', '%H:%M'],
       \'options' : {'status-justify' : 'left'}}
+
+let g:tmuxline_theme = {
+    \   'a'    : [ 234, 148 ],
+    \   'b'    : [ 0,  33 ],
+    \   'c'    : [ 255, 235 ],
+    \   'x'    : [ 255, 235 ],
+    \   'y'    : [ 167, 237 ],
+    \   'z'    : [ 136, 235 ],
+    \   'win'  : [ 244, 235 ],
+    \   'cwin' : [ 166, 235 ],
+    \   'bg'   : [ 244, 236 ],
+    \ }
