@@ -55,13 +55,13 @@ set undoreload=10000 " number of lines to save for undo
 """"""""""""""
 " Copy/Paste "
 """"""""""""""
-set pastetoggle=<F2>
+set pastetoggle=<F2> " use F2 to toggle paste
 
 """"""""""""""""""""
 " Filetype Plugins "
 """"""""""""""""""""
-filetype on
-filetype plugin on
+filetype on " detect and use filetypes
+filetype plugin on " from plugins, too
 
 """""""""""""""""""""""""""""""
 " Filetype Specific Overrides "
