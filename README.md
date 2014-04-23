@@ -36,7 +36,7 @@ At a sort of 'operational minimum':
 
 ```bash
 gem install bundler pry
-pip install awscli flake8 ipython virtualenv
+pip install awscli flake8 ipython virtualenv tabulate numpy scipy
 ```
 
 ## License
