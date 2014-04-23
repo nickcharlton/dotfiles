@@ -1,6 +1,6 @@
 # dotfiles
 
-A bunch of impossible to live without config files. `bootstrap.sh` symlinks 
+A bunch of impossible to live without config files. `bootstrap.sh` symlinks
 everything. `USAGE.md` gives some often handy commands.
 
 ## Install/Setup
