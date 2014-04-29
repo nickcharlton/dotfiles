@@ -26,6 +26,8 @@ export EDITOR=vim
 export DEBFULLNAME="Nick Charlton"
 export DEBEMAIL=nick@nickcharlton.net
 
+export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
+
 #
 # Path
 #
