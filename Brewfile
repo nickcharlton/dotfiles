@@ -16,7 +16,6 @@ install tmux
 install vim
 install tree
 install htop-osx
-install appledoc
 install gibo
 install nmap
 install packer
