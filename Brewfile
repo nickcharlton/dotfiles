@@ -2,7 +2,7 @@
 tap homebrew/binary
 
 # compilers
-install apple-gcc42
+install gcc49
 install gfortran
 
 # languages and runtimes
