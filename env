@@ -43,6 +43,9 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
 if [[ "$PLATFORM" == "osx" ]]; then
+    # xcode and xcode tools
+    export XCODE="`xcode-select --print-path`"
+    export PATH="$XCODE/Tools:$PATH"
     # ruby gems
     export PATH="/usr/local/opt/ruby/bin:$PATH"
     # ruby ssl fix
