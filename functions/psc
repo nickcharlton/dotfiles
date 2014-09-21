@@ -1,0 +1,19 @@
+# vim: ft=sh:
+
+#
+# psc - List the commands associated with a process.
+#
+# Originally from: http://furbo.org/2014/09/03/the-terminal/
+#
+# v1.0.0 2014-09-21 - Nick Charlton
+#                     Conversion to a zsh function and more modern syntax.
+#
+function psc {
+    local ps_cmd="ps axo pid,ppid,user,command"
+
+    if [ "$1" = "" ]; then
+        eval $ps_cmd
+    else
+        eval $ps_cmd | grep "$1" | grep -v "grep $1" | grep -v "psc"
+    fi
+}
