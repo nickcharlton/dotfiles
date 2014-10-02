@@ -48,6 +48,8 @@ if [[ "$PLATFORM" == "osx" ]]; then
     export PATH="$XCODE/Tools:$PATH"
     # ruby gems
     export PATH="/usr/local/opt/ruby/bin:$PATH"
+    # MacTeX
+    export PATH="/usr/local/texlive/2014/bin/x86_64-darwin:$PATH"
     # ruby ssl fix
     export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 fi
