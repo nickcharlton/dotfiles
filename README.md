@@ -35,7 +35,7 @@ brew bundle
 At a sort of 'operational minimum':
 
 ```bash
-gem install bundler pry
+gem install bundler pry rubocop
 pip install awscli flake8 ipython virtualenv tabulate numpy scipy
 ```
 

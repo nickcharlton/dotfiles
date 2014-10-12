@@ -101,6 +101,9 @@ let g:syntastic_style_warning_symbol='⚠'
 
 let g:syntastic_check_on_open=1 " automatically check
 
+" enable specific syntastic checkers
+let g:syntastic_ruby_checkers=['mri', 'rubocop']
+
 """"""""""""""""
 " tmuxline.vim "
 """"""""""""""""
