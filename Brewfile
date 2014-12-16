@@ -2,13 +2,12 @@
 tap homebrew/binary
 
 # compilers
-install gcc49
-install gfortran
+install gcc
 
 # languages and runtimes
 install ruby
 install python
-install haskell-platform
+install ghc cabal-install
 install go
 
 # utilities
@@ -23,5 +22,4 @@ install redis
 install jsonpp
 
 # osx fixes
-install curl-ca-bundle
 install reattach-to-user-namespace
