@@ -89,8 +89,10 @@ set ttimeoutlen=50 " speed up coming out of insert
 let g:gitgutter_realtime=1 " update when typing stops
 let g:gitgutter_eager=1 " update when tab/buffer changes
 
-let g:pandoc_no_folding=1 " don't autofold pandoc
-let g:pandoc_use_conceal=0 " disable conceal
+let g:pandoc#modules#disabled = ['folding', 'bibliographies']
+let g:pandoc#formatting#mode = 'hA' " enable smart hard wrapping
+let g:pandoc#formatting#smart_autoformat_on_cursormoved = 1
+let g:pandoc#syntax#conceal#use = 0 " disable conceal
 
 " show syntastic errors in the margin
 let g:syntastic_enable_signs=1
