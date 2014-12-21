@@ -20,6 +20,7 @@ install nmap
 install packer
 install redis
 install jsonpp
+install pandoc
 
 # osx fixes
 install reattach-to-user-namespace
