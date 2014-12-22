@@ -90,7 +90,7 @@ let g:gitgutter_realtime=1 " update when typing stops
 let g:gitgutter_eager=1 " update when tab/buffer changes
 
 let g:pandoc#modules#disabled = ['folding', 'bibliographies']
-let g:pandoc#formatting#mode = 'hA' " enable smart hard wrapping
+let g:pandoc#formatting#mode = 'ha' " enable auto hard wrapping
 let g:pandoc#formatting#smart_autoformat_on_cursormoved = 1
 let g:pandoc#syntax#conceal#use = 0 " disable conceal
 
