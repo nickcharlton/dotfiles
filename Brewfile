@@ -9,6 +9,7 @@ install ruby
 install python
 install ghc cabal-install
 install go
+install chruby ruby-install
 
 # utilities
 install tmux

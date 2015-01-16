@@ -16,3 +16,6 @@ fi
 # pull in aliases
 source $HOME/.aliases
 
+# configure chruby
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+source /usr/local/opt/chruby/share/chruby/auto.sh
