@@ -5,11 +5,10 @@ tap homebrew/binary
 install gcc
 
 # languages and runtimes
-install ruby
+install chruby ruby-install
 install python
 install ghc cabal-install
 install go
-install chruby ruby-install
 
 # utilities
 install tmux

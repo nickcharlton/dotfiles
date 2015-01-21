@@ -32,12 +32,19 @@ brew bundle
 
 ### Ruby / Python
 
-At a sort of 'operational minimum':
+The system Ruby is almost always fine for the standard set of tools:
 
 ```bash
-gem install bundler pry rubocop
+sudo gem install cocoapods
+gem install pry rubocop
 pip install awscli flake8 ipython virtualenv tabulate numpy scipy
 ```
+
+(These are all used as normal command line utilities and should be treated like
+that).
+
+For development, further Rubies should be installed with `ruby-install` and
+switched to. Inside here, install `bundler` and then use as normal.
 
 ## License
 
