@@ -13,6 +13,7 @@ install go
 # utilities
 install tmux
 install vim
+install git
 install git-extras
 install tree
 install htop-osx
