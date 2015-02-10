@@ -21,6 +21,7 @@ install gibo
 install nmap
 install packer
 install redis
+install postgresql
 install jsonpp
 install pandoc
 
