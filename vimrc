@@ -20,6 +20,8 @@ set backspace=indent,eol,start " make backspace act normally
 " go up and down by screen line
 nnoremap j gj
 nnoremap k gk
+set listchars=tab:>-,trail:- " highlight tabs and trailing spaces
+set list
 
 """"""""""""""""""""""""""""""""
 " Syntax Highlighting & Colors "
