@@ -31,3 +31,6 @@
 [submodule "vim/bundle/vim-pandoc-syntax"]
 	path = vim/bundle/vim-pandoc-syntax
 	url = git://github.com/vim-pandoc/vim-pandoc-syntax.git
+[submodule "vim/bundle/vim-lexical"]
+	path = vim/bundle/vim-lexical
+	url = git://github.com/reedes/vim-lexical.git
