@@ -17,3 +17,5 @@
     trustExitCode = true
 [credential]
     helper = store
+[status]
+    showUntrackedFiles = all
