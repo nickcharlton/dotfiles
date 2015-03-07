@@ -68,6 +68,8 @@ filetype plugin on " from plugins, too
 """""""""""""""""""""""""""""""
 " Filetype Specific Overrides "
 """""""""""""""""""""""""""""""
+" better spelling for text and markdown
+autocmd FileType text,markdown,mkd,pandoc call lexical#init()
 " ruby should be two spaces per tab
 autocmd FileType ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2
 " XML/HTML should be two spaces per tab
@@ -90,6 +92,8 @@ set ttimeoutlen=50 " speed up coming out of insert
 
 let g:gitgutter_realtime=1 " update when typing stops
 let g:gitgutter_eager=1 " update when tab/buffer changes
+
+let g:lexical#spelllang = ['en_us','en_gb',]
 
 let g:pandoc#modules#disabled = ['folding', 'bibliographies']
 let g:pandoc#formatting#mode = 'ha' " enable auto hard wrapping
