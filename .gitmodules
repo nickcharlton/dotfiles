@@ -34,3 +34,6 @@
 [submodule "vim/bundle/vim-lexical"]
 	path = vim/bundle/vim-lexical
 	url = git://github.com/reedes/vim-lexical.git
+[submodule "vim/bundle/vim-rabl"]
+	path = vim/bundle/vim-rabl
+	url = git@github.com:yaymukund/vim-rabl.git
