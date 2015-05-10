@@ -41,6 +41,10 @@ export PATH="/usr/local/heroku/bin:$PATH"
 mkdir -p $HOME/go # make sure it exists
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+# python/virtualenv
+export WORKON_HOME=~/.virtualenvs
+mkdir -p $WORKON_HOME
+source /usr/local/bin/virtualenvwrapper.sh
 
 if [[ "$PLATFORM" == "osx" ]]; then
     # xcode and xcode tools
