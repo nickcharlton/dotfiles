@@ -1,7 +1,8 @@
-# 
+#
 # Sets OS X defaults.
 #
 # Much are from: https://github.com/mathiasbynens/dotfiles/blob/master/.osx
+#                https://gist.github.com/brandonb927/3195465
 #
 
 #
@@ -10,18 +11,18 @@
 
 # remove shadows from screenshots
 defaults write com.apple.screencapture disable-shadow -bool true
-
 # disable menu bar transparency
 defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
-
 # always expand save dialog
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
-
 # save to disk, not iCloud by default
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
-
 # set the help viewer windows to be non-floating
 defaults write com.apple.helpviewer DevMode -bool true
+# show IP, hostname, OS version, etc in the lock window
+defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
+# toggle dark mode with Ctrl+Opt+Cmd+t
+defaults write /Library/Preferences/.GlobalPreferences.plist _HIEnableThemeSwitchHotKey -bool true
 
 #
 # Trackpad, Mouse, Keyboard and other input devices
