@@ -40,3 +40,6 @@
 [submodule "vim/bundle/vim-cucumber"]
 	path = vim/bundle/vim-cucumber
 	url = git://github.com/tpope/vim-cucumber.git
+[submodule "vim/bundle/file-line"]
+	path = vim/bundle/file-line
+	url = git://github.com/bogado/file-line.git
