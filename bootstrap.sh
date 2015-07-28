@@ -39,3 +39,6 @@ ln -sf $DOTFILES/lldbinit $HOME/.lldbinit
 
 # bin/
 ln -sf $DOTFILES/bin/ $HOME/bin
+
+# chef
+ln -sf $DOTFILES/chef $HOME/.chef
