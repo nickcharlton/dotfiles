@@ -49,6 +49,8 @@ export PATH=$PATH:$GOPATH/bin
 export WORKON_HOME=~/.virtualenvs
 mkdir -p $WORKON_HOME
 source /usr/local/bin/virtualenvwrapper.sh
+# chefkdk
+export PATH="$PATH:/opt/chefdk/embedded/bin"
 
 if [[ "$PLATFORM" == "osx" ]]; then
     # xcode and xcode tools
