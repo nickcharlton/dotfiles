@@ -1,5 +1,6 @@
 # more sources
-tap homebrew/binary
+tap homebrew/services
+install caskroom/cask/brew-cask
 
 # compilers
 install gcc
