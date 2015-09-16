@@ -59,6 +59,19 @@ set undoreload=10000 " number of lines to save for undo
 """"""""""""""
 set pastetoggle=<F2> " use F2 to toggle paste
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Split Panes                                                             "
+" https://robots.thoughtbot.com/vim-splits-move-faster-and-more-naturally "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set splitbelow
+set splitright
+
+" ctrl-j to go down, not ctrl-w + j
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
 """"""""""""""""""""
 " Filetype Plugins "
 """"""""""""""""""""
