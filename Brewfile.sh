@@ -15,6 +15,7 @@ brew install vim
 brew install git
 brew install git-extras
 brew install tree
+brew install ack
 brew install htop-osx
 brew install gibo
 brew install nmap
