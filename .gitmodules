@@ -43,3 +43,6 @@
 [submodule "vim/bundle/file-line"]
 	path = vim/bundle/file-line
 	url = git://github.com/bogado/file-line.git
+[submodule "vim/bundle/supertab"]
+	path = vim/bundle/supertab
+	url = git://github.com/ervandew/supertab.git
