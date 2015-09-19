@@ -1,4 +1,4 @@
-# 
+#
 # Git
 #
 
@@ -13,7 +13,7 @@ alias gu='git reset HEAD~1'
 
 #
 # ls
-# 
+#
 alias ll='ls -lhFg'
 alias la='ls -alhFg'
 
@@ -21,3 +21,8 @@ alias la='ls -alhFg'
 # Gist
 #
 alias gist='gist -cps'
+
+#
+# Bundle
+#
+alias be='bundle exec'
