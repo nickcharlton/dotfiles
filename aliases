@@ -20,7 +20,7 @@ alias la='ls -alhFg'
 #
 # Gist
 #
-alias gist='gist -cps'
+alias gist='gist -p'
 
 #
 # Bundle
