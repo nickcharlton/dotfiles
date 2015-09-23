@@ -37,6 +37,8 @@ export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
 #
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/bin:/usr/sbin:/sbin"
 
+# dotfiles bin
+export PATH="$DOTFILES/bin:$PATH"
 # haskell
 export PATH="$HOME/.cabal/bin:$PATH"
 # heroku toolbelt
