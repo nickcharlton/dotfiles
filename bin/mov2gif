@@ -15,3 +15,5 @@ ffmpeg -v warning -i $1 -vf "$filters,palettegen" -y $palette
 ffmpeg -v warning -i $1 -i $palette -lavfi "$filters [x]; [x][1:v] paletteuse" -y ffmpeg_output.gif
 
 gifsicle --colors 128 -O3 -o $2 ffmpeg_output.gif
+
+rm ffmpeg_output.gif
