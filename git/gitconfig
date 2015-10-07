@@ -19,3 +19,5 @@
     helper = store
 [status]
     showUntrackedFiles = all
+[fetch]
+    prune = true
