@@ -21,3 +21,5 @@
     showUntrackedFiles = all
 [fetch]
     prune = true
+[grep]
+    lineNumber = true
