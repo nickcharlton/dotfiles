@@ -126,7 +126,7 @@ let g:syntastic_check_on_open=1 " automatically check
 
 " enable specific syntastic checkers
 let g:syntastic_ruby_checkers=['mri', 'rubocop']
-let g:syntastic_ruby_rubocop_exec='/Users/nickcharlton/.gem/ruby/2.2.2/bin/rubocop'
+let g:syntastic_ruby_rubocop_exec='/Users/nickcharlton/.gem/ruby/2.2.3/bin/rubocop'
 
 " enable SuperTab's context mode
 let g:SuperTabDefaultCompletionType = 'context'
