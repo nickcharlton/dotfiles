@@ -32,6 +32,8 @@ export DEBEMAIL=$EMAIL
 
 export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
 
+export ATLAS_USER=nickcharlton
+
 #
 # Path
 #
