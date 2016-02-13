@@ -26,3 +26,5 @@
     lineNumber = true
 [commit]
     gpgsign = true
+[rebase]
+    autosquash = true
