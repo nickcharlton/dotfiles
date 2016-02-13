@@ -28,3 +28,5 @@
     gpgsign = true
 [rebase]
     autosquash = true
+[merge]
+    ff = only
