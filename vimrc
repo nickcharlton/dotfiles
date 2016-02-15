@@ -85,6 +85,8 @@ filetype plugin on " from plugins, too
 autocmd FileType text,markdown,mkd,pandoc call lexical#init()
 " ruby should be two spaces per tab
 autocmd FileType ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2
+" javascript should be two spaces per tab
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2
 " yaml should be two spaces per tab
 autocmd FileType yaml setlocal shiftwidth=2 tabstop=2 softtabstop=2
 " XML/HTML should be two spaces per tab
