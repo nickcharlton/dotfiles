@@ -11,3 +11,4 @@ _vim/bundle/snipmate/doc/tags
 
 # chef
 chef/checksums
+chef/encrypted_data_bag_secret
