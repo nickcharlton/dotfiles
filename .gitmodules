@@ -55,3 +55,6 @@
 [submodule "vim/bundle/vim-airline-themes"]
 	path = vim/bundle/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes
+[submodule "vim/bundle/vim-commentry"]
+	path = vim/bundle/vim-commentry
+	url = https://github.com/tpope/vim-commentary.git
