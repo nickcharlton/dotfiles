@@ -58,6 +58,7 @@ set undoreload=10000 " number of lines to save for undo
 " Copy/Paste "
 """"""""""""""
 set pastetoggle=<F2> " use F2 to toggle paste
+vnoremap <C-c> "*y
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Split Panes                                                             "
