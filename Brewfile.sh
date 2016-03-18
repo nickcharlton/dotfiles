@@ -24,6 +24,7 @@ brew install redis
 brew install postgresql
 brew install jsonpp
 brew install pandoc
+brew install zsh-syntax-highlighting
 
 # osx fixes
 brew install reattach-to-user-namespace
