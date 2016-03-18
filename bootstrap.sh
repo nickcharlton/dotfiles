@@ -31,6 +31,7 @@ ln -sf $DOTFILES/tmux.conf $HOME/.tmux.conf
 # ruby
 ln -sf $DOTFILES/ruby/gemrc $HOME/.gemrc
 ln -sf $DOTFILES/ruby/rubocop.yml $HOME/.rubocop.yml
+ln -sf $DOTFILES/ruby/ruby-version $HOME/.ruby-version
 
 # lldbinit
 ln -sf $DOTFILES/lldbinit $HOME/.lldbinit
