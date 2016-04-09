@@ -28,3 +28,8 @@ brew install zsh-syntax-highlighting
 
 # osx fixes
 brew install reattach-to-user-namespace
+
+# quicklook plugins
+brew cask install qlstephen
+brew cask install quicklook-csv
+brew cask install qlimagesize
