@@ -19,9 +19,6 @@
 [submodule "vim/bundle/tmuxline.vim"]
 	path = vim/bundle/tmuxline.vim
 	url = git://github.com/edkolev/tmuxline.vim
-[submodule "vim/bundle/vim-golang"]
-	path = vim/bundle/vim-golang
-	url = git://github.com/jnwhiteh/vim-golang
 [submodule "vim/bundle/vim-coffee-script"]
 	path = vim/bundle/vim-coffee-script
 	url = git://github.com/kchmck/vim-coffee-script.git
