@@ -14,6 +14,8 @@ cookbook_copyright ENV['NAME']
 cookbook_email ENV['EMAIL']
 cookbook_license 'MIT'
 
+cookbook_path ["/Users/nickcharlton/Dropbox/Projects"]
+
 # AWS
 knife[:aws_access_key_id] = "#{ENV['AWS_ACCESS_KEY_ID']}"
 knife[:aws_secret_access_key] = "#{ENV['AWS_SECRET_ACCESS_KEY']}"
