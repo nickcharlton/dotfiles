@@ -11,6 +11,8 @@
     excludesfile = /Users/nickcharlton/.gitignore
 [push]
     default = current
+[diff]
+    compactionHeuristic = true
 [difftool "Kaleidoscope"]
     cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [mergetool "Kaleidoscope"]
