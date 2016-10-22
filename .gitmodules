@@ -61,3 +61,6 @@
 [submodule "vim/bundle/vim-go"]
 	path = vim/bundle/vim-go
 	url = https://github.com/fatih/vim-go.git
+[submodule "zsh/zprezto"]
+	path = zsh/zprezto
+	url = git@github.com:sorin-ionescu/prezto.git
