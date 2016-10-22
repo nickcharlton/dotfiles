@@ -2,6 +2,11 @@
 # Executes commands at the start of an interactive session.
 #
 
+# load in the share environment variables
+if [[ -f ~/.env ]]; then
+    source ~/.env
+fi
+
 # add the custom function path
 fpath=($DOTFILES/functions $DOTFILES/zsh/functions $fpath)
 
