@@ -134,6 +134,10 @@ let g:syntastic_ruby_rubocop_exec='/Users/nickcharlton/.gem/ruby/2.3.0/bin/ruboc
 " enable SuperTab's context mode
 let g:SuperTabDefaultCompletionType = 'context'
 
+" ctrlp.vim
+let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g ""'
+let g:ctrlp_use_caching = 0
+
 """"""""""""""""
 " tmuxline.vim "
 """"""""""""""""
