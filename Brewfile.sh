@@ -34,3 +34,5 @@ brew install reattach-to-user-namespace
 brew cask install qlstephen
 brew cask install quicklook-csv
 brew cask install qlimagesize
+
+brew cask install fastlane
