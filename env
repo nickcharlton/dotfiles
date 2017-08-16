@@ -8,15 +8,21 @@ export DOTFILES="$HOME/.dotfiles"
 #
 # System
 #
-export PLATFORM='unknown'
-uname_str=$(uname)
-if [[ "$uname_str" == 'Darwin' ]]; then
-    export PLATFORM='osx'
-elif [[ "$uname_str" == 'Linux' ]]; then
-    export PLATFORM='linux'
-elif [[ "$uname_str" == 'FreeBSD' ]]; then
-    export PLATFORM='freebsd'
-fi
+case $(uname)
+    Darwin)
+        PLATFORM=osx
+        ;;
+    Linux)
+        PLATFORM=linux
+        ;;
+    FreeBSD)
+        PLATFORM=freebsd
+        ;;
+    *)
+        PLATFORM=unknown
+        ;;
+esac
+export PLATFORM
 
 #
 # User
