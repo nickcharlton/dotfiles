@@ -26,3 +26,8 @@ alias gist='gist -p'
 # Bundle
 #
 alias be='bundle exec'
+
+#
+# Tree
+#
+alias tree='tree -I "node_modules|tmp"'
