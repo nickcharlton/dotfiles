@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# Return the executable and PID of a program using a certain port.
+#
+# Usage: which-port 4200
+
+lsof -n -i:$1 | grep LISTEN
