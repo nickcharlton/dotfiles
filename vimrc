@@ -91,7 +91,7 @@ autocmd FileType javascript,json setlocal shiftwidth=2 tabstop=2 softtabstop=2
 " yaml should be two spaces per tab
 autocmd FileType yaml setlocal shiftwidth=2 tabstop=2 softtabstop=2
 " XML/HTML should be two spaces per tab
-autocmd FileType html,xhtml,htmldjango,jinjahtml,haml setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType html,xhtml,htmldjango,jinjahtml,haml,html.handlebars setlocal shiftwidth=2 tabstop=2 softtabstop=2
 " erb/scss should be two spaces per tab
 autocmd FileType eruby,scss setlocal shiftwidth=2 tabstop=2 softtabstop=2
 " detect CocoaPods files
