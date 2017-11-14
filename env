@@ -8,7 +8,7 @@ export DOTFILES="$HOME/.dotfiles"
 #
 # System
 #
-case $(uname)
+case $(uname) in
     Darwin)
         PLATFORM=osx
         ;;
