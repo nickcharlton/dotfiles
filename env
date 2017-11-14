@@ -53,8 +53,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 mkdir -p $HOME/go # make sure it exists
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
-# chefkdk
-export PATH="$PATH:/opt/chefdk/embedded/bin"
 
 if [[ "$PLATFORM" == "osx" ]]; then
     # xcode and xcode tools

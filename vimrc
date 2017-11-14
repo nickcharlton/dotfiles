@@ -98,8 +98,6 @@ autocmd FileType eruby,scss setlocal shiftwidth=2 tabstop=2 softtabstop=2
 au BufNewFile,BufRead Podfile,*.podspec set filetype=ruby
 " detect Vagrant files
 au BufNewFile,BufRead Vagrantfile set filetype=ruby
-" detect Homebrew files
-au BufNewFile,BufRead Berksfile set filetype=ruby
 
 """"""""""""""""""""""""
 " Plugin Configuration "

@@ -35,6 +35,3 @@ ln -sf $DOTFILES/ruby/ruby-version $HOME/.ruby-version
 
 # bin/
 ln -sf $DOTFILES/bin/ $HOME/bin
-
-# chef
-ln -sf $DOTFILES/chef $HOME/.chef
