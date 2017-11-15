@@ -1,3 +1,6 @@
+" Leader
+let mapleader = " "
+
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
@@ -20,6 +23,11 @@ nnoremap j gj
 nnoremap k gk
 set list listchars=tab:→\ ,trail:· " highlight tabs and trailing spaces
 set list
+set showcmd " display incomplete commands
+set incsearch " do incremental searching
+set autowrite " Automatically :write before running commands
+
+nnoremap <Leader><Leader> <c-^> " Switch between the last two files
 
 """"""""""""""""""""""""""""""""
 " Syntax Highlighting & Colors "
@@ -31,11 +39,10 @@ colorscheme solarized " set solarized
 """""""""""""
 " Indenting "
 """""""""""""
-set tabstop=4 " 4 columns is a tab
-set shiftwidth=4 " set the same for auto indenting
-set softtabstop=4 " ensure we always use spaces for indenting
-set expandtab " when using tab, use the tabstop value of spaces
-set autoindent " attempt to indent automatically
+set tabstop=2 " 2 spaces to a tab
+set shiftwidth=2 " and again
+set shiftround
+set expandtab
 
 """""""""""""""""
 " Line Wrapping "
@@ -71,36 +78,65 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+"""""""""""""""""""""""""""""""""""""""""""""""""
+" Search with The Silver Searcher               "
+" https://github.com/ggreer/the_silver_searcher "
+"""""""""""""""""""""""""""""""""""""""""""""""""
+if executable('ag')
+  " Use Ag over Grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag --literal --files-with-matches --nocolor --hidden --filename-pattern "" %s'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+
+  if !exists(":Ag")
+    command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+    nnoremap \ :Ag<SPACE>
+  endif
+endif
+
 """"""""""""""""""""
 " Filetype Plugins "
 """"""""""""""""""""
-filetype on " detect and use filetypes
-filetype plugin on " from plugins, too
+filetype plugin indent on " detect and use filetypes
 
-"""""""""""""""""""""""""""""""
-" Filetype Specific Overrides "
-"""""""""""""""""""""""""""""""
-" better spelling for text and markdown
-autocmd FileType text,markdown,mkd,pandoc call lexical#init()
-" ruby should be two spaces per tab
-autocmd FileType ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2
-" javascript should be two spaces per tab
-autocmd FileType javascript,json setlocal shiftwidth=2 tabstop=2 softtabstop=2
-" yaml should be two spaces per tab
-autocmd FileType yaml setlocal shiftwidth=2 tabstop=2 softtabstop=2
-" XML/HTML should be two spaces per tab
-autocmd FileType html,xhtml,htmldjango,jinjahtml,haml,html.handlebars setlocal shiftwidth=2 tabstop=2 softtabstop=2
-" erb/scss should be two spaces per tab
-autocmd FileType eruby,scss setlocal shiftwidth=2 tabstop=2 softtabstop=2
-" detect CocoaPods files
-au BufNewFile,BufRead Podfile,*.podspec set filetype=ruby
-" detect Vagrant files
-au BufNewFile,BufRead Vagrantfile set filetype=ruby
+augroup vimrcEx
+  autocmd!
+
+  " When editing a file, always jump to the last known cursor position.
+  " Don't do it for commit messages, when the position is invalid, or when
+  " inside an event handler (happens when dropping a file on gvim).
+  autocmd BufReadPost *
+    \ if &ft != 'gitcommit' && line("'\"") > 0 && line("'\"") <= line("$") |
+    \   exe "normal g`\"" |
+    \ endif
+
+  " Set syntax highlighting for specific file types
+  autocmd BufRead,BufNewFile Appraisals,Podfile,*.podspec,Vagrantfile set filetype=ruby
+  autocmd BufRead,BufNewFile *.md set filetype=markdown
+  autocmd BufRead,BufNewFile .{jscs,jshint,eslint}rc set filetype=json
+  autocmd FileType text,markdown,mkd,pandoc call lexical#init()
+
+  " ALE linting events
+  if g:has_async
+    set updatetime=1000
+    let g:ale_lint_on_text_changed = 0
+    autocmd CursorHold * call ale#Lint()
+    autocmd CursorHoldI * call ale#Lint()
+    autocmd InsertEnter * call ale#Lint()
+    autocmd InsertLeave * call ale#Lint()
+  else
+    echoerr "This requires NeoVim or Vim 8"
+  endif
+augroup END
 
 """"""""""""""""""""""""
 " Plugin Configuration "
 """"""""""""""""""""""""
-let  g:airline_powerline_fonts=1 " use powerline fonts
+let g:airline_powerline_fonts=1 " use powerline fonts
 set noshowmode " don't show the mode selector twice
 set ttimeoutlen=50 " speed up coming out of insert
 
@@ -114,27 +150,25 @@ let g:pandoc#formatting#mode = 'ha' " enable auto hard wrapping
 let g:pandoc#formatting#smart_autoformat_on_cursormoved = 1
 let g:pandoc#syntax#conceal#use = 0 " disable conceal
 
-" show syntastic errors in the margin
-let g:syntastic_enable_signs=1
-let g:syntastic_error_symbol='✗'
-let g:syntastic_style_rror_symbol='✗'
-let g:syntastic_warning_symbol='⚠'
-let g:syntastic_style_warning_symbol='⚠'
-
-let g:syntastic_check_on_open=1 " automatically check
-
-" enable specific syntastic checkers
-let g:syntastic_ruby_checkers=['mri', 'rubocop']
-let g:syntastic_ruby_rubocop_exec='/Users/nickcharlton/.gem/ruby/2.4.0/bin/rubocop'
+" enable airline with ALE
+let g:airline#extensions#ale#enabled = 1
 
 " enable SuperTab's context mode
 let g:SuperTabDefaultCompletionType = 'context'
 
-" ctrlp.vim
-let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g ""'
-let g:ctrlp_use_caching = 0
+" vim-test mappings
+nnoremap <silent> <Leader>t :TestFile<CR>
+nnoremap <silent> <Leader>s :TestNearest<CR>
+nnoremap <silent> <Leader>l :TestLast<CR>
+nnoremap <silent> <Leader>a :TestSuite<CR>
+nnoremap <silent> <Leader>gt :TestVisit<CR>
 
-" ack.vim / ag
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
-endif
+" Run commands that require an interactive shell
+nnoremap <Leader>r :RunInInteractiveShell<space>
+
+" Treat <li> and <p> tags like the block tags they are
+let g:html_indent_tags = 'li\|p'
+
+" Move between linting errors
+nnoremap ]r :ALENextWrap<CR>
+nnoremap [r :ALEPreviousWrap<CR>
