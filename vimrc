@@ -1,8 +1,6 @@
-""""""""""""
-" Pathogen "
-""""""""""""
-execute pathogen#infect()
-call pathogen#helptags()
+if filereadable(expand("~/.vimrc.bundles"))
+  source ~/.vimrc.bundles
+endif
 
 """""""""""""""""
 " File Encoding "

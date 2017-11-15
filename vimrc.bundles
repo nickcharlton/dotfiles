@@ -1,0 +1,51 @@
+if &compatible
+  set nocompatible
+end
+
+" Remove declared plugins
+function! s:UnPlug(plug_name)
+  if has_key(g:plugs, a:plug_name)
+    call remove(g:plugs, a:plug_name)
+  endif
+endfunction
+command!  -nargs=1 UnPlug call s:UnPlug(<args>)
+
+let g:has_async = v:version >= 800 || has('nvim')
+
+call plug#begin('~/.vim/bundle')
+
+" Define bundles via Github repos
+Plug 'airblade/vim-gitgutter'
+Plug 'bogado/file-line'
+Plug 'christoomey/vim-run-interactive'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'elixir-lang/vim-elixir'
+Plug 'elzr/vim-json'
+Plug 'fatih/vim-go'
+Plug 'hashivim/vim-terraform'
+Plug 'janko-m/vim-test'
+Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
+Plug 'pbrisbin/vim-mkdir'
+Plug 'reedes/vim-lexical'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-rake'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-rhubarb'
+Plug 'tpope/vim-surround'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'vim-ruby/vim-ruby'
+
+if g:has_async
+  Plug 'w0rp/ale'
+endif
+
+call plug#end()
