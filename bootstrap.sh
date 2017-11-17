@@ -1,20 +1,18 @@
 #!/usr/bin/env bash
 
-source ./env
+$DOTFILES="$HOME/.dotfiles"
 
 # shell
 ln -sf $DOTFILES/aliases $HOME/.aliases
-ln -sf $DOTFILES/env $HOME/.env
+ln -sf $DOTFILES/exports $HOME/.exports
 
 # bash
 ln -sf $DOTFILES/bash_profile $HOME/.bash_profile
 
 # zsh
-ln -sf $DOTFILES/zsh/zprezto/ $HOME/.zprezto
-ln -sf $DOTFILES/zsh/zlogin $HOME/.zlogin
-ln -sf $DOTFILES/zsh/zshenv $HOME/.zshenv
-ln -sf $DOTFILES/zsh/zshrc $HOME/.zshrc
-ln -sf $DOTFILES/zsh/zpreztorc $HOME/.zpreztorc
+ln -sf $DOTFILES/zshenv $HOME/.zshenv
+ln -sf $DOTFILES/zshrc $HOME/.zshrc
+ln -sf $DOTFILES/zsh/ $HOME/.zsh
 
 # git
 ln -sf $DOTFILES/git/gitconfig $HOME/.gitconfig

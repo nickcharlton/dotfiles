@@ -2,25 +2,47 @@
 # Git
 #
 
-# a more useful git log, mostly inline with branches, remotes and merges shown
+# git
+alias gws='git status -sb'
+alias gb='git branch'
+alias gc='git commit --verbose'
+alias gca='git commit --verbose --all'
+alias gco='git checkout'
+alias gia='git add'
+alias giA='git add --patch'
+alias gm='git merge'
+alias gp='git push'
+alias gpf='git push --force--with-lease'
+alias gr='git rebase'
+alias gra='git rebase --abort'
+alias grc='git rebase --continue'
+alias gri='git rebase --interactive'
+alias gs='git stash'
+alias gwd='git diff --no-ext-diff'
+alias gu='git reset HEAD~1' # undo the last commit
+
+# git log
 alias log='git log --graph --pretty="format:%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset"'
 
-# better standard status line
-alias gws='git status -sb'
-
-# undo the last commit
-alias gu='git reset HEAD~1'
 
 #
 # ls
 #
-alias ll='ls -lhFg'
-alias la='ls -alhFg'
+alias l='ls -1A' # one column
+alias ll='ls -lhFg' # lists w/human sizes
+alias la='ls -alhFg' # lists w/human sizes, w/hidden
+alias lr='ll -R' # lists w/human sizes, recursively
 
 #
-# Gist
+# df/du
 #
-alias gist='gist -p'
+alias df='df -kh'
+alias du='du -kh'
+
+#
+# Grep
+#
+alias grep='grep --color=auto'
 
 #
 # Bundle
