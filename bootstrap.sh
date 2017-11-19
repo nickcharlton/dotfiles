@@ -17,6 +17,7 @@ ln -sf $DOTFILES/zsh/ $HOME/.zsh
 # git
 ln -sf $DOTFILES/git/gitconfig $HOME/.gitconfig
 ln -sf $DOTFILES/git/gitignore $HOME/.gitignore
+ln -sf $DOTFILES/git/git_template/ $HOME/.git_template
 
 # vim
 ln -sf $DOTFILES/vimrc $HOME/.vimrc

@@ -33,3 +33,5 @@
     autosquash = true
 [merge]
     ff = only
+[init]
+  templatedir = ~/.git_template
