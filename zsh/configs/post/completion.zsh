@@ -18,3 +18,8 @@ zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 bindkey "^[[A" up-line-or-beginning-search # Up
 bindkey "^[[B" down-line-or-beginning-search # Down
+
+# Colorful lists of possible autocompletions for `ls`
+# zstyle doesn't understand the BSD-style $LSCOLORS at all, so use Linux-style
+# $LS_COLORS
+zstyle ':completion:*:ls:*:*' list-colors "$LS_COLORS"
