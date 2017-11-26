@@ -77,6 +77,7 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+nnoremap <silent> vv <C-w>v " vv to generate new vertical split
 
 """""""""""""""""""""""""""""""""""""""""""""""""
 " Search with The Silver Searcher               "
