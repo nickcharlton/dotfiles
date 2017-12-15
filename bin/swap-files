@@ -1,0 +1,39 @@
+#!/bin/sh
+
+set -e
+
+usage() {
+	name=$(basename "$0")
+
+	cat <<-EOT
+	${name}
+
+	Print and optionally delete redundant vim swap files
+
+	Arguments:
+	  -d/--delete Delete discovered files.
+	  -h/--help Show this help.
+	EOT
+	exit 1
+}
+
+DELETE=""
+
+if [ "$#" -gt 0 ]; then
+	case $1 in
+		-d|--delete)
+			DELETE="-delete"
+			;;
+		*)
+			usage;
+			exit 1;
+			;;
+	esac
+fi
+
+main() {
+	find . -type f -name "*.sw[klmnop]" $DELETE
+	exit 0
+}
+
+main "$@"
