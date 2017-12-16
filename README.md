@@ -13,20 +13,12 @@ cd ~/.dotfiles
 
 ## Dependencies
 
-It tries to work with both Debian (and so Ubuntu too) as well as OS X. But, OS X is
-mostly used.
+### macOS
 
-### Debian
-
-```bash
-apt-get install vim vim-scripts tmux git
-```
-
-### OS X
-
-The included `Brewfile` lists all of the dependencies and extra taps:
+[Install most things][] using the included [`Brewfile`][]:
 
 ```bash
+brew tap homebrew/bundle
 brew bundle
 ```
 
@@ -53,6 +45,8 @@ Copyright (c) Nick Charlton 2011. Licensed under the MIT license.
 Inspired by dotfiles from [Zach Holman][], [Ryan Bates][], [Mathias Bynens][],
 and many more since.
 
+[Install most things]: https://robots.thoughtbot.com/brewfile-a-gemfile-but-for-homebrew
+[`Brewfile`]: https://github.com/Homebrew/homebrew-bundle
 [Zach Holman]: https://github.com/holman/dotfiles
 [Ryan Bates]: https://github.com/ryanb/dotfiles
 [Mathias Bynens]: https://github.com/mathiasbynens/dotfiles
