@@ -1,0 +1,37 @@
+#!/bin/sh
+
+set -e
+
+usage() {
+	name=$(basename "$0")
+
+	cat <<-EOT
+	${name} [-d | --diff] [term]
+
+	Find a term inside the git history
+
+	Options:
+	  -d/--diff Look into the content of commits.
+	  -h/--help Show this help.
+	EOT
+	exit 1
+}
+
+if [ "$#" -lt 1 ]; then
+	usage;
+	exit 1;
+fi
+
+main() {
+	case $1 in
+		-d|--delete)
+			# shellcheck disable=SC2046
+			git grep "$2" $(git rev-list --all);
+			;;
+		*)
+			git log --all --grep="$1";
+			;;
+	esac
+}
+
+main "$@"
