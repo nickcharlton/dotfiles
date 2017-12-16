@@ -3,3 +3,4 @@ awscli
 flake8
 ipython
 tabulate
+yamllint
