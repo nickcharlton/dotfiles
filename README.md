@@ -35,6 +35,17 @@ There's a `requirements.txt` for Python:
 pip2 install -r requirements.txt
 ```
 
+### JavaScript
+
+[`npm`][] doesn't provide a native way to handle global dependencies, so
+there's an `npm-globals.txt` which can be used with the following command:
+
+```sh
+cat npm-globals.txt | xargs npm install -g
+```
+
+[Inspired by this StackOverflow answer][so-npm].
+
 ## License
 
 Copyright (c) Nick Charlton 2011. Licensed under the MIT license.
@@ -45,6 +56,8 @@ and many more since.
 [Install most things]: https://robots.thoughtbot.com/brewfile-a-gemfile-but-for-homebrew
 [`Brewfile`]: https://github.com/Homebrew/homebrew-bundle
 [default-gems]: https://github.com/asdf-vm/asdf-ruby#default-gems
+[`npm`]: http://npmjs.com
+[so-npm]: https://stackoverflow.com/a/47562656/83386
 [Zach Holman]: https://github.com/holman/dotfiles
 [Ryan Bates]: https://github.com/ryanb/dotfiles
 [Mathias Bynens]: https://github.com/mathiasbynens/dotfiles
