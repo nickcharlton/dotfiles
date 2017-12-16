@@ -37,5 +37,8 @@ ln -sf $DOTFILES/ruby/rubocop.yml $HOME/.rubocop.yml
 ln -sf $DOTFILES/ruby/ruby-version $HOME/.ruby-version
 ln -sf "$DOTFILES/ruby/default-gems" "$HOME/.default-gems"
 
+# javascript
+ln -sf "$DOTFILES/javascript/eslintrc.json" "$HOME/.eslintrc.json"
+
 # bin/
 ln -sf $DOTFILES/bin/ $HOME/bin
