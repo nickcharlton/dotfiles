@@ -35,6 +35,7 @@ ln -sf $DOTFILES/agignore $HOME/.agignore
 ln -sf $DOTFILES/ruby/gemrc $HOME/.gemrc
 ln -sf $DOTFILES/ruby/rubocop.yml $HOME/.rubocop.yml
 ln -sf $DOTFILES/ruby/ruby-version $HOME/.ruby-version
+ln -sf "$DOTFILES/ruby/default-gems" "$HOME/.default-gems"
 
 # bin/
 ln -sf $DOTFILES/bin/ $HOME/bin

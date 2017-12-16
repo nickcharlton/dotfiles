@@ -22,21 +22,18 @@ brew tap homebrew/bundle
 brew bundle
 ```
 
-### Ruby / Python
+### Ruby
 
-The system Ruby is almost always fine for the standard set of tools:
+[Gems that should be installed with all Rubies][default-gems] should go in
+`default-gems`.
 
-```bash
-sudo gem install cocoapods
-gem install pry rubocop
-pip install awscli flake8 ipython virtualenv tabulate numpy scipy
+### Python
+
+There's a `requirements.txt` for Python:
+
+```sh
+pip2 install -r requirements.txt
 ```
-
-(These are all used as normal command line utilities and should be treated like
-that).
-
-For development, further Rubies should be installed with `ruby-install` and
-switched to. Inside here, install `bundler` and then use as normal.
 
 ## License
 
@@ -47,6 +44,7 @@ and many more since.
 
 [Install most things]: https://robots.thoughtbot.com/brewfile-a-gemfile-but-for-homebrew
 [`Brewfile`]: https://github.com/Homebrew/homebrew-bundle
+[default-gems]: https://github.com/asdf-vm/asdf-ruby#default-gems
 [Zach Holman]: https://github.com/holman/dotfiles
 [Ryan Bates]: https://github.com/ryanb/dotfiles
 [Mathias Bynens]: https://github.com/mathiasbynens/dotfiles
