@@ -1,0 +1,29 @@
+#!/bin/sh
+
+set -e
+
+usage() {
+	name=$(basename "$0")
+
+	cat <<-EOT
+	${name} [hostname]
+
+	Show the TLS/SSL certificate behind a host.
+
+	Options:
+	  -h/--help Show this help.
+	EOT
+	exit 1
+}
+
+if [ "$#" -lt 1 ]; then
+	usage;
+	exit 1;
+fi
+
+main() {
+	curl --insecure -v "https://$1" 2>&1 | awk \
+		'BEGIN { cert=0 } /^\* SSL connection/ { cert=1 } /^\*/ { if (cert) print }'
+}
+
+main "$@"
