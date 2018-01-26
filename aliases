@@ -58,3 +58,8 @@ alias tree='tree -I "node_modules|tmp"'
 # Pretty print the PATH
 #
 alias path='echo $PATH | tr -s ":" "\n"'
+
+#
+# Reload Rubies
+#
+alias reload-rubies='source /usr/local/share/chruby/chruby.sh'
