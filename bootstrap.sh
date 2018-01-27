@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-$DOTFILES="$HOME/.dotfiles"
+DOTFILES="$HOME/.dotfiles"
+
+mkdir -p "${XDG_CONFIG_HOME:=$HOME/.config}"
 
 # shell
 ln -sf $DOTFILES/aliases $HOME/.aliases
@@ -19,10 +21,11 @@ ln -sf $DOTFILES/git/gitconfig $HOME/.gitconfig
 ln -sf $DOTFILES/git/gitignore $HOME/.gitignore
 ln -sf $DOTFILES/git/git_template/ $HOME/.git_template
 
-# vim
+# vim/neovim
 ln -sf $DOTFILES/vimrc $HOME/.vimrc
 ln -sf $DOTFILES/vimrc.bundles $HOME/.vimrc.bundles
 ln -sf $DOTFILES/vim/ $HOME/.vim
+ln -s "$HOME/.vim" "$XDG_CONFIG_HOME/nvim"
 mkdir -p $HOME/.vimundo # the directory for undo files.
 
 # tmux

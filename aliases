@@ -2,6 +2,11 @@
 # Git
 #
 
+# vim/neovim
+if type nvim > /dev/null 2>&1; then
+  alias vim='nvim'
+fi
+
 # git
 alias gws='git status -sb'
 alias gb='git branch'
