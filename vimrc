@@ -143,8 +143,6 @@ set ttimeoutlen=50 " speed up coming out of insert
 let g:gitgutter_realtime=1 " update when typing stops
 let g:gitgutter_eager=1 " update when tab/buffer changes
 
-let g:lexical#spelllang = ['en_us','en_gb',]
-
 let g:pandoc#modules#disabled = ['folding', 'bibliographies']
 let g:pandoc#formatting#mode = 'ha' " enable auto hard wrapping
 let g:pandoc#formatting#smart_autoformat_on_cursormoved = 1
