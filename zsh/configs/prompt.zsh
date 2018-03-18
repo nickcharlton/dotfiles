@@ -8,7 +8,7 @@ prompt_color_bold() {
   [[ -n "$1" ]] && print "%{$fg_bold[$2]%}$1%{$reset_color%}"
 }
 prompt_blue()   { print "$(prompt_color "$1" blue)" }
-prompt_blue_bold() { print "$(prompt_color_bold "$1" yellow)" }
+prompt_bold_black() { print "$(prompt_color_bold "$1" black)" }
 prompt_red()    { print "$(prompt_color "$1" red)" }
 prompt_spaced() { [[ -n "$1" ]] && print " $@" }
 
@@ -20,7 +20,7 @@ prompt_spaced() { [[ -n "$1" ]] && print " $@" }
 #
 # ~/foo/bar is shown as "foo/bar"
 # ~/foo is shown as ~/foo (not /Users/nickcharlton/foo)
-prompt_shortened_path() { print "$(prompt_blue_bold "%2~")" }
+prompt_shortened_path() { print "$(prompt_bold_black "%2~")" }
 
 # git
 # see also: http://zsh.sourceforge.net/Doc/Release/User-Contributions.html#Version-Control-Information
