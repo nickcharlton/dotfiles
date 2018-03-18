@@ -27,8 +27,7 @@ alias gwd='git diff --no-ext-diff'
 alias gu='git reset HEAD~1' # undo the last commit
 
 # git log
-alias log='git log --graph --pretty="format:%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset"'
-
+alias log='git log --graph --pretty="format:%C(yellow)%h%Cblue%d%Creset %s %C(magenta) %an, %ar%Creset"'
 
 #
 # ls
