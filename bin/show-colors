@@ -1,0 +1,15 @@
+#!/bin/zsh
+
+autoload colors && colors
+
+colors=(red green yellow blue magenta cyan white black)
+
+for color in "${colors[@]}"; do
+  # standard
+  print -P "%{$fg[$color]%}$color%{$reset_color%}"
+  # bold
+  print -P "%{$fg_bold[$color]%}bold $color%{$reset_color%}"
+  # background
+  print -P "%{$bg[$color]%}bg $color%{$reset_color%}"
+  print -P "%{$bg_bold[$color]%}bold bg $color%{$reset_color%}"
+done
