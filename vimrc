@@ -33,8 +33,9 @@ nnoremap <Leader><Leader> <c-^> " Switch between the last two files
 " Syntax Highlighting & Colors "
 """"""""""""""""""""""""""""""""
 syntax on " enable syntax highlighting
-set background=dark " we use a dark background
-colorscheme solarized " set solarized
+
+let base16colorspace=256
+colorscheme base16-materia
 
 """""""""""""
 " Indenting "

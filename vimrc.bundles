@@ -17,6 +17,7 @@ call plug#begin('~/.vim/bundle')
 " Define bundles via Github repos
 Plug 'airblade/vim-gitgutter'
 Plug 'bogado/file-line'
+Plug 'chriskempson/base16-vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'elixir-lang/vim-elixir'
 Plug 'elzr/vim-json'
