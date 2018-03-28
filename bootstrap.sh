@@ -44,5 +44,9 @@ ln -sf "$DOTFILES/ruby/default-gems" "$HOME/.default-gems"
 # javascript
 ln -sf "$DOTFILES/javascript/eslintrc.json" "$HOME/.eslintrc.json"
 
+# java
+mkdir -p "$HOME/.jabba"
+ln -sf "$DOTFILES/jabba/jabba.sh" "$HOME/.jabba/jabba.sh"
+
 # bin/
 ln -sf $DOTFILES/bin/ $HOME/bin

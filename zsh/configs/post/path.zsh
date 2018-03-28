@@ -8,6 +8,9 @@ PATH="$HOME/bin:/usr/local/sbin:$PATH"
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
 
+# jabba
+source $HOME/.jabba/jabba.sh
+
 # mkdir .git/safe in the root of repositories you trust
 PATH=".git/safe/../../bin:$PATH"
 
