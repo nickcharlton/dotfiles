@@ -9,6 +9,7 @@
 [core]
     editor = $EDITOR
     excludesfile = /Users/nickcharlton/.gitignore
+	pager = diff-so-fancy | less --tabs=4 -RFX
 [push]
     default = current
     followTags = true
