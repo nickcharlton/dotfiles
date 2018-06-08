@@ -1,39 +1,39 @@
 [user]
-    name = Nick Charlton
-    email = nick@nickcharlton.net
-    signingkey = Nick Charlton <nick@nickcharlton.net>
+  name = Nick Charlton
+  email = nick@nickcharlton.net
+  signingkey = Nick Charlton <nick@nickcharlton.net>
 [github]
-    user = nickcharlton
+  user = nickcharlton
 [color]
-    ui = auto
+  ui = auto
 [core]
-    editor = $EDITOR
-    excludesfile = /Users/nickcharlton/.gitignore
-	pager = diff-so-fancy | less --tabs=4 -RFX
+  editor = $EDITOR
+  excludesfile = /Users/nickcharlton/.gitignore
+  pager = diff-so-fancy | less --tabs=4 -RFX
 [push]
-    default = current
-    followTags = true
+  default = current
+  followTags = true
 [diff]
-    compactionHeuristic = true
-    colorMoved = zebra
+  compactionHeuristic = true
+  colorMoved = zebra
 [difftool "Kaleidoscope"]
-    cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [mergetool "Kaleidoscope"]
-    cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-    trustExitCode = true
+  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+  trustExitCode = true
 [credential]
-    helper = store
+  helper = store
 [status]
-    showUntrackedFiles = all
+  showUntrackedFiles = all
 [fetch]
-    prune = true
+  prune = true
 [grep]
-    lineNumber = true
+  lineNumber = true
 [commit]
-    gpgsign = true
+  gpgsign = true
 [rebase]
-    autosquash = true
+  autosquash = true
 [merge]
-    ff = only
+  ff = only
 [init]
   templatedir = ~/.git_template
