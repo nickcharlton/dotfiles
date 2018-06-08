@@ -25,9 +25,8 @@ alias gri='git rebase --interactive'
 alias gs='git stash'
 alias gwd='git diff --no-ext-diff'
 alias gu='git reset HEAD~1' # undo the last commit
-
-# git log
-alias log='git log --graph --pretty="format:%C(yellow)%h%Cblue%d%Creset %s %C(magenta) %an, %ar%Creset"'
+alias gl='gll -20'
+alias gll="git log --pretty='format:%C(yellow)%h %C(blue)%ad %C(reset)%s%C(red)%d %C(green)%an%C(reset), %C(cyan)%ar' --date=short"
 
 #
 # ls
