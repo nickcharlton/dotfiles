@@ -34,6 +34,18 @@ nnoremap <Leader><Leader> <c-^> " Switch between the last two files
 """"""""""""""""""""""""""""""""
 syntax on " enable syntax highlighting
 
+function! s:base16_customize() abort
+  call Base16hi("SpellBad", g:base16_gui08, g:base16_gui00, g:base16_cterm08, g:base16_cterm00, "reverse", "")
+  call Base16hi("SpellLocal", g:base16_gui0C, g:base16_gui00, g:base16_cterm0C, g:base16_cterm00, "underline", "")
+  call Base16hi("SpellCap", g:base16_gui0D, g:base16_gui00, g:base16_cterm0D, g:base16_cterm00, "underline", "")
+  call Base16hi("SpellRare", g:base16_gui0E, g:base16_gui00, g:base16_cterm0E, g:base16_cterm00, "underline", "")
+endfunction
+
+augroup on_change_colorschema
+  autocmd!
+  autocmd ColorScheme * call s:base16_customize()
+augroup END
+
 let base16colorspace=256
 colorscheme base16-materia
 
