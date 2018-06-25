@@ -178,6 +178,10 @@ nnoremap <silent> <Leader>gt :TestVisit<CR>
 " map Run to leader-r
 nnoremap <Leader>r :Run<CR>
 
+" jump to next/previous ale warning
+nmap <silent> <Leader>k <Plug>(ale_previous_wrap)
+nmap <silent> <Leader>j <Plug>(ale_next_wrap)
+
 " Treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li\|p'
 
