@@ -129,6 +129,7 @@ augroup vimrcEx
     \ endif
 
   " Set syntax highlighting for specific file types
+  autocmd BufNewFile,BufRead Jenkinsfile set filetype=groovy
   autocmd BufNewFile,BufRead Brewfile set filetype=ruby
   autocmd BufRead,BufNewFile *.md set filetype=markdown
   autocmd BufRead,BufNewFile .{jscs,jshint,eslint}rc set filetype=json
