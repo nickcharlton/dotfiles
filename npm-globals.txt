@@ -1,3 +1,4 @@
 eslint
 eslint-plugin-jsx-a11y
 jsonlint
+neovim
