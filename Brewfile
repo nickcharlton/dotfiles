@@ -2,6 +2,7 @@ tap "homebrew/services"
 tap "caskroom/cask"
 tap "thoughtbot/formulae"
 tap "wata727/tflint"
+tap "caskroom/fonts"
 
 brew "ack"
 brew "ag"
@@ -67,3 +68,6 @@ cask "vagrant-vmware-utility"
 cask "virtualbox"
 cask "virtualbox-extension-pack"
 cask "vmware-fusion"
+
+cask 'font-inconsolata-dz'
+cask 'font-inconsolata-dz-for-powerline'
