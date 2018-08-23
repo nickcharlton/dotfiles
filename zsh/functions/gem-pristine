@@ -1,0 +1,7 @@
+function gem-pristine() {
+  RUBIES=$(chruby | sed -e 's: ::g' -e 's:*::g')
+
+  for ruby in $RUBIES; do
+    chruby-exec "$ruby" -- gem pristine --all
+  done
+}
