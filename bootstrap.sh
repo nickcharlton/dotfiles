@@ -48,5 +48,8 @@ ln -sf "$DOTFILES/javascript/eslintrc.json" "$HOME/.eslintrc.json"
 mkdir -p "$HOME/.jabba"
 ln -sf "$DOTFILES/jabba/jabba.sh" "$HOME/.jabba/jabba.sh"
 
+# node
+mkdir -p "$HOME/.nvm"
+
 # bin/
 ln -sf $DOTFILES/bin/ $HOME/bin
