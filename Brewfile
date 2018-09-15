@@ -70,5 +70,5 @@ cask "virtualbox"
 cask "virtualbox-extension-pack"
 cask "vmware-fusion"
 
-cask 'font-inconsolata-dz'
-cask 'font-inconsolata-dz-for-powerline'
+cask "font-inconsolata-dz"
+cask "font-inconsolata-dz-for-powerline"
