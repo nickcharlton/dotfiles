@@ -15,6 +15,8 @@ source $HOME/.jabba/jabba.sh
 export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
 
+# go
+PATH="$GOPATH/bin:$PATH"
 
 # mkdir .git/safe in the root of repositories you trust
 PATH=".git/safe/../../bin:$PATH"
