@@ -56,7 +56,7 @@ alias be='bundle exec'
 #
 # Tree
 #
-alias tree='tree -I "node_modules|tmp"'
+alias tree='tree -I "node_modules|tmp|vendor"'
 
 #
 # Pretty print the PATH
