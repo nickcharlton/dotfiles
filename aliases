@@ -38,6 +38,11 @@ alias la='ls -alhFg' # lists w/human sizes, w/hidden
 alias lr='ll -R' # lists w/human sizes, recursively
 
 #
+# cat
+#
+alias cat='bat --theme=OneHalfDark'
+
+#
 # df/du
 #
 alias df='df -kh'
