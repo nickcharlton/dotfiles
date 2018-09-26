@@ -41,7 +41,7 @@ pip2 install -r requirements.txt
 there's an `npm-globals.txt` which can be used with the following command:
 
 ```sh
-cat npm-globals.txt | xargs npm install -g
+xargs npm install -g < npm-globals.txt
 ```
 
 [Inspired by this StackOverflow answer][so-npm].
