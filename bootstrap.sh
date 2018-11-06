@@ -32,9 +32,6 @@ mkdir -p $HOME/.vimundo # the directory for undo files.
 # tmux
 ln -sf $DOTFILES/tmux.conf $HOME/.tmux.conf
 
-# ag
-ln -sf $DOTFILES/agignore $HOME/.agignore
-
 # ruby
 ln -sf $DOTFILES/ruby/gemrc $HOME/.gemrc
 ln -sf $DOTFILES/ruby/rubocop.yml $HOME/.rubocop.yml

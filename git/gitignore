@@ -1,52 +1,23 @@
-### /Users/nickcharlton/.gitignore-boilerplates/Global/vim.gitignore
-
-.*.sw[a-z]
-*.un~
-Session.vim
-.netrwhist
-
-### /Users/nickcharlton/.gitignore-boilerplates/Global/osx.gitignore
-
-.DS_Store
-.AppleDouble
-.LSOverride
-Icon
-
-
-# Thumbnails
-._*
-
-# Files that might appear on external disk
 .Spotlight-V100
 .Trashes
-
-
-### /Users/nickcharlton/.gitignore-boilerplates/Global/linux.gitignore
-
-.*
-!.gitignore
 *~
-
-
-### /Users/nickcharlton/.gitignore-boilerplates/Objective-C.gitignore
-
-# Xcode
-.DS_Store
-build/
-*.pbxuser
-!default.pbxuser
-*.mode1v3
-!default.mode1v3
-*.mode2v3
-!default.mode2v3
-*.perspectivev3
-!default.perspectivev3
-*.xcworkspace
-!default.xcworkspace
-xcuserdata
-profile
-*.moved-aside
-DerivedData
+.netrwhist
 .idea/
-
-
+!tags/
+*.pyc
+*.sw[nop]
+.DS_Store
+.bundle
+.byebug_history
+.env
+.git/
+/bower_components/
+/log
+/node_modules/
+/tmp
+/vendor
+db/*.sqlite3
+log/*.log
+rerun.txt
+tags
+tmp/**/*
