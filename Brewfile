@@ -59,6 +59,7 @@ brew "wget"
 brew "yarn"
 brew "zsh-syntax-highlighting"
 
+cask "datagrip"
 cask "fastlane"
 cask "intellij-idea"
 cask "keepingyouawake"
