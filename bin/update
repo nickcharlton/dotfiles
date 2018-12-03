@@ -4,5 +4,6 @@ set -e
 
 brew update
 brew outdated
+brew cask outdated
 
 vim +PlugUpgrade +PlugClean! +PlugUpdate +PlugInstall +qall
