@@ -1,8 +1,8 @@
-tap "homebrew/services"
 tap "caskroom/cask"
+tap "caskroom/fonts"
+tap "homebrew/services"
 tap "thoughtbot/formulae"
 tap "wata727/tflint"
-tap "caskroom/fonts"
 
 brew "ack"
 brew "ag"
