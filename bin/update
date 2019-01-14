@@ -12,3 +12,4 @@ echo "=> brew cask outdated"
 brew cask outdated
 
 vim +PlugUpgrade +PlugClean! +PlugUpdate +PlugInstall +qall
+tldr --update
