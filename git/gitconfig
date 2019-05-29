@@ -37,3 +37,5 @@
   ff = only
 [init]
   templatedir = ~/.git_template
+[branch]
+  sort=-committerdate
