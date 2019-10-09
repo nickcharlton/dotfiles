@@ -26,6 +26,7 @@
   lineNumber = true
 [commit]
   gpgsign = true
+  template = ~/.git_commit_template
 [rebase]
   autosquash = true
 [merge]

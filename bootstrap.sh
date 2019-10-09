@@ -20,6 +20,7 @@ ln -sf $DOTFILES/zsh/ $HOME/.zsh
 # git
 ln -sf $DOTFILES/git/gitconfig $HOME/.gitconfig
 ln -sf $DOTFILES/git/gitignore $HOME/.gitignore
+ln -sf $DOTFILES/git/git_commit_template $HOME/.git_commit_template
 ln -sf $DOTFILES/git/git_template/ $HOME/.git_template
 
 # vim/neovim
