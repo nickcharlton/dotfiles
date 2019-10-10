@@ -92,6 +92,11 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 nnoremap <silent> vv <C-w>v " vv to generate new vertical split
 
+" remap neovim terminal mode switch
+if has('nvim')
+  tmap <C-o> <C-\><C-n>
+endif
+
 """""""""""""""""""""""""""""""""""""""""""""""""
 " Search with The Silver Searcher               "
 " https://github.com/ggreer/the_silver_searcher "
