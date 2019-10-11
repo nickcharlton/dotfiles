@@ -58,6 +58,7 @@ brew "wget"
 brew "yarn"
 brew "zsh-syntax-highlighting"
 
+cask "1password"
 cask "backblaze"
 cask "chromedriver"
 cask "datagrip"
