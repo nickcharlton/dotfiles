@@ -1,5 +1,4 @@
-tap "caskroom/cask"
-tap "caskroom/fonts"
+tap "homebrew/cask-fonts"
 tap "homebrew/services"
 tap "thoughtbot/formulae"
 tap "wagoodman/dive"
