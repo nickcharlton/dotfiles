@@ -26,6 +26,7 @@ set list
 set showcmd " display incomplete commands
 set incsearch " do incremental searching
 set autowrite " Automatically :write before running commands
+set autoread  " automatically read files which are changed outside of vim
 
 nnoremap <Leader><Leader> <c-^> " Switch between the last two files
 
