@@ -11,5 +11,5 @@ brew outdated
 echo "=> brew cask outdated"
 brew cask outdated
 
-vim +PlugUpgrade +PlugClean! +PlugUpdate +PlugInstall +qall
+/usr/local/bin/nvim +PlugUpgrade +PlugClean! +PlugUpdate +PlugInstall +qall
 tldr --update
