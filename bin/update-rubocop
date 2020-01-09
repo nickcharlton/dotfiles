@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -e
+
+SOURCE_REPO=https://github.com/thoughtbot/guides
+RUBOCOP_PATH=style/ruby/.rubocop.yml
+RUBOCOP_DESTINATION="$HOME/.dotfiles/ruby/rubocop.yml"
+
+curl -sL "$SOURCE_REPO/raw/master/$RUBOCOP_PATH" -o "$RUBOCOP_DESTINATION"
