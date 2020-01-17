@@ -149,6 +149,8 @@ augroup vimrcEx
     autocmd CursorHoldI * call ale#Queue(0)
     autocmd InsertEnter * call ale#Queue(0)
     autocmd InsertLeave * call ale#Queue(0)
+    let b:ale_fixers = {'javascript': ['prettier', 'eslint']}
+    let g:ale_fix_on_save = 1
   else
     echoerr "This requires NeoVim or Vim 8"
   endif
