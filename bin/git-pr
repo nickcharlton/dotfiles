@@ -1,0 +1,56 @@
+#!/bin/sh
+
+set -e
+
+usage() {
+	name=$(basename "$0")
+
+	cat <<-EOT
+	${name} [pr-id]
+
+	Pull down writable GitHub pull requests locally
+
+	Options:
+	  -h/--help Show this help.
+	EOT
+	exit 1
+}
+
+if [ "$#" -lt 1 ]; then
+	usage;
+	exit 1;
+fi
+
+main() {
+	remote_url=$(git config --get remote.origin.url)
+	repo_with_owner=$(echo "$remote_url" | perl -pe's/(git@|https:\/\/)?github.com(:|\/)([-\.\w]+)\/([-.\w]+)(\.git)/$3\/$4/')
+	pr_id=$1
+
+	if ! pull_request=$(hub api "repos/$repo_with_owner/pulls/$pr_id"); then
+		echo "PR #$pr_id not found; exiting"
+		exit 1
+	fi
+
+	contributor_user=$(echo "$pull_request" | jq -r '.head.user.login')
+	contributor_remote=$(echo "$pull_request" | jq -r '.head.repo.ssh_url')
+	contributor_ref=$(echo "$pull_request" | jq -r '.head.ref')
+
+	if ! git remote show | grep -q "$contributor_user"; then
+		git remote add "$contributor_user" "$contributor_remote"
+		echo "Added $contributor_remote remote as $contributor_user"
+	fi
+
+	git fetch --quiet "$contributor_user"
+
+	if ! git branch | grep -q "pr/$pr_id"; then
+		git checkout --quiet -b "pr/$pr_id" --track "$contributor_user/$contributor_ref"
+		git config "remote.$contributor_user.push" "refs/heads/pr/$pr_id:refs/heads/$contributor_ref"
+		echo "Set pr/$pr_id to track $contributor_user/$contributor_ref"
+	else
+		echo "A branch for #$pr_id already exists, switching to it"
+		git checkout --quiet "pr/$pr_id"
+		git pull --quiet
+	fi
+}
+
+main "$@"
