@@ -35,3 +35,5 @@
   templatedir = ~/.git_template
 [branch]
   sort=-committerdate
+[rerere]
+  enabled = true
