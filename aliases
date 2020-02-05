@@ -9,7 +9,7 @@ fi
 
 # git
 alias gws='git status -sb'
-alias gb='git branch'
+alias gb='git branch -vv'
 alias gc='git commit --verbose'
 alias gca='git commit --verbose --all'
 alias gcf='git commit --fixup HEAD'
