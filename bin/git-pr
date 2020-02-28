@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 set -e
 
@@ -53,9 +53,9 @@ main() {
 				exit 1
 			fi
 
-			contributor_user=$(echo "$pull_request" | jq -r '.head.user.login')
-			contributor_remote=$(echo "$pull_request" | jq -r '.head.repo.ssh_url')
-			contributor_ref=$(echo "$pull_request" | jq -r '.head.ref')
+			contributor_user=$(jq -r '.head.user.login' <<< "$pull_request")
+			contributor_remote=$(jq -r '.head.repo.ssh_url' <<< "$pull_request")
+			contributor_ref=$(jq -r '.head.ref' <<< "$pull_request")
 
 			if ! git remote show | grep -q "$contributor_user"; then
 				git remote add "$contributor_user" "$contributor_remote"
