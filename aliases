@@ -27,6 +27,7 @@ alias gs='git stash'
 alias gwd='git diff --no-ext-diff'
 alias gu='git reset HEAD~1' # undo the last commit
 alias gl='gll -20'
+alias gl-not-updates="gll --author='^(?!dependabot).*$' --perl-regexp"
 alias gll="git log --pretty='format:%C(yellow)%h %C(blue)%ad %C(reset)%s%C(red)%d %C(green)%an%C(reset), %C(cyan)%ar' --date=short"
 
 #
