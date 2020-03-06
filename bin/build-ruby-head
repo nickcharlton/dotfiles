@@ -1,0 +1,42 @@
+#!/bin/sh
+
+set -e
+
+usage() {
+	name=$(basename "$0")
+
+	cat <<-EOT
+	${name} [name]
+
+	Build current ruby-head using ruby-build.
+
+	Options:
+	  -h/--help Show this help.
+	EOT
+	exit 1
+}
+
+if [ "$#" -lt 1 ]; then
+	usage;
+	exit 1;
+fi
+
+main() {
+	build_dir=$(mktemp -d 2>/dev/null || mktemp -d -t 'build-ruby-head')
+	cd "$build_dir"
+
+	git clone https://github.com/ruby/ruby.git
+	cd ruby
+	pwd
+
+	name="$1-$(git hash)"
+	opt_dir="$(brew --prefix openssl):$(brew --prefix readline):$(brew --prefix libyaml):$(brew --prefix gdbm)"
+	autoconf
+	./configure --with-opt-dir="$opt_dir" --prefix="$HOME/.rubies/ruby-$name"
+	make
+	make install
+
+	rm -rf "$build_dir"
+}
+
+main "$@"
