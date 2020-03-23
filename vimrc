@@ -118,6 +118,24 @@ if executable('ag')
   endif
 endif
 
+""""
+" coc.nvim "
+""""
+" use tab to trigger completion and pick the selected
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" format the current file with <leader>p
+nmap <leader>p :CocCommand prettier.formatFile<CR>
+
 """"""""""""""""""""
 " Filetype Plugins "
 """"""""""""""""""""
@@ -140,20 +158,6 @@ augroup vimrcEx
   autocmd BufRead,BufNewFile *.md set filetype=markdown
   autocmd BufRead,BufNewFile .{jscs,jshint,eslint}rc set filetype=json
   autocmd FileType text,markdown,mkd,pandoc call lexical#init()
-
-  " ALE linting events
-  if g:has_async
-    set updatetime=1000
-    let g:ale_lint_on_text_changed = 0
-    autocmd CursorHold * call ale#Queue(0)
-    autocmd CursorHoldI * call ale#Queue(0)
-    autocmd InsertEnter * call ale#Queue(0)
-    autocmd InsertLeave * call ale#Queue(0)
-    let b:ale_fixers = {'javascript': ['prettier', 'eslint']}
-    let g:ale_fix_on_save = 1
-  else
-    echoerr "This requires NeoVim or Vim 8"
-  endif
 augroup END
 
 """"""""""""""""""""""""
@@ -174,9 +178,6 @@ let g:pandoc#syntax#conceal#use = 0 " disable conceal
 " enable airline with ALE
 let g:airline#extensions#ale#enabled = 1
 
-" enable SuperTab's context mode
-let g:SuperTabDefaultCompletionType = 'context'
-
 " vim-test mappings
 nnoremap <silent> <Leader>t :TestFile<CR>
 nnoremap <silent> <Leader>s :TestNearest<CR>
@@ -187,16 +188,8 @@ nnoremap <silent> <Leader>gt :TestVisit<CR>
 " map Run to leader-r
 nnoremap <Leader>r :Run<CR>
 
-" jump to next/previous ale warning
-nmap <silent> <Leader>k <Plug>(ale_previous_wrap)
-nmap <silent> <Leader>j <Plug>(ale_next_wrap)
-
 " trim out whitespace
 nnoremap <leader>; mz:%s/\s\+$//<cr>:let @/=''<cr>`z<cr>:w<cr>
 
 " Treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li\|p'
-
-" Move between linting errors
-nnoremap ]r :ALENextWrap<CR>
-nnoremap [r :ALEPreviousWrap<CR>

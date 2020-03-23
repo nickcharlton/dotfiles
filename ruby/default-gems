@@ -3,3 +3,4 @@ pry
 rubocop
 rubocop-rails
 rubocop-performance
+solargraph
