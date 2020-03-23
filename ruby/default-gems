@@ -1,3 +1,5 @@
 bundler
 pry
 rubocop
+rubocop-rails
+rubocop-performance
