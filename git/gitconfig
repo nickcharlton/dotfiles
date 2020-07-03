@@ -37,3 +37,5 @@
   sort=-committerdate
 [rerere]
   enabled = true
+[pull]
+	ff = only
