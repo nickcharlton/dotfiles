@@ -1,0 +1,21 @@
+#!/bin/bash
+
+set -e
+
+source /usr/local/share/chruby/chruby.sh
+
+RUBIES=$(chruby | sed -e 's: ::g' -e 's:*::g')
+
+for ruby in $RUBIES; do
+	[[ $ruby =~ .*dev* ]] && break
+
+	ruby-install $ruby
+done
+
+source /usr/local/share/chruby/chruby.sh
+
+for ruby in `chruby`; do
+	chruby "$ruby"
+	gem pristine --all
+	gem install bundler pry rubocop rubocop-rails rubocop-performance solargraph
+done
