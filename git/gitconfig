@@ -33,6 +33,7 @@
   ff = only
 [init]
   templatedir = ~/.git_template
+  defaultBranch = main
 [branch]
   sort=-committerdate
 [rerere]
