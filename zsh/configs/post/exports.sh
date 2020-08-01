@@ -10,3 +10,5 @@ export VAGRANT_VMWARE_CLONE_DIRECTORY=$HOME/.vagrant.d/clones
 mkdir -p "$VAGRANT_VMWARE_CLONE_DIRECTORY"
 
 export ATLAS_USER=nickcharlton
+
+export DISABLE_SPRING=1
