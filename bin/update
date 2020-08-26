@@ -8,8 +8,5 @@ brew update
 echo "=> brew outdated"
 brew outdated
 
-echo "=> brew cask outdated"
-brew cask outdated
-
 /usr/local/bin/nvim +PlugUpgrade +PlugClean! +PlugUpdate +PlugInstall +qall
 tldr --update
