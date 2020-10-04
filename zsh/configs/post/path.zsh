@@ -11,10 +11,6 @@ source /usr/local/share/chruby/auto.sh
 # jabba
 source $HOME/.jabba/jabba.sh
 
-# nvm
-export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
-
 # go
 PATH="$GOPATH/bin:$PATH"
 
