@@ -8,9 +8,6 @@ PATH="$HOME/bin:/usr/local/sbin:$PATH"
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
 
-# jabba
-source $HOME/.jabba/jabba.sh
-
 # go
 PATH="$GOPATH/bin:$PATH"
 
