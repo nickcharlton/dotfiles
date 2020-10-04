@@ -2,7 +2,6 @@ tap "homebrew/cask-fonts"
 tap "homebrew/services"
 tap "thoughtbot/formulae"
 tap "wagoodman/dive"
-tap "wata727/tflint"
 
 brew "ack"
 brew "ag"
