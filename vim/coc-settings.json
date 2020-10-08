@@ -4,5 +4,7 @@
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
-  "wxss.validate": false
+  "wxss.validate": false,
+  "tsserver.npm": "/usr/local/bin/npm",
+  "tsserver.enableJavascript": false
 }
