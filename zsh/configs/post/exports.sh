@@ -12,3 +12,10 @@ mkdir -p "$VAGRANT_VMWARE_CLONE_DIRECTORY"
 export ATLAS_USER=nickcharlton
 
 export DISABLE_SPRING=1
+
+# android
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
