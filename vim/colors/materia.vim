@@ -14,9 +14,10 @@ if exists("syntax_on")
   syntax reset
 endif
 
-let colors_name="interrobang"
+let colors_name="materia" " ???
 
 " Vim UI
+hi Normal              ctermfg=5     ctermbg=0
 hi Cursor              ctermfg=7     ctermbg=1
 hi CursorLine          ctermbg=0     cterm=NONE
 hi MatchParen          ctermfg=0     ctermbg=8
@@ -41,7 +42,7 @@ hi VertSplit           ctermfg=0     ctermbg=0     cterm=NONE
 hi TabLine             ctermfg=8     ctermbg=0     cterm=NONE
 hi TabLineSel          ctermfg=7     ctermbg=0     cterm=italic
 hi Folded              ctermfg=3     ctermbg=0
-hi Directory           ctermfg=12
+hi Directory           ctermfg=4
 hi Title               ctermfg=3     cterm=bold
 hi ErrorMsg            ctermfg=15    ctermbg=1
 hi DiffAdd             ctermfg=0     ctermbg=2
@@ -72,15 +73,15 @@ hi! link SpecialKey    NonText
 hi Delimiter       ctermfg=7
 hi Comment         ctermfg=8   cterm=italic
 hi Underlined      ctermfg=4   cterm=underline
-hi Type            ctermfg=4
-hi String          ctermfg=12
-hi Keyword         ctermfg=2   cterm=bold
-hi Todo            ctermfg=15  ctermbg=NONE cterm=bold,underline
-hi Function        ctermfg=9   cterm=bold
+hi Type            ctermfg=3
+hi String          ctermfg=2
+hi Keyword         ctermfg=4   cterm=bold
+hi Todo            ctermfg=3   ctermbg=NONE cterm=bold,underline
+hi Function        ctermfg=4   cterm=bold
 hi Identifier      ctermfg=7   cterm=NONE
-hi Statement       ctermfg=2   cterm=bold
-hi Constant        ctermfg=13
-hi Number          ctermfg=12
+hi Statement       ctermfg=1   cterm=bold
+hi Constant        ctermfg=3
+hi Number          ctermfg=7
 hi Boolean         ctermfg=4
 hi Special         ctermfg=13
 hi Ignore          ctermfg=0   cterm=italic
@@ -158,6 +159,12 @@ hi! link rubyLocalVariableOrMethod  Identifier
 hi! link rubyConstant               Constant
 hi! link rubyInstanceVariable       Number
 hi! link rubyStringDelimiter        rubyString
+
+hi! rubyAttribute               ctermfg=4
+hi! rubyConstant                ctermfg=3
+hi! rubyInterpolationDelimiter  ctermfg=1
+hi! rubyRegexp                  ctermfg=6
+hi! rubySymbol                  ctermfg=2
 
 " Git
 hi gitCommitBranch               ctermfg=3
