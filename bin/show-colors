@@ -1,15 +1,76 @@
-#!/bin/zsh
+#!/bin/bash
 
-autoload colors && colors
+# show-colors
+#
+# Print ANSI colors (and be a reference for them)
+#
+# Key:
+#   Color mode: \33
+#   Text mode: [0;
+#     (0 = normal, 1 = bold, 2 = dark, 3 = italic, 4 = underline)
+#   Color code: 30m
+#
+# https://stackoverflow.com/questions/5947742
 
-colors=(red green yellow blue magenta cyan white black)
+RESET='\033[0m'
 
-for color in "${colors[@]}"; do
-  # standard
-  print -P "%{$fg[$color]%}$color%{$reset_color%}"
-  # bold
-  print -P "%{$fg_bold[$color]%}bold $color%{$reset_color%}"
-  # background
-  print -P "%{$bg[$color]%}bg $color%{$reset_color%}"
-  print -P "%{$bg_bold[$color]%}bold bg $color%{$reset_color%}"
+BLACK='\033[0;30m'
+BOLD_BLACK='\033[1;30m'
+BG_BLACK='\033[40m'
+RED='\033[0;31m'
+BOLD_RED='\033[1;31m'
+BG_RED='\033[41m'
+GREEN='\033[0;32m'
+BOLD_GREEN='\033[1;32m'
+BG_GREEN='\033[42m'
+YELLOW='\033[0;33m'
+BOLD_YELLOW='\033[1;33m'
+BG_YELLOW='\033[43m'
+BLUE='\033[0;34m'
+BOLD_BLUE='\033[1;34m'
+BG_BLUE='\033[44m'
+MAGENTA='\033[0;35m'
+BOLD_MAGENTA='\033[1;35m'
+BG_MAGENTA='\033[45m'
+CYAN='\033[0;36m'
+BOLD_CYAN='\033[1;36m'
+BG_CYAN='\033[46m'
+WHITE='\033[0;37m'
+BOLD_WHITE='\033[1;37m'
+BG_WHITE='\033[47m'
+
+printf "${BLACK}black${RESET}\n"
+printf "${BOLD_BLACK}bold black${RESET}\n"
+printf "${BG_BLACK}bg black${RESET}\n"
+
+printf "${RED}red${RESET}\n"
+printf "${BOLD_RED}bold red${RESET}\n"
+printf "${BG_RED}bg red${RESET}\n"
+
+printf "${GREEN}green${RESET}\n"
+printf "${BOLD_GREEN}bold green${RESET}\n"
+printf "${BG_GREEN}bg green${RESET}\n"
+
+printf "${YELLOW}yellow${RESET}\n"
+printf "${BOLD_YELLOW}bold yellow${RESET}\n"
+printf "${BG_YELLOW}bg yellow${RESET}\n"
+
+printf "${BLUE}blue${RESET}\n"
+printf "${BOLD_BLUE}bold blue${RESET}\n"
+printf "${BG_BLUE}bg blue${RESET}\n"
+
+printf "${MAGENTA}magenta${RESET}\n"
+printf "${BOLD_MAGENTA}bold magenta${RESET}\n"
+printf "${BG_MAGENTA}bg magenta${RESET}\n"
+
+printf "${CYAN}cyan${RESET}\n"
+printf "${BOLD_CYAN}bold cyan${RESET}\n"
+printf "${BG_CYAN}bg cyan${RESET}\n"
+
+printf "${WHITE}white${RESET}\n"
+printf "${BOLD_WHITE}bold white${RESET}\n"
+printf "${BG_WHITE}bg white${RESET}\n"
+
+for i in {0..255}; do
+    printf "\x1b[38;5;${i}mcolour${i}\x1b[0m\n"
 done
