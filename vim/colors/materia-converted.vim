@@ -6,165 +6,37 @@ if exists("syntax_on")
   syntax reset
 endif
 
-" GUI color definitions
-let s:gui00        = "263238"
-let g:base16_gui00 = "263238"
-let s:gui01        = "2C393F"
-let g:base16_gui01 = "2C393F"
-let s:gui02        = "37474F"
-let g:base16_gui02 = "37474F"
-let s:gui03        = "707880"
-let g:base16_gui03 = "707880"
-let s:gui04        = "C9CCD3"
-let g:base16_gui04 = "C9CCD3"
-let s:gui05        = "CDD3DE"
-let g:base16_gui05 = "CDD3DE"
-let s:gui06        = "D5DBE5"
-let g:base16_gui06 = "D5DBE5"
-let s:gui07        = "FFFFFF"
-let g:base16_gui07 = "FFFFFF"
-let s:gui08        = "EC5F67"
-let g:base16_gui08 = "EC5F67"
-let s:gui09        = "EA9560"
-let g:base16_gui09 = "EA9560"
-let s:gui0A        = "FFCC00"
-let g:base16_gui0A = "FFCC00"
-let s:gui0B        = "8BD649"
-let g:base16_gui0B = "8BD649"
-let s:gui0C        = "80CBC4"
-let g:base16_gui0C = "80CBC4"
-let s:gui0D        = "89DDFF"
-let g:base16_gui0D = "89DDFF"
-let s:gui0E        = "82AAFF"
-let g:base16_gui0E = "82AAFF"
-let s:gui0F        = "EC5F67"
-let g:base16_gui0F = "EC5F67"
-
-" Terminal color definitions
-let s:cterm00        = "00"
-let g:base16_cterm00 = "00"
-let s:cterm03        = "08"
-let g:base16_cterm03 = "08"
-let s:cterm05        = "07"
-let g:base16_cterm05 = "07"
-let s:cterm07        = "15"
-let g:base16_cterm07 = "15"
-let s:cterm08        = "01"
-let g:base16_cterm08 = "01"
-let s:cterm0A        = "03"
-let g:base16_cterm0A = "03"
-let s:cterm0B        = "02"
-let g:base16_cterm0B = "02"
-let s:cterm0C        = "06"
-let g:base16_cterm0C = "06"
-let s:cterm0D        = "04"
-let g:base16_cterm0D = "04"
-let s:cterm0E        = "05"
-let g:base16_cterm0E = "05"
-if exists("base16colorspace") && base16colorspace == "256"
-  let s:cterm01        = "18"
-  let g:base16_cterm01 = "18"
-  let s:cterm02        = "19"
-  let g:base16_cterm02 = "19"
-  let s:cterm04        = "20"
-  let g:base16_cterm04 = "20"
-  let s:cterm06        = "21"
-  let g:base16_cterm06 = "21"
-  let s:cterm09        = "16"
-  let g:base16_cterm09 = "16"
-  let s:cterm0F        = "17"
-  let g:base16_cterm0F = "17"
-else
-  let s:cterm01        = "10"
-  let g:base16_cterm01 = "10"
-  let s:cterm02        = "11"
-  let g:base16_cterm02 = "11"
-  let s:cterm04        = "12"
-  let g:base16_cterm04 = "12"
-  let s:cterm06        = "13"
-  let g:base16_cterm06 = "13"
-  let s:cterm09        = "09"
-  let g:base16_cterm09 = "09"
-  let s:cterm0F        = "14"
-  let g:base16_cterm0F = "14"
-endif
-
-" Neovim terminal colours
-if has("nvim")
-  let g:terminal_color_0 =  "#263238"
-  let g:terminal_color_1 =  "#EC5F67"
-  let g:terminal_color_2 =  "#8BD649"
-  let g:terminal_color_3 =  "#FFCC00"
-  let g:terminal_color_4 =  "#89DDFF"
-  let g:terminal_color_5 =  "#82AAFF"
-  let g:terminal_color_6 =  "#80CBC4"
-  let g:terminal_color_7 =  "#CDD3DE"
-  let g:terminal_color_8 =  "#707880"
-  let g:terminal_color_9 =  "#EC5F67"
-  let g:terminal_color_10 = "#8BD649"
-  let g:terminal_color_11 = "#FFCC00"
-  let g:terminal_color_12 = "#89DDFF"
-  let g:terminal_color_13 = "#82AAFF"
-  let g:terminal_color_14 = "#80CBC4"
-  let g:terminal_color_15 = "#FFFFFF"
-  let g:terminal_color_background = g:terminal_color_0
-  let g:terminal_color_foreground = g:terminal_color_5
-  if &background == "light"
-    let g:terminal_color_background = g:terminal_color_7
-    let g:terminal_color_foreground = g:terminal_color_2
-  endif
-elseif has("terminal")
-  let g:terminal_ansi_colors = [
-        \ "#263238",
-        \ "#EC5F67",
-        \ "#8BD649",
-        \ "#FFCC00",
-        \ "#89DDFF",
-        \ "#82AAFF",
-        \ "#80CBC4",
-        \ "#CDD3DE",
-        \ "#707880",
-        \ "#EC5F67",
-        \ "#8BD649",
-        \ "#FFCC00",
-        \ "#89DDFF",
-        \ "#82AAFF",
-        \ "#80CBC4",
-        \ "#FFFFFF",
-        \ ]
-endif
-
-! black
-*.color0: #263238 gui00
-*.color8: #707880 gui03
-
-! red
-*.color1: #EC5F67 gui08
-*.color9: #EC5F67 gui08
-
-! green
-*.color2: #8BD649 gui0B
-*.color10: #8BD649 gui0B
-
-! yellow
-*.color3: #FFCC00 gui0A
-*.color11: #FFCC00 gui0A
-
-! blue
-*.color4: #89DDFF gui0D
-*.color12: #89DDFF gui0D
-
-! magenta
-*.color5: #82AAFF gui0E
-*.color13: #82AAFF gui0E
-
-! cyan
-*.color6: #80CBC4 gui0C
-*.color14: #80CBC4 gui0C
-
-! white
-*.color7: #CDD3DE gui05
-*.color15: #FFFFFF gui07
+" ! black
+" *.color0: #263238 gui00
+" *.color8: #707880 gui03
+" 
+" ! red
+" *.color1: #EC5F67 gui08
+" *.color9: #EC5F67 gui08
+" 
+" ! green
+" *.color2: #8BD649 gui0B
+" *.color10: #8BD649 gui0B
+" 
+" ! yellow
+" *.color3: #FFCC00 gui0A
+" *.color11: #FFCC00 gui0A
+" 
+" ! blue
+" *.color4: #89DDFF gui0D
+" *.color12: #89DDFF gui0D
+" 
+" ! magenta
+" *.color5: #82AAFF gui0E
+" *.color13: #82AAFF gui0E
+" 
+" ! cyan
+" *.color6: #80CBC4 gui0C
+" *.color14: #80CBC4 gui0C
+" 
+" ! white
+" *.color7: #CDD3DE gui05
+" *.color15: #FFFFFF gui07
 
 " Vim editor colors
 hi Normal          ctermfg=5 ctermbg=0
@@ -181,219 +53,214 @@ hi MatchParen      ctermfg=8
 hi ModeMsg         ctermfg=2
 hi MoreMsg         ctermfg=2
 hi Question        ctermfg=4
-hi Search",        s:gui01, s:gui0A, s:cterm01, s:cterm0A,  "", "")
-hi Substitute",    s:gui01, s:gui0A, s:cterm01, s:cterm0A, "none", "")
-hi SpecialKey",    s:gui03, "", s:cterm03, "", "", "")
-hi TooLong",       s:gui08, "", s:cterm08, "", "", "")
-hi Underlined",    s:gui08, "", s:cterm08, "", "", "")
-hi Visual",        "", s:gui02, "", s:cterm02, "", "")
-hi VisualNOS",     s:gui08, "", s:cterm08, "", "", "")
-hi WarningMsg",    s:gui08, "", s:cterm08, "", "", "")
-hi WildMenu",      s:gui08, s:gui0A, s:cterm08, "", "", "")
-hi Title",         s:gui0D, "", s:cterm0D, "", "none", "")
-hi Conceal",       s:gui0D, s:gui00, s:cterm0D, s:cterm00, "", "")
-hi Cursor",        s:gui00, s:gui05, s:cterm00, s:cterm05, "", "")
-hi NonText",       s:gui03, "", s:cterm03, "", "", "")
-hi LineNr",        s:gui03, s:gui01, s:cterm03, s:cterm01, "", "")
-hi SignColumn",    s:gui03, s:gui01, s:cterm03, s:cterm01, "", "")
-hi StatusLine",    s:gui04, s:gui02, s:cterm04, s:cterm02, "none", "")
-hi StatusLineNC",  s:gui03, s:gui01, s:cterm03, s:cterm01, "none", "")
-hi VertSplit",     s:gui02, s:gui02, s:cterm02, s:cterm02, "none", "")
-hi ColorColumn",   "", s:gui01, "", s:cterm01, "none", "")
-hi CursorColumn",  "", s:gui01, "", s:cterm01, "none", "")
-hi CursorLine",    "", s:gui01, "", s:cterm01, "none", "")
-hi CursorLineNr",  s:gui04, s:gui01, s:cterm04, s:cterm01, "", "")
-hi QuickFixLine",  "", s:gui01, "", s:cterm01, "none", "")
-hi PMenu",         s:gui05, s:gui01, s:cterm05, s:cterm01, "none", "")
-hi PMenuSel",      s:gui01, s:gui05, s:cterm01, s:cterm05, "", "")
-hi TabLine",       s:gui03, s:gui01, s:cterm03, s:cterm01, "none", "")
-hi TabLineFill",   s:gui03, s:gui01, s:cterm03, s:cterm01, "none", "")
-hi TabLineSel",    s:gui0B, s:gui01, s:cterm0B, s:cterm01, "none", "")
+hi Search          ctermfg=0 ctermbg=3
+hi Substitute      ctermfg=0 ctermbg=3
+hi TooLong         ctermfg=1
+hi Underlined      ctermfg=1
+hi Visual          ctermfg=0
+hi VisualNOS       ctermfg=1
+hi WarningMsg      ctermfg=1
+hi WildMenu        ctermfg=1
+hi Title           ctermfg=4
+hi Conceal         ctermfg=4 ctermbg=0
+hi Cursor          ctermfg=0 ctermbg=7
+hi NonText         ctermfg=8
+hi LineNr          ctermfg=8 ctermbg=0
+hi SignColumn      ctermfg=3 ctermbg=0
+hi StatusLine      ctermfg=8 ctermbg=0
+hi StatusLineNC    ctermfg=8 ctermbg=0
+hi VertSplit       ctermfg=0 ctermbg=0
+hi CursorLine      ctermbg=8
+hi CursorLineNr    ctermfg=8 ctermbg=0
+hi QuickFixLine    ctermfg=0
+hi PMenu           ctermfg=7 ctermbg=0
+hi PMenuSel        ctermfg=0 ctermbg=7
+hi TabLine         ctermfg=8 ctermbg=0
+hi TabLineFill     ctermfg=8 ctermbg=0
+hi TabLineSel      ctermfg=2 ctermbg=0
+hi! link CursorColumn  CursorLine
+hi! link SignColumn    LineNr
+hi! link WildMenu      Visual
+hi! link FoldColumn    SignColumn
+hi! link WarningMsg    ErrorMsg
+hi! link Question      MoreMsg
+hi! link ModeMsg       MoreMsg
+hi! link TabLineFill   StatusLineNC
+hi! link SpecialKey    NonText
 
 " Standard syntax highlighting
-call <sid>hi("Boolean",      s:gui09, "", s:cterm09, "", "", "")
-call <sid>hi("Character",    s:gui08, "", s:cterm08, "", "", "")
-call <sid>hi("Comment",      s:gui03, "", s:cterm03, "", "", "")
-call <sid>hi("Conditional",  s:gui0E, "", s:cterm0E, "", "", "")
-call <sid>hi("Constant",     s:gui09, "", s:cterm09, "", "", "")
-call <sid>hi("Define",       s:gui0E, "", s:cterm0E, "", "none", "")
-call <sid>hi("Delimiter",    s:gui0F, "", s:cterm0F, "", "", "")
-call <sid>hi("Float",        s:gui09, "", s:cterm09, "", "", "")
-call <sid>hi("Function",     s:gui0D, "", s:cterm0D, "", "", "")
-call <sid>hi("Identifier",   s:gui08, "", s:cterm08, "", "none", "")
-call <sid>hi("Include",      s:gui0D, "", s:cterm0D, "", "", "")
-call <sid>hi("Keyword",      s:gui0E, "", s:cterm0E, "", "", "")
-call <sid>hi("Label",        s:gui0A, "", s:cterm0A, "", "", "")
-call <sid>hi("Number",       s:gui09, "", s:cterm09, "", "", "")
-call <sid>hi("Operator",     s:gui05, "", s:cterm05, "", "none", "")
-call <sid>hi("PreProc",      s:gui0A, "", s:cterm0A, "", "", "")
-call <sid>hi("Repeat",       s:gui0A, "", s:cterm0A, "", "", "")
-call <sid>hi("Special",      s:gui0C, "", s:cterm0C, "", "", "")
-call <sid>hi("SpecialChar",  s:gui0F, "", s:cterm0F, "", "", "")
-call <sid>hi("Statement",    s:gui08, "", s:cterm08, "", "", "")
-call <sid>hi("StorageClass", s:gui0A, "", s:cterm0A, "", "", "")
-call <sid>hi("String",       s:gui0B, "", s:cterm0B, "", "", "")
-call <sid>hi("Structure",    s:gui0E, "", s:cterm0E, "", "", "")
-call <sid>hi("Tag",          s:gui0A, "", s:cterm0A, "", "", "")
-call <sid>hi("Todo",         s:gui0A, s:gui01, s:cterm0A, s:cterm01, "", "")
-call <sid>hi("Type",         s:gui0A, "", s:cterm0A, "", "none", "")
-call <sid>hi("Typedef",      s:gui0A, "", s:cterm0A, "", "", "")
+hi Boolean       ctermfg=3
+hi Character     ctermfg=1
+hi Comment       ctermfg=8
+hi Conditional   ctermfg=5
+hi Constant      ctermfg=3
+hi Define        ctermfg=5
+hi Delimiter     ctermfg=8
+hi Float         ctermfg=3
+hi Function      ctermfg=4
+hi Identifier    ctermfg=1
+hi Include       ctermfg=4
+hi Keyword       ctermfg=5
+hi Label         ctermfg=3
+hi Number        ctermfg=3
+hi Operator      ctermfg=7
+hi PreProc       ctermfg=3
+hi Repeat        ctermfg=3
+hi Special       ctermfg=6
+hi SpecialChar   ctermfg=8
+hi Statement     ctermfg=1
+hi StorageClass  ctermfg=3
+hi String        ctermfg=2
+hi Structure     ctermfg=5
+hi Tag           ctermfg=3
+hi Todo          ctermfg=3
+hi Type          ctermfg=3
+hi Typedef       ctermfg=3
 
 " C highlighting
-call <sid>hi("cOperator",   s:gui0C, "", s:cterm0C, "", "", "")
-call <sid>hi("cPreCondit",  s:gui0E, "", s:cterm0E, "", "", "")
+hi cOperator ctermfg=6
+hi cPreCondit ctermfg=5
 
 " C# highlighting
-call <sid>hi("csClass",                 s:gui0A, "", s:cterm0A, "", "", "")
-call <sid>hi("csAttribute",             s:gui0A, "", s:cterm0A, "", "", "")
-call <sid>hi("csModifier",              s:gui0E, "", s:cterm0E, "", "", "")
-call <sid>hi("csType",                  s:gui08, "", s:cterm08, "", "", "")
-call <sid>hi("csUnspecifiedStatement",  s:gui0D, "", s:cterm0D, "", "", "")
-call <sid>hi("csContextualStatement",   s:gui0E, "", s:cterm0E, "", "", "")
-call <sid>hi("csNewDecleration",        s:gui08, "", s:cterm08, "", "", "")
+hi csClass                 ctermfg=3
+hi csAttribute             ctermfg=3
+hi csModifier              ctermfg=5
+hi csType                  ctermfg=1
+hi csUnspecifiedStatement  ctermfg=4
+hi csContextualStatement   ctermfg=5
+hi csNewDecleration        ctermfg=1
 
 " CSS highlighting
-call <sid>hi("cssBraces",      s:gui05, "", s:cterm05, "", "", "")
-call <sid>hi("cssClassName",   s:gui0E, "", s:cterm0E, "", "", "")
-call <sid>hi("cssColor",       s:gui0C, "", s:cterm0C, "", "", "")
+hi cssBraces      ctermfg=7
+hi cssClassName   ctermfg=5
+hi cssColor       ctermfg=6
 
 " Diff highlighting
-call <sid>hi("DiffAdd",      s:gui0B, s:gui01,  s:cterm0B, s:cterm01, "", "")
-call <sid>hi("DiffChange",   s:gui03, s:gui01,  s:cterm03, s:cterm01, "", "")
-call <sid>hi("DiffDelete",   s:gui08, s:gui01,  s:cterm08, s:cterm01, "", "")
-call <sid>hi("DiffText",     s:gui0D, s:gui01,  s:cterm0D, s:cterm01, "", "")
-call <sid>hi("DiffAdded",    s:gui0B, s:gui00,  s:cterm0B, s:cterm00, "", "")
-call <sid>hi("DiffFile",     s:gui08, s:gui00,  s:cterm08, s:cterm00, "", "")
-call <sid>hi("DiffNewFile",  s:gui0B, s:gui00,  s:cterm0B, s:cterm00, "", "")
-call <sid>hi("DiffLine",     s:gui0D, s:gui00,  s:cterm0D, s:cterm00, "", "")
-call <sid>hi("DiffRemoved",  s:gui08, s:gui00,  s:cterm08, s:cterm00, "", "")
+hi DiffAdd      ctermfg=2 ctermbg=0
+hi DiffChange   ctermfg=8 ctermbg=0
+hi DiffDelete   ctermfg=1 ctermbg=0
+hi DiffText     ctermfg=4 ctermbg=0
+hi DiffAdded    ctermfg=2 ctermbg=0
+hi DiffFile     ctermfg=1 ctermbg=0
+hi DiffNewFile  ctermfg=2 ctermbg=0
+hi DiffLine     ctermfg=4 ctermbg=0
+hi DiffRemoved  ctermfg=1 ctermbg=0
 
 " Git highlighting
-call <sid>hi("gitcommitOverflow",       s:gui08, "", s:cterm08, "", "", "")
-call <sid>hi("gitcommitSummary",        s:gui0B, "", s:cterm0B, "", "", "")
-call <sid>hi("gitcommitComment",        s:gui03, "", s:cterm03, "", "", "")
-call <sid>hi("gitcommitUntracked",      s:gui03, "", s:cterm03, "", "", "")
-call <sid>hi("gitcommitDiscarded",      s:gui03, "", s:cterm03, "", "", "")
-call <sid>hi("gitcommitSelected",       s:gui03, "", s:cterm03, "", "", "")
-call <sid>hi("gitcommitHeader",         s:gui0E, "", s:cterm0E, "", "", "")
-call <sid>hi("gitcommitSelectedType",   s:gui0D, "", s:cterm0D, "", "", "")
-call <sid>hi("gitcommitUnmergedType",   s:gui0D, "", s:cterm0D, "", "", "")
-call <sid>hi("gitcommitDiscardedType",  s:gui0D, "", s:cterm0D, "", "", "")
-call <sid>hi("gitcommitBranch",         s:gui09, "", s:cterm09, "", "bold", "")
-call <sid>hi("gitcommitUntrackedFile",  s:gui0A, "", s:cterm0A, "", "", "")
-call <sid>hi("gitcommitUnmergedFile",   s:gui08, "", s:cterm08, "", "bold", "")
-call <sid>hi("gitcommitDiscardedFile",  s:gui08, "", s:cterm08, "", "bold", "")
-call <sid>hi("gitcommitSelectedFile",   s:gui0B, "", s:cterm0B, "", "bold", "")
+hi gitcommitOverflow       ctermfg=1
+hi gitcommitSummary        ctermfg=2
+hi gitcommitComment        ctermfg=8
+hi gitcommitUntracked      ctermfg=8
+hi gitcommitDiscarded      ctermfg=8
+hi gitcommitSelected       ctermfg=8
+hi gitcommitHeader         ctermfg=5
+hi gitcommitSelectedType   ctermfg=4
+hi gitcommitUnmergedType   ctermfg=4
+hi gitcommitDiscardedType  ctermfg=4
+hi gitcommitBranch         ctermfg=3 cterm=bold
+hi gitcommitUntrackedFile  ctermfg=3
+hi gitcommitUnmergedFile   ctermfg=1 cterm=bold
+hi gitcommitDiscardedFile  ctermfg=1 cterm=bold
+hi gitcommitSelectedFile   ctermfg=2 cterm=bold
 
 " GitGutter highlighting
-call <sid>hi("GitGutterAdd",     s:gui0B, s:gui01, s:cterm0B, s:cterm01, "", "")
-call <sid>hi("GitGutterChange",  s:gui0D, s:gui01, s:cterm0D, s:cterm01, "", "")
-call <sid>hi("GitGutterDelete",  s:gui08, s:gui01, s:cterm08, s:cterm01, "", "")
-call <sid>hi("GitGutterChangeDelete",  s:gui0E, s:gui01, s:cterm0E, s:cterm01, "", "")
+hi GitGutterAdd           ctermfg=2, ctermfg=0
+hi GitGutterChange        ctermfg=4, ctermfg=0
+hi GitGutterDelete        ctermfg=1, ctermfg=0
+hi GitGutterChangeDelete  ctermfg=5, ctermfg=0
 
 " HTML highlighting
-call <sid>hi("htmlBold",    s:gui0A, "", s:cterm0A, "", "", "")
-call <sid>hi("htmlItalic",  s:gui0E, "", s:cterm0E, "", "", "")
-call <sid>hi("htmlEndTag",  s:gui05, "", s:cterm05, "", "", "")
-call <sid>hi("htmlTag",     s:gui05, "", s:cterm05, "", "", "")
+hi htmlBold    ctermfg=3
+hi htmlItalic  ctermfg=5
+hi htmlEndTag  ctermfg=7
+hi htmlTag     ctermfg=7
 
 " JavaScript highlighting
-call <sid>hi("javaScript",        s:gui05, "", s:cterm05, "", "", "")
-call <sid>hi("javaScriptBraces",  s:gui05, "", s:cterm05, "", "", "")
-call <sid>hi("javaScriptNumber",  s:gui09, "", s:cterm09, "", "", "")
+hi javaScript        ctermfg=7
+hi javaScriptBraces  ctermfg=7
+hi javaScriptNumber  ctermfg=3
 " pangloss/vim-javascript highlighting
-call <sid>hi("jsOperator",          s:gui0D, "", s:cterm0D, "", "", "")
-call <sid>hi("jsStatement",         s:gui0E, "", s:cterm0E, "", "", "")
-call <sid>hi("jsReturn",            s:gui0E, "", s:cterm0E, "", "", "")
-call <sid>hi("jsThis",              s:gui08, "", s:cterm08, "", "", "")
-call <sid>hi("jsClassDefinition",   s:gui0A, "", s:cterm0A, "", "", "")
-call <sid>hi("jsFunction",          s:gui0E, "", s:cterm0E, "", "", "")
-call <sid>hi("jsFuncName",          s:gui0D, "", s:cterm0D, "", "", "")
-call <sid>hi("jsFuncCall",          s:gui0D, "", s:cterm0D, "", "", "")
-call <sid>hi("jsClassFuncName",     s:gui0D, "", s:cterm0D, "", "", "")
-call <sid>hi("jsClassMethodType",   s:gui0E, "", s:cterm0E, "", "", "")
-call <sid>hi("jsRegexpString",      s:gui0C, "", s:cterm0C, "", "", "")
-call <sid>hi("jsGlobalObjects",     s:gui0A, "", s:cterm0A, "", "", "")
-call <sid>hi("jsGlobalNodeObjects", s:gui0A, "", s:cterm0A, "", "", "")
-call <sid>hi("jsExceptions",        s:gui0A, "", s:cterm0A, "", "", "")
-call <sid>hi("jsBuiltins",          s:gui0A, "", s:cterm0A, "", "", "")
+hi jsOperator          ctermfg=4
+hi jsStatement         ctermfg=5
+hi jsReturn            ctermfg=5
+hi jsThis              ctermfg=1
+hi jsClassDefinition   ctermfg=3
+hi jsFunction          ctermfg=5
+hi jsFuncName          ctermfg=4
+hi jsFuncCall          ctermfg=4
+hi jsClassFuncName     ctermfg=4
+hi jsClassMethodType   ctermfg=5
+hi jsRegexpString      ctermfg=6
+hi jsGlobalObjects     ctermfg=3
+hi jsGlobalNodeObjects ctermfg=3
+hi jsExceptions        ctermfg=3
+hi jsBuiltins          ctermfg=3
 
 " Mail highlighting
-call <sid>hi("mailQuoted1",  s:gui0A, "", s:cterm0A, "", "", "")
-call <sid>hi("mailQuoted2",  s:gui0B, "", s:cterm0B, "", "", "")
-call <sid>hi("mailQuoted3",  s:gui0E, "", s:cterm0E, "", "", "")
-call <sid>hi("mailQuoted4",  s:gui0C, "", s:cterm0C, "", "", "")
-call <sid>hi("mailQuoted5",  s:gui0D, "", s:cterm0D, "", "", "")
-call <sid>hi("mailQuoted6",  s:gui0A, "", s:cterm0A, "", "", "")
-call <sid>hi("mailURL",      s:gui0D, "", s:cterm0D, "", "", "")
-call <sid>hi("mailEmail",    s:gui0D, "", s:cterm0D, "", "", "")
+hi mailQuoted1  ctermfg=3
+hi mailQuoted2  ctermfg=2
+hi mailQuoted3  ctermfg=5
+hi mailQuoted4  ctermfg=6
+hi mailQuoted5  ctermfg=4
+hi mailQuoted6  ctermfg=3
+hi mailURL      ctermfg=4
+hi mailEmail    ctermfg=4
 
 " Markdown highlighting
-call <sid>hi("markdownCode",              s:gui0B, "", s:cterm0B, "", "", "")
-call <sid>hi("markdownError",             s:gui05, s:gui00, s:cterm05, s:cterm00, "", "")
-call <sid>hi("markdownCodeBlock",         s:gui0B, "", s:cterm0B, "", "", "")
-call <sid>hi("markdownHeadingDelimiter",  s:gui0D, "", s:cterm0D, "", "", "")
-
-" NERDTree highlighting
-call <sid>hi("NERDTreeDirSlash",  s:gui0D, "", s:cterm0D, "", "", "")
-call <sid>hi("NERDTreeExecFile",  s:gui05, "", s:cterm05, "", "", "")
+hi markdownCode               ctermfg=2
+hi markdownError              ctermfg=7
+hi markdownCodeBlock          ctermfg=2
+hi markdownHeadingDelimiter   ctermfg=4
 
 " PHP highlighting
-call <sid>hi("phpMemberSelector",  s:gui05, "", s:cterm05, "", "", "")
-call <sid>hi("phpComparison",      s:gui05, "", s:cterm05, "", "", "")
-call <sid>hi("phpParent",          s:gui05, "", s:cterm05, "", "", "")
-call <sid>hi("phpMethodsVar",      s:gui0C, "", s:cterm0C, "", "", "")
+hi phpMemberSelector   ctermfg=7
+hi phpComparison       ctermfg=7
+hi phpParent           ctermfg=7
+hi phpMethodsVar       ctermfg=6
 
 " Python highlighting
-call <sid>hi("pythonOperator",  s:gui0E, "", s:cterm0E, "", "", "")
-call <sid>hi("pythonRepeat",    s:gui0E, "", s:cterm0E, "", "", "")
-call <sid>hi("pythonInclude",   s:gui0E, "", s:cterm0E, "", "", "")
-call <sid>hi("pythonStatement", s:gui0E, "", s:cterm0E, "", "", "")
+hi pythonOperator   ctermfg=5
+hi pythonRepeat     ctermfg=5
+hi pythonInclude    ctermfg=5
+hi pythonStatement  ctermfg=5
 
 " Ruby highlighting
-call <sid>hi("rubyAttribute",               s:gui0D, "", s:cterm0D, "", "", "")
-call <sid>hi("rubyConstant",                s:gui0A, "", s:cterm0A, "", "", "")
-call <sid>hi("rubyInterpolationDelimiter",  s:gui0F, "", s:cterm0F, "", "", "")
-call <sid>hi("rubyRegexp",                  s:gui0C, "", s:cterm0C, "", "", "")
-call <sid>hi("rubySymbol",                  s:gui0B, "", s:cterm0B, "", "", "")
-call <sid>hi("rubyStringDelimiter",         s:gui0B, "", s:cterm0B, "", "", "")
+hi rubyAttribute                ctermfg=4
+hi rubyConstant                 ctermfg=3
+hi rubyInterpolationDelimiter   ctermfg=8
+hi rubyRegexp                   ctermfg=6
+hi rubySymbol                   ctermfg=2
+hi rubyStringDelimiter          ctermfg=2
 
 " SASS highlighting
-call <sid>hi("sassidChar",     s:gui08, "", s:cterm08, "", "", "")
-call <sid>hi("sassClassChar",  s:gui09, "", s:cterm09, "", "", "")
-call <sid>hi("sassInclude",    s:gui0E, "", s:cterm0E, "", "", "")
-call <sid>hi("sassMixing",     s:gui0E, "", s:cterm0E, "", "", "")
-call <sid>hi("sassMixinName",  s:gui0D, "", s:cterm0D, "", "", "")
+hi sassidChar      ctermfg=1
+hi sassClassChar   ctermfg=3
+hi sassInclude     ctermfg=5
+hi sassMixing      ctermfg=5
+hi sassMixinName   ctermfg=4
 
 " Signify highlighting
-call <sid>hi("SignifySignAdd",     s:gui0B, s:gui01, s:cterm0B, s:cterm01, "", "")
-call <sid>hi("SignifySignChange",  s:gui0D, s:gui01, s:cterm0D, s:cterm01, "", "")
-call <sid>hi("SignifySignDelete",  s:gui08, s:gui01, s:cterm08, s:cterm01, "", "")
+hi SignifySignAdd      ctermfg=2 ctermbg=0
+hi SignifySignChange   ctermfg=4 ctermbg=0
+hi SignifySignDelete   ctermfg=1 ctermbg=0
 
 " Spelling highlighting
-call <sid>hi("SpellBad",     "", "", "", "", "undercurl", s:gui08)
-call <sid>hi("SpellLocal",   "", "", "", "", "undercurl", s:gui0C)
-call <sid>hi("SpellCap",     "", "", "", "", "undercurl", s:gui0D)
-call <sid>hi("SpellRare",    "", "", "", "", "undercurl", s:gui0E)
+hi SpellBad      cterm=undercurl
+hi SpellLocal    cterm=undercurl
+hi SpellCap      cterm=undercurl
+hi SpellRare     cterm=undercurl
 
 " Startify highlighting
-call <sid>hi("StartifyBracket",  s:gui03, "", s:cterm03, "", "", "")
-call <sid>hi("StartifyFile",     s:gui07, "", s:cterm07, "", "", "")
-call <sid>hi("StartifyFooter",   s:gui03, "", s:cterm03, "", "", "")
-call <sid>hi("StartifyHeader",   s:gui0B, "", s:cterm0B, "", "", "")
-call <sid>hi("StartifyNumber",   s:gui09, "", s:cterm09, "", "", "")
-call <sid>hi("StartifyPath",     s:gui03, "", s:cterm03, "", "", "")
-call <sid>hi("StartifySection",  s:gui0E, "", s:cterm0E, "", "", "")
-call <sid>hi("StartifySelect",   s:gui0C, "", s:cterm0C, "", "", "")
-call <sid>hi("StartifySlash",    s:gui03, "", s:cterm03, "", "", "")
-call <sid>hi("StartifySpecial",  s:gui03, "", s:cterm03, "", "", "")
+hi StartifyBracket   ctermfg=8
+hi StartifyFile      ctermfg=7
+hi StartifyFooter    ctermfg=8
+hi StartifyHeader    ctermfg=2
+hi StartifyNumber    ctermfg=3
+hi StartifyPath      ctermfg=8
+hi StartifySection   ctermfg=5
+hi StartifySelect    ctermfg=6
+hi StartifySlash     ctermfg=8
+hi StartifySpecial   ctermfg=8
 
 " Java highlighting
-call <sid>hi("javaOperator",     s:gui0D, "", s:cterm0D, "", "", "")
-
-" Remove functions
-delf <sid>hi
-
-" Remove color variables
-unlet s:gui00 s:gui01 s:gui02 s:gui03  s:gui04  s:gui05  s:gui06  s:gui07  s:gui08  s:gui09 s:gui0A  s:gui0B  s:gui0C  s:gui0D  s:gui0E  s:gui0F
-unlet s:cterm00 s:cterm01 s:cterm02 s:cterm03 s:cterm04 s:cterm05 s:cterm06 s:cterm07 s:cterm08 s:cterm09 s:cterm0A s:cterm0B s:cterm0C s:cterm0D s:cterm0E s:cterm0F
+hi javaOperator      ctermfg=4

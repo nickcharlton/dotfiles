@@ -34,7 +34,7 @@ nnoremap <Leader><Leader> <c-^> " Switch between the last two files
 " Syntax Highlighting & Colors "
 """"""""""""""""""""""""""""""""
 syntax on " enable syntax highlighting
-colorscheme materia
+colorscheme materia-converted
 
 """""""""""""
 " Indenting "
