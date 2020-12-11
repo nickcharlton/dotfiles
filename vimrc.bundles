@@ -48,6 +48,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'reedes/vim-lexical'
 Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
+Plug 'rust-lang/rust.vim'
 Plug 'sbdchd/vim-run'
 Plug 'sebdah/vim-delve'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }

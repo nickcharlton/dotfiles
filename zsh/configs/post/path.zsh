@@ -11,6 +11,9 @@ source /usr/local/share/chruby/auto.sh
 # go
 PATH="$GOPATH/bin:$PATH"
 
+# rust
+PATH="$HOME/.cargo/env:$PATH"
+
 # mkdir .git/safe in the root of repositories you trust
 PATH=".git/safe/../../bin:$PATH"
 
