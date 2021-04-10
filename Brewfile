@@ -4,6 +4,7 @@ tap "thoughtbot/formulae"
 tap "wagoodman/dive"
 
 brew "ack"
+brew "act"
 brew "ag"
 brew "ansible"
 brew "awscli"
