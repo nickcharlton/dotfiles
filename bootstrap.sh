@@ -5,7 +5,6 @@ DOTFILES="$HOME/.dotfiles"
 mkdir -p "${XDG_CONFIG_HOME:=$HOME/.config}"
 
 # shell
-ln -s "$DOTFILES/base16-shell" "$XDG_CONFIG_HOME/base16-shell"
 ln -sf $DOTFILES/aliases $HOME/.aliases
 ln -sf $DOTFILES/exports $HOME/.exports
 
