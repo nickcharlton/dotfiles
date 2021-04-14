@@ -33,6 +33,21 @@ nnoremap <Leader><Leader> <c-^> " Switch between the last two files
 """"""""""""""""""""""""""""""""
 " Syntax Highlighting & Colors "
 """"""""""""""""""""""""""""""""
+function! CustomHighlights() abort
+  highlight ColorColumn ctermbg=236
+  highlight CursorLine ctermbg=237 cterm=NONE
+  highlight! link SignColumn LineNr
+  highlight VertSplit ctermfg=236 ctermbg=0
+  highlight TabLine ctermfg=8 ctermbg=0 cterm=NONE
+  highlight TabLineSel ctermfg=7 ctermbg=0
+  highlight TabLineFill ctermfg=0
+endfunction
+
+augroup CustomColors
+  autocmd!
+  autocmd ColorScheme * call CustomHighlights()
+augroup END
+
 syntax on " enable syntax highlighting
 colorscheme dim
 
