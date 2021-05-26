@@ -73,3 +73,12 @@ alias path='echo $PATH | tr -s ":" "\n"'
 # Reload Rubies
 #
 alias reload-rubies='source /usr/local/share/chruby/chruby.sh'
+
+#
+# Docker
+#
+alias dki="docker run -t -i -P"
+db() { docker build -t="$1" .; }
+alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
+drm() { docker rm $(docker ps -q -a); }
+dri() { docker rmi $(docker images -q); }
