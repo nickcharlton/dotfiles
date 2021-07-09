@@ -1,3 +1,3 @@
-EXCLUDES="README.md USAGE.md Brewfile iterm osx others npm-globals.txt requirements.txt"
+EXCLUDES="README.md Brewfile iterm osx others npm-globals.txt requirements.txt"
 SYMLINK_DIRS="bin functions vim zsh"
 UNDOTTED="bin functions Library"
