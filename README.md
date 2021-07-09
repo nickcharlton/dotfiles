@@ -1,7 +1,6 @@
 # dotfiles
 
-A bunch of impossible to live without config files. `USAGE.md` gives some
-often handy commands.
+A bunch of impossible to live without config files.
 
 ## Install
 

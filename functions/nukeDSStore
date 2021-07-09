@@ -1,8 +1,0 @@
-# vim: ft=sh:
-
-#
-# Delete .DS_Store files in the user's home directory.
-#
-function nukeDSStore {
-   find $HOME -path $HOME/.Trash -prune -o -name .DS_Store -type f -print -delete 2>/dev/null
-}
