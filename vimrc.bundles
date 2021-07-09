@@ -24,17 +24,9 @@ call plug#begin('~/.vim/bundle')
 Plug 'airblade/vim-gitgutter'
 Plug 'bmatcuk/coc-stylelintplus', {'do': 'yarn install --frozen-lockfile'}
 Plug 'bogado/file-line'
-Plug 'chemzqm/vim-jsx-improve'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'elixir-lang/vim-elixir'
-Plug 'elzr/vim-json'
-Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
-Plug 'hashivim/vim-terraform'
 Plug 'janko-m/vim-test'
 Plug 'jeffkreeftmeijer/vim-dim'
-Plug 'jparise/vim-graphql'
-Plug 'keith/swift.vim'
-Plug 'leafgarland/typescript-vim'
 Plug 'modille/groovy.vim'
 Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-eslint', {'do': 'yarn install --frozen-lockfile'}
@@ -44,15 +36,13 @@ Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-solargraph', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-Plug 'pangloss/vim-javascript'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'reedes/vim-lexical'
 Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
 Plug 'ruanyl/vim-gh-line'
-Plug 'rust-lang/rust.vim'
 Plug 'sbdchd/vim-run'
 Plug 'sebdah/vim-delve'
-Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
@@ -66,6 +56,5 @@ Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline', { 'tag': 'v0.11' }
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
-Plug 'vim-ruby/vim-ruby'
 
 call plug#end()
