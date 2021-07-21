@@ -82,3 +82,9 @@ db() { docker build -t="$1" .; }
 alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
 drm() { docker rm $(docker ps -q -a); }
 dri() { docker rmi $(docker images -q); }
+de() {
+	container_id=$1
+	cmd=${2:-"/bin/bash"}
+
+	docker exec -it "$container_id" "$cmd"
+}
