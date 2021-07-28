@@ -8,7 +8,7 @@
   ui = auto
 [core]
   editor = $EDITOR
-  excludesfile = /Users/nickcharlton/.gitignore
+  excludesfile = ~/.gitignore
   pager = delta
 [push]
   default = current
