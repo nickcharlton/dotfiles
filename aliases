@@ -84,7 +84,8 @@ drm() { docker rm $(docker ps -q -a); }
 dri() { docker rmi $(docker images -q); }
 de() {
 	container_id=$1
-	cmd=${2:-"/bin/bash"}
+	shift
+	cmd=${@:-"/bin/bash"}
 
 	docker exec -it "$container_id" "$cmd"
 }
