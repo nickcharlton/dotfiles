@@ -1,2 +1,5 @@
-export -U XCODE="`xcode-select --print-path`"
-export -U PATH="$XCODE/Tools:$PATH"
+if [ "$(uname -s)" = "Darwin" ]; then
+	xcode_path=$(xcode-select --print-path)
+	export XCODE=$xcode_path
+	export PATH="$XCODE/Tools:$PATH"
+fi
