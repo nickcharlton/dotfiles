@@ -2,6 +2,9 @@ export NAME='Nick Charlton'
 export EMAIL='nick@nickcharlton.net'
 export TZ='Europe/London'
 
+export XDG_CONFIG_HOME=$HOME/.config
+mkdir -p "$XDG_CONFIG_HOME"
+
 export DEBFULLNAME=$NAME
 export DEBEMAIL=$EMAIL
 
