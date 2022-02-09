@@ -25,10 +25,13 @@ main() {
 	project_name=$1
 
 	echo "=> Switch to the suspenders version of Ruby..."
-	chruby ruby-2.6.6
+	chruby ruby-2.7.4
+
+	echo "=> Install specific_install to install current suspenders..."
+	gem install specific_install
 
 	echo "=> Installing the latest suspenders release..."
-	gem install suspenders
+	gem specific_install thoughtbot/suspenders
 
 	echo "=> Creating a minimal Rails application..."
 	suspenders $project_name --skip-keeps --skip-action-mailbox \
