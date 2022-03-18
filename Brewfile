@@ -60,6 +60,7 @@ brew "wget"
 brew "yarn"
 brew "zsh-syntax-highlighting"
 
+cask "bartender"
 cask "chromedriver"
 cask "datagrip"
 cask "font-jetbrains-mono-nerd-font"
