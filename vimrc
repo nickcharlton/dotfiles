@@ -177,6 +177,11 @@ nnoremap <silent> <Leader>gt :TestVisit<CR>
 " map Run to leader-r
 nnoremap <Leader>r :Run<CR>
 
+" use F5 for undo history tree
+nnoremap <F5> :MundoToggle<CR>
+let g:mundo_width = 60
+let g:mundo_preview_height = 40
+
 " trim out whitespace
 nnoremap <leader>; mz:%s/\s\+$//<cr>:let @/=''<cr>`z<cr>:w<cr>
 
