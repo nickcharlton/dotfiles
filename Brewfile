@@ -63,6 +63,7 @@ brew "tmux"
 brew "tree"
 brew "wget"
 brew "yarn"
+brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 
 cask "alfred"
