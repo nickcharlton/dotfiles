@@ -16,3 +16,5 @@ chef/encrypted_data_bag_secret
 vim/bundle
 vim/autoload/plug.vim
 vim/autoload/plug.vim.old
+
+Brewfile.lock.json

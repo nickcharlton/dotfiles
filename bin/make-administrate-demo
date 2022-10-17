@@ -19,7 +19,7 @@ if [ "$#" -lt 1 ]; then
 	exit 1;
 fi
 
-source /usr/local/share/chruby/chruby.sh
+source $CHRUBY_PREFIX/share/chruby/chruby.sh
 
 main() {
 	project_name=$1

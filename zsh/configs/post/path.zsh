@@ -1,12 +1,9 @@
-# default path
-PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/bin:/usr/sbin:/sbin"
-
 # dotfiles bin
 PATH="$HOME/bin:/usr/local/sbin:$PATH"
 
 # chruby
-source /usr/local/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
+source $CHRUBY_PREFIX/share/chruby/chruby.sh
+source $CHRUBY_PREFIX/share/chruby/auto.sh
 
 # go
 PATH="$GOPATH/bin:$PATH"

@@ -72,7 +72,7 @@ alias path='echo $PATH | tr -s ":" "\n"'
 #
 # Reload Rubies
 #
-alias reload-rubies='source /usr/local/share/chruby/chruby.sh'
+alias reload-rubies="source $CHRUBY_PREFIX/share/chruby/chruby.sh"
 
 #
 # Docker
