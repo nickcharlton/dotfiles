@@ -1,6 +1,6 @@
 nvm() {
-  if [[ -d '/usr/local/opt/nvm' ]]; then
-    NVM_DIR="/usr/local/opt/nvm"
+  if [[ -d '/opt/homebrew/opt/nvm' ]]; then
+    NVM_DIR="/opt/homebrew/opt/nvm"
     export NVM_DIR
     # shellcheck disable=SC1090
     source "${NVM_DIR}/nvm.sh"
