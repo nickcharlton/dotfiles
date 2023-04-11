@@ -29,6 +29,7 @@ Plug 'janko-m/vim-test'
 Plug 'jeffkreeftmeijer/vim-dim'
 Plug 'mattn/vim-lsp-settings'
 Plug 'pbrisbin/vim-mkdir'
+Plug 'nickcharlton/vim-pandoc-syntax', { 'branch': 'neovim-compat' }
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/vim-lsp'
@@ -51,6 +52,5 @@ Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline', { 'tag': 'v0.11' }
 Plug 'vim-pandoc/vim-pandoc'
-Plug 'vim-pandoc/vim-pandoc-syntax'
 
 call plug#end()
