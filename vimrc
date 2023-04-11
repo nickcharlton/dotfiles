@@ -108,27 +108,6 @@ let g:ctrlp_use_caching = 0
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_switch_buffer = 'et'
 
-""""""""""""
-" coc.nvim "
-""""""""""""
-" use tab to trigger completion and pick the selected
-inoremap <silent><expr> <TAB>
-      \ coc#pum#visible() ? coc#pum#next(1) :
-      \ CheckBackspace() ? "\<Tab>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
-
-inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-
-function! CheckBackspace() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-" format the current file with <leader>p
-nmap <leader>p :CocCommand prettier.formatFile<CR>
-
 """"""""""""""""""""
 " Filetype Plugins "
 """"""""""""""""""""
@@ -167,8 +146,18 @@ let g:pandoc#formatting#mode = 'ha' " enable auto hard wrapping
 let g:pandoc#formatting#smart_autoformat_on_cursormoved = 1
 let g:pandoc#syntax#conceal#use = 0 " disable conceal
 
-" enable airline with ALE
-let g:airline#extensions#ale#enabled = 1
+" custom lsp configuration
+let g:lsp_settings_filetype_ruby = ['solargraph']
+
+" setup tab complete
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
+
+let g:airline#extensions#ale#enabled = 1 " set ale to use airline
+let g:ale_virtualtext_cursor = 'current' " show error/warning text on current
+nmap <silent> <C-[> <Plug>(ale_previous_wrap)
+nmap <silent> <C-]> <Plug>(ale_next_wrap)
 
 " vim-test mappings
 nnoremap <silent> <Leader>t :TestFile<CR>

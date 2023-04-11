@@ -22,21 +22,18 @@ call plug#begin('~/.vim/bundle')
 
 " Define bundles via Github repos
 Plug 'airblade/vim-gitgutter'
-Plug 'bmatcuk/coc-stylelintplus', {'do': 'yarn install --frozen-lockfile'}
 Plug 'bogado/file-line'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'dense-analysis/ale'
 Plug 'janko-m/vim-test'
 Plug 'jeffkreeftmeijer/vim-dim'
-Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-eslint', {'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-html', {'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-solargraph', {'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+Plug 'mattn/vim-lsp-settings'
 Plug 'pbrisbin/vim-mkdir'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/vim-lsp'
 Plug 'reedes/vim-lexical'
+Plug 'rhysd/vim-lsp-ale'
 Plug 'ruanyl/vim-gh-line'
 Plug 'sbdchd/vim-run'
 Plug 'sebdah/vim-delve'
