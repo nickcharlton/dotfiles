@@ -33,7 +33,6 @@ Plug 'nickcharlton/vim-pandoc-syntax', { 'branch': 'neovim-compat' }
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/vim-lsp'
-Plug 'reedes/vim-lexical'
 Plug 'rhysd/vim-lsp-ale'
 Plug 'ruanyl/vim-gh-line'
 Plug 'sbdchd/vim-run'

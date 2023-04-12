@@ -127,7 +127,6 @@ augroup vimrcEx
   " Set syntax highlighting for specific file types
   autocmd BufNewFile,BufRead *.prawn,Brewfile set filetype=ruby
   autocmd BufRead,BufNewFile .{jscs,jshint,eslint}rc set filetype=json
-  autocmd FileType text,markdown,mkd,pandoc call lexical#init()
 augroup END
 
 """"""""""""""""""""""""
