@@ -7,6 +7,7 @@ tap "heroku/brew"
 
 brew "ack"
 brew "act"
+brew "actionlint"
 brew "ansible"
 brew "awscli"
 brew "bat"

@@ -128,6 +128,8 @@ augroup vimrcEx
   " Set syntax highlighting for specific file types
   autocmd BufNewFile,BufRead *.prawn,Brewfile set filetype=ruby
   autocmd BufRead,BufNewFile .{jscs,jshint,eslint}rc set filetype=json
+  au BufRead,BufNewFile */.github/*/*.y{,a}ml
+                                \ let b:ale_linters = {'yaml': ['actionlint']}
 augroup END
 
 """"""""""""""""""""""""
