@@ -13,6 +13,7 @@ set encoding=utf-8 " have some unicode
 """""""""""""
 " Interface "
 """""""""""""
+set mouse="" " disable the mouse
 set number " show line numbers
 set ruler " show line/column numbers
 set cursorline " draw a line where the cursor is
