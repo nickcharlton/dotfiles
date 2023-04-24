@@ -1,9 +1,0 @@
-jabba() {
-  if [[ -d "${HOME}/.jabba" ]]; then
-    source "$HOME/.jabba/jabba.sh"
-    jabba "$@"
-  else
-    echo "jabba is not installed" >&2
-    return 1
-  fi
-}
