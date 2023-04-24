@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -e
+
+format='format:%C(yellow)%h %C(blue)%ad %C(reset)%s %C(green)%an%C(reset)'
+# e.g.:
+# d55c668 2023-04-23 Remove ctags and git hooks Nick Charlton
+
+git log --pretty="$format" --date=short origin/production..main
