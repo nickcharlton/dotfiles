@@ -30,6 +30,7 @@ Plug 'jeffkreeftmeijer/vim-dim'
 Plug 'mattn/vim-lsp-settings'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'nickcharlton/vim-pandoc-syntax', { 'branch': 'neovim-compat' }
+Plug 'prabirshrestha/asyncomplete-file.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/vim-lsp'
