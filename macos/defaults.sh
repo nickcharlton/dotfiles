@@ -1,7 +1,9 @@
+#!/bin/sh
+
 #
-# Sets OS X defaults.
+# Sets macOS defaults.
 #
-# Much are from: https://github.com/mathiasbynens/dotfiles/blob/master/.osx
+# Much are from: https://github.com/mathiasbynens/dotfiles/blob/main/.macos
 #                https://gist.github.com/brandonb927/3195465
 #
 
@@ -19,10 +21,6 @@ defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 # set the help viewer windows to be non-floating
 defaults write com.apple.helpviewer DevMode -bool true
-# show IP, hostname, OS version, etc in the lock window
-defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
-# toggle dark mode with Ctrl+Opt+Cmd+t
-defaults write /Library/Preferences/.GlobalPreferences.plist _HIEnableThemeSwitchHotKey -bool true
 
 #
 # Trackpad, Mouse, Keyboard and other input devices
@@ -32,12 +30,6 @@ defaults write /Library/Preferences/.GlobalPreferences.plist _HIEnableThemeSwitc
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-
-# enable UI scroll with ctrl
-defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
-defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
-# follow the keyboard focus when zoomed
-defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 
 # automatically illuminate built-in keyboard in low light
 defaults write com.apple.BezelServices kDim -bool true
