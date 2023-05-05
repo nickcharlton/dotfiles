@@ -63,6 +63,7 @@ brew "tree"
 brew "wget"
 brew "yarn"
 brew "zsh-autosuggestions"
+brew "vale"
 brew "zsh-syntax-highlighting"
 
 cask "1password-cli"
