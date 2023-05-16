@@ -2,6 +2,7 @@
 window:
   decorations: none
   startup_mode: Maximized
+  option_as_alt: Both
 key_bindings:
   - { key: Key3, mods: Alt, chars: "#" }
 font:
