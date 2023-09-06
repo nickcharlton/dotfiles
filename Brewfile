@@ -1,6 +1,5 @@
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
-tap "homebrew/cask-drivers"
 tap "homebrew/services"
 tap "thoughtbot/formulae"
 tap "heroku/brew"
