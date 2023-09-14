@@ -1,0 +1,62 @@
+#!/bin/sh
+
+set -e
+
+usage() {
+	name=$(basename "$0")
+
+	cat <<-EOT
+	${name} [version]
+
+	Update Bundler in the current directory and open a PR
+
+	Options:
+	  -h/--help Show this help.
+	EOT
+}
+
+if [ "$#" -gt 0 ]; then
+	case $1 in
+		-h|--help)
+			usage
+		;;
+	esac
+else
+	usage
+	exit 1
+fi
+
+BUNDLER_VERSION="$1"
+BUNDLER_RELEASE="https://github.com/rubygems/rubygems/releases/tag/bundler-v$BUNDLER_VERSION"
+
+run_in_container() {
+	container_id=$1
+	shift
+	cmd=$*
+
+	docker exec -it --workdir /app "$container_id" bash -c "$cmd"
+}
+
+container_id=$(docker run -d -v .:/app ruby sleep infinity)
+echo "Bundling..."
+run_in_container "$container_id" "bundle install"
+echo "Installing new version of bundler..."
+run_in_container "$container_id" "gem install bundler --version ${BUNDLER_VERSION}"
+echo "Updating bundler..."
+run_in_container "$container_id" "bundle _${BUNDLER_VERSION}_ update --bundler"
+
+echo "Tidying up container..."
+docker stop "$container_id" > /dev/null
+docker rm "$container_id" > /dev/null
+
+if git diff-index --quiet HEAD -- Gemfile.lock; then
+	echo "Bundler up to date; doing nothing more"
+	exit 0
+fi
+
+echo "Opening PR..."
+branch="update-bundler-to-v$BUNDLER_VERSION"
+git checkout -b "$branch"
+git commit Gemfile.lock -m "Update Bundler to v$BUNDLER_VERSION" -m "$BUNDLER_RELEASE"
+git push -u
+gh pr create --fill --head "$branch"
