@@ -6,7 +6,7 @@ source $CHRUBY_PREFIX/share/chruby/chruby.sh
 source $CHRUBY_PREFIX/share/chruby/auto.sh
 
 # go
-PATH="$GOPATH/bin:$PATH"
+PATH=$PATH:$(go env GOPATH)/bin
 
 # rust
 PATH="$HOME/.cargo/env:$PATH"
