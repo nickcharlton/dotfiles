@@ -1,0 +1,59 @@
+#!/bin/sh
+
+set -e
+
+RUBY_VERSION="3.2.2"
+RUBY_RELEASE="https://www.ruby-lang.org/en/news/2023/03/30/ruby-3-2-2-released/"
+
+strip_tool_version_comments() {
+	# https://github.com/asdf-vm/asdf/blob/0586b37d03031ae8c3110ea2b51cacaad46c7cdc/lib/utils.bash#L667C1-L677C2
+	sed '/^[[:blank:]]*#/d;s/#.*//;s/[[:blank:]]*$//' "$1"
+}
+
+parse_asdf_version() {
+	# https://github.com/asdf-vm/asdf/blob/0586b37d03031ae8c3110ea2b51cacaad46c7cdc/lib/utils.bash#L317
+	strip_tool_version_comments ".tool-versions" | grep "^ruby " | sed -e "s/^ruby //"
+}
+
+if [ -f ".ruby-version" ]; then
+	if ! grep -q "^$RUBY_VERSION$" .ruby-version; then
+		echo "Updating .ruby-version..."
+		echo "$RUBY_VERSION" > .ruby-version
+	fi
+fi
+
+if [ -f ".tool-versions" ]; then
+	if ! grep -q "^ruby $RUBY_VERSION$" .tool-versions; then
+		echo "Updating .tool-versions..."
+
+		existing_version=$(parse_asdf_version)
+		sed -i '' -e "s/ruby $existing_version/ruby $RUBY_VERSION/g" .tool-versions
+	fi
+fi
+
+if [ -f "Gemfile" ]; then
+	if ! grep -q "^ruby \"$RUBY_VERSION\"$" Gemfile; then
+		echo "Updating Gemfile..."
+
+		existing_version=$(grep "^ruby " Gemfile | sed -e "s/^ruby //" | tr -d \'\")
+		sed -i '' -e "s/ruby \"$existing_version\"/ruby \"$RUBY_VERSION\"/g" Gemfile
+		docker run -it --workdir /app -v .:/app ruby:$RUBY_VERSION /bin/bash -c bundle install
+	fi
+fi
+
+if git diff-index --quiet HEAD -- .ruby_version .tool-versions Gemfile Gemfile.lock; then
+	echo "Ruby version up to date; doing nothing more"
+	exit 0
+fi
+
+echo "Opening PR..."
+branch="upgrade-ruby-to-v$RUBY_VERSION"
+git checkout -b $branch
+for file_name in ".ruby-version" ".tool-versions" "Gemfile" "Gemfile.lock"; do
+	if ! git diff-index --quiet HEAD -- $file_name; then
+		git add "$file_name"
+	fi
+done
+git commit -m "Upgrade Ruby to v$RUBY_VERSION" -m "$RUBY_RELEASE"
+git push -u
+gh pr create --fill --head $branch
