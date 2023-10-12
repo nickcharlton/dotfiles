@@ -1,8 +1,8 @@
 if [ -n "${HOMEBREW_PREFIX+1}" ]; then
-  PREFIX=$(brew --prefix)
+  BREW_PREFIX=$(brew --prefix)
 else
-  PREFIX="/usr"
+  BREW_PREFIX="/usr"
 fi
 
-source $PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $BREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $BREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
