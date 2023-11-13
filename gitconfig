@@ -31,6 +31,7 @@
   autosquash = true
 [merge]
   ff = only
+  conflictStyle = diff3
 [init]
   defaultBranch = main
 [branch]
