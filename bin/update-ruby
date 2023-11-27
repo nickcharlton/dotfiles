@@ -46,6 +46,8 @@ fi
 # Default Rails Dockerfile now has a: ARG RUBY_VERSION=3.2.2
 # TB one is: FROM ${AWS_ECR}/ruby:3.2.2-slim AS Builder (twice in the file)
 
+# GitHub Actions ???
+
 if git diff-index --quiet HEAD -- .ruby_version .tool-versions Gemfile Gemfile.lock; then
 	echo "Ruby version up to date; doing nothing more"
 	exit 0
