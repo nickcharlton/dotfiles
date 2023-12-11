@@ -21,6 +21,7 @@ let g:has_async = v:version >= 800 || has('nvim')
 call plug#begin('~/.vim/bundle')
 
 " Define bundles via Github repos
+Plug 'OmniSharp/omnisharp-vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'bogado/file-line'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -28,8 +29,9 @@ Plug 'dense-analysis/ale'
 Plug 'janko-m/vim-test'
 Plug 'jeffkreeftmeijer/vim-dim'
 Plug 'mattn/vim-lsp-settings'
-Plug 'pbrisbin/vim-mkdir'
 Plug 'nickcharlton/vim-pandoc-syntax', { 'branch': 'neovim-compat' }
+Plug 'nickspoons/vim-sharpenup'
+Plug 'pbrisbin/vim-mkdir'
 Plug 'prabirshrestha/asyncomplete-file.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'prabirshrestha/asyncomplete.vim'
