@@ -8,6 +8,7 @@ fi
 
 if [ -n "${HOMEBREW_PREFIX+1}" ]; then
   export CHRUBY_PREFIX=$(brew --prefix chruby)
+  export CHNODE_PREFIX=$(brew --prefix chnode)
 else
   export CHRUBY_PREFIX="/usr/local"
 fi

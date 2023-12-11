@@ -5,6 +5,11 @@ PATH="$HOME/bin:/usr/local/sbin:$PATH"
 source $CHRUBY_PREFIX/share/chruby/chruby.sh
 source $CHRUBY_PREFIX/share/chruby/auto.sh
 
+# chnode
+source $CHNODE_PREFIX/share/chnode/chnode.sh
+source $CHNODE_PREFIX/share/chnode/auto.sh
+precmd_functions+=(chnode_auto)
+
 # go
 PATH=$PATH:$(go env GOPATH)/bin
 
