@@ -188,3 +188,19 @@ nnoremap <leader>; mz:%s/\s\+$//<cr>:let @/=''<cr>`z<cr>:w<cr>
 
 " Treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li\|p'
+
+" Run a given vim command on the results of alt from a given path.
+function! AltCommand(path, vim_command)
+  let l:alternates = system("alt " . a:path)
+  let l:alternate = split(l:alternates)[0]
+  if empty(l:alternate)
+    echo "No alternate file for " . a:path . " exists!"
+  else
+    exec a:vim_command . " " . l:alternate
+  endif
+endfunction
+
+" Find the alternate file for the current path and open it
+command A :call AltCommand(expand('%'), ':e')
+command AS :call AltCommand(expand('%'), ':sp')
+command AV :call AltCommand(expand('%'), ':vs')
