@@ -1,0 +1,47 @@
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[colors.bright]
+black = "#707880"
+blue = "#89DDFF"
+cyan = "#80CBC4"
+green = "#8BD649"
+magenta = "#82AAFF"
+red = "#EC5F67"
+white = "#FFFFFF"
+yellow = "#FFCC00"
+
+[colors.normal]
+black = "#263238"
+blue = "#89DDFF"
+cyan = "#80CBC4"
+green = "#8BD649"
+magenta = "#82AAFF"
+red = "#EC5F67"
+white = "#CDD3DE"
+yellow = "#FFCC00"
+
+[colors.primary]
+background = "#263238"
+foreground = "#CDD3DE"
+
+[font]
+size = 14
+
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+style = "Bold"
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Regular"
+
+[[keyboard.bindings]]
+chars = "#"
+key = "Key3"
+mods = "Alt"
+
+[window]
+decorations = "none"
+option_as_alt = "Both"
+startup_mode = "Maximized"
