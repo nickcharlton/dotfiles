@@ -8,5 +8,5 @@ brew update
 echo "=> brew outdated"
 brew outdated
 
+echo "=> vim plugins"
 nvim +PlugUpgrade +PlugClean! +PlugUpdate +PlugInstall +qall
-tldr --update
