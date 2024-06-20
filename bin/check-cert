@@ -8,7 +8,7 @@ usage() {
 	cat <<-EOT
 	${name} [hostname]
 
-	Show the TLS/SSL certificate behind a host.
+	Show the TLS certificate behind a host.
 
 	Options:
 	  -h/--help Show this help.
@@ -18,12 +18,12 @@ usage() {
 
 if [ "$#" -lt 1 ]; then
 	usage;
-	exit 1;
 fi
 
 main() {
-	curl --insecure -v "https://$1" 2>&1 | awk \
-		'BEGIN { cert=0 } /^\* SSL connection/ { cert=1 } /^\*/ { if (cert) print }'
+	nslookup "$1"
+  (echo "Q" | openssl s_client -showcerts -servername "$1" -connect "$1:443" \
+		| openssl x509 -text | grep -iA2 "Validity")
 }
 
 main "$@"
