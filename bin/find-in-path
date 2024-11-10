@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# find-in-path
+#
+# Find the location of files matching a pattern in $PATH
+#
+# Example: find-in-path "ruby*", will find everything starting with "ruby"
+
+pattern="$1"
+paths=$(echo "$PATH" | tr -s ":" "\n")
+
+echo "$paths" | while read -r path; do
+	if [ -d "$path" ]; then
+		find "$path" -iname "$pattern" 2>&1 | grep -v "Permission denied" >&2
+	fi
+done
