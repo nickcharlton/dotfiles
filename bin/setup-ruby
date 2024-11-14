@@ -1,0 +1,55 @@
+#!/bin/sh
+
+set -e
+
+. "/opt/homebrew/share/ruby-install/ruby-install.sh"
+
+while test $# -gt 0; do
+  case $1 in
+    -h | --help)
+      echo "help"
+      exit 0
+      ;;
+    -i | --install)
+      shift
+      ruby="$*"
+      ;;
+    --)
+      shift
+      break
+      ;;
+    --*)
+      echo "Unknown long option: $1"
+      exit 1
+      ;;
+    -?)
+      echo "Unknown short option: $1"
+      exit 1
+      ;;
+    -*)
+      split=$1
+      shift
+      # shellcheck disable=SC2046
+      set -- $(echo "$split" | cut -c 2- | sed 's/./-& /g') "$@"
+      continue
+      ;;
+    *)
+      break
+      ;;
+  esac
+
+  shift
+done
+
+echo "end of parsing"
+echo "remaining arguments: $*"
+
+if [ -z "$ruby" ]; then
+  ruby=$*
+fi
+
+ruby-install "$ruby"
+
+. "/opt/homebrew/share/chruby/chruby.sh"
+# shellcheck disable=SC2046
+gem install $(tr '\n' ' ' < "$HOME/.dotfiles/default-gems")
