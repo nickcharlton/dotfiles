@@ -1,0 +1,29 @@
+#!/bin/sh
+
+set -e
+
+. "/opt/homebrew/share/ruby-install/ruby-install.sh"
+
+while test $# -gt 0; do
+  case $1 in
+    -i | --install)
+      shift
+      ruby="$*"
+      ;;
+    *)
+      break
+      ;;
+  esac
+
+  shift
+done
+
+if [ -z "$ruby" ]; then
+  ruby=$*
+fi
+
+ruby-install "$ruby"
+
+. "/opt/homebrew/share/chruby/chruby.sh"
+# shellcheck disable=SC2046
+gem install $(tr '\n' ' ' < "$HOME/.dotfiles/default-gems")
