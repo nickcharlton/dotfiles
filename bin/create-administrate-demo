@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 set -e
 
@@ -11,7 +11,6 @@ usage() {
 	Create a new Rails project for testing Administrate. Fresh Rails app, with a
 	single model with migrations run already.
 	EOT
-	exit 1
 }
 
 if [ "$#" -lt 1 ]; then
@@ -19,35 +18,29 @@ if [ "$#" -lt 1 ]; then
 	exit 1;
 fi
 
-source $CHRUBY_PREFIX/share/chruby/chruby.sh
-
 main() {
 	project_name=$1
 
-	echo "=> Switch to the suspenders version of Ruby..."
-	chruby ruby-2.7.4
-
-	echo "=> Install specific_install to install current suspenders..."
-	gem install specific_install
-
-	echo "=> Installing the latest suspenders release..."
-	gem specific_install thoughtbot/suspenders
+	echo "=> Ensure we're running the latest version of Rails..."
+	gem install rails
 
 	echo "=> Creating a minimal Rails application..."
-	suspenders $project_name --skip-keeps --skip-action-mailbox \
-		--skip-action-text --skip-active-storage --skip-action-cable --skip-spring
+	rails new "$project_name" --database=postgresql --skip-rubocop \
+		--skip-test --skip-spring --suspenders-main \
+		--template=https://raw.githubusercontent.com/thoughtbot/suspenders/main/lib/install/web.rb
 
 	echo "=> Creating an example Post model and migrating..."
-	cd $project_name
+	cd "$project_name"
 	bundle exec rails g model post title:string body:text published_at:datetime
 	bundle exec rails db:migrate
 
 	echo "=> Commit everything so far..."
 	git init
 	git add .
-	git commit -m "Initial commit"
+	git commit --no-gpg-sign -m "Initial commit"
 
-	echo "=> Adding Administrate and re-bundling.."
+	echo "=> Adding Administrate and re-bundling..."
+	# shellcheck disable=SC2005
 	echo "$(awk '/^gem/ && !done { print "gem \"administrate\""; done=1;}; 1;' Gemfile)" > Gemfile
 	bundle
 
