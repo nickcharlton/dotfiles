@@ -8,6 +8,8 @@ mkdir -p "$XDG_CONFIG_HOME"
 export DEBFULLNAME=$NAME
 export DEBEMAIL=$EMAIL
 
+export GPG_TTY=$(tty)
+
 export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
 export VAGRANT_VMWARE_CLONE_DIRECTORY=$HOME/.vagrant.d/clones
 mkdir -p "$VAGRANT_VMWARE_CLONE_DIRECTORY"
