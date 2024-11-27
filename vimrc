@@ -148,9 +148,6 @@ let g:pandoc#formatting#smart_autoformat_on_cursormoved = 1
 let g:pandoc#syntax#conceal#use = 0 " disable conceal
 let g:ale_linter_aliases = {'pandoc': ['markdown']} " use markdown linters
 
-" custom lsp configuration
-let g:lsp_settings_filetype_ruby = ['solargraph']
-
 " setup tab complete
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"

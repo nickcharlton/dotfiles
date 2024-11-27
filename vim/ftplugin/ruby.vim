@@ -1,3 +1,22 @@
+" disable typeprof for Ruby type checking
+let g:lsp_settings = {
+\  'typeprof': {
+\    'disabled': 1,
+\   }
+\}
+
+" use standardrb when it's available
+if executable('standardrb')
+  au User lsp_setup call lsp#register_server({
+        \ 'name': 'standardrb',
+        \ 'cmd': ['standardrb', '--lsp'],
+        \ 'allowlist': ['ruby'],
+        \ })
+
+  let g:ale_linters = {'ruby': ['standardrb']}
+  let g:ale_fixers = {'ruby': ['standardrb']}
+endif
+
 let g:rails_projections = {
       \  "app/controllers/*_controller.rb": {
       \      "test": [
