@@ -89,3 +89,8 @@ de() {
 
 	docker exec -it "$container_id" "$cmd"
 }
+
+#
+# Tailscale on macOS
+#
+alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
