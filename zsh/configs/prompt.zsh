@@ -10,6 +10,7 @@ prompt_color_bold() {
 prompt_blue()   { print "$(prompt_color "$1" blue)" }
 prompt_bold_black() { print "$(prompt_color_bold "$1" black)" }
 prompt_red()    { print "$(prompt_color "$1" red)" }
+prompt_green() { print "$(prompt_color "$1" green)" }
 prompt_spaced() { [[ -n "$1" ]] && print " $@" }
 
 # path
@@ -56,5 +57,21 @@ function precmd {
   vcs_info
 }
 
+prompt_ruby_version() {
+  local ruby_version=$(chruby | sed -n -e 's/ \* //p')
+
+  [[ -z $ruby_version || "${ruby_version}" == "system" ]] && return
+
+  print " $(prompt_red "$ruby_version")"
+}
+
+prompt_node_version() {
+  local node_version=$(chnode | sed -n -e 's/ \* //p')
+
+  [[ -z $node_version ]] && return
+
+  print " $(prompt_green "$node_version")"
+}
+
 setopt prompt_subst
-PROMPT='[$(prompt_shortened_path)$(prompt_git_status)]%# '
+PROMPT='[$(prompt_shortened_path)$(prompt_git_status)$(prompt_ruby_version)$(prompt_node_version)]%# '
