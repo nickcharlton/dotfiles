@@ -1,0 +1,27 @@
+#!/bin/sh
+
+set -e
+
+while test $# -gt 0; do
+  case $1 in
+    -i | --install)
+      shift
+      node="$*"
+      ;;
+    *)
+      break
+      ;;
+  esac
+
+  shift
+done
+
+if [ -z "$node" ]; then
+  node=$*
+fi
+
+node-build "$node" "$HOME/.nodes/node-$node"
+
+. "/opt/homebrew/share/chnode/chnode.sh"
+chnode "node-$node"
+xargs npm install -g < "$HOME/.dotfiles/npm-globals.txt"
