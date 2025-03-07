@@ -1,0 +1,18 @@
+#!/bin/sh
+
+set -e
+
+if [ "$1" ]; then
+	PR_NUMBER="$1"
+else
+	PR_NUMBER="" # no PR means we let gh infer it
+fi
+
+checks=$(gh pr checks "$PR_NUMBER" --json name,bucket,link \
+	--jq 'map(select(.bucket | contains("fail")))')
+
+echo "$checks" | jq -r '.[].link' | while read -r check; do
+	job_id=$(echo "$check" | awk -F / '{print $NF}')
+
+	gh run rerun --job "$job_id"
+done
