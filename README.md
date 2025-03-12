@@ -5,7 +5,7 @@ A bunch of impossible to live without config files.
 ## Install
 
 ```sh
-git clone git://github.com/nickcharlton/dotfiles.git ~/.dotfiles
+git clone git@github.com:nickcharlton/dotfiles.git ~/.dotfiles
 env RCRC=$HOME/.dotfiles/rcrc rcup
 ```
 
