@@ -1,9 +1,8 @@
 tap "hashicorp/tap"
-tap "homebrew/cask-fonts"
-tap "homebrew/cask-versions"
+tap "heroku/brew"
 tap "homebrew/services"
 tap "thoughtbot/formulae"
-tap "heroku/brew"
+tap "tkareine/chnode"
 tap "uptech/homebrew-oss"
 
 brew "ack"
