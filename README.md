@@ -18,7 +18,6 @@ env RCRC=$HOME/.dotfiles/rcrc rcup
 [Install most things][] using the included [`Brewfile`][]:
 
 ```bash
-brew tap homebrew/bundle
 brew bundle
 ```
 
