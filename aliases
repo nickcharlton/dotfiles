@@ -63,7 +63,7 @@ alias be='bundle exec'
 #
 # Tree
 #
-alias tree='tree -aI ".git|node_modules|tmp|vendor"'
+alias tree='tree -aI ".git|node_modules|tmp|vendor|build"'
 
 #
 # Pretty print the PATH
