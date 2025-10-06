@@ -1,0 +1,25 @@
+matches:
+  - trigger: ";date"
+    replace: "{{currentdate}}"
+    vars:
+      - name: currentdate
+        type: date
+        params:
+          format: "%F"
+  - trigger: ";timestamp"
+    replace: "{{timestamp}}"
+    vars:
+      - name: timestamp
+        type: date
+        params:
+          format: "%+"
+  - trigger: ";dp"
+    replace: "@dependabot rebase"
+  - trigger: ";copy"
+    replace: "©"
+  - trigger: ";tm"
+    replace: "™️"
+  - trigger: ";larrow"
+    replace: "←"
+  - trigger: ";rarrow"
+    replace: "→"
