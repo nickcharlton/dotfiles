@@ -18,7 +18,6 @@ usage() {
 
 if [ "$#" -lt 1 ]; then
 	usage;
-	exit 1;
 fi
 
 main() {
@@ -31,12 +30,12 @@ main() {
 
 			for branch in $branches; do
 				pr_id=$(echo "$branch" | sed -e 's/pr\///')
-				pull_request=$(hub api "repos/$repo_with_owner/pulls/$pr_id")
+				pull_request=$(gh api "repos/$repo_with_owner/pulls/$pr_id")
 
 				if echo "$pull_request" | jq -r '.state' | grep -q "closed"; then
 					if git rev-parse --abbrev-ref HEAD | grep "$branch"; then
-						echo "Current branch is a closed PR, switching to master"
-						git checkout --quiet master
+						echo "Current branch is a closed PR, switching to main"
+						git checkout --quiet main
 					fi
 
 					git branch --delete --force "$branch"
@@ -48,7 +47,7 @@ main() {
 			repo_with_owner=$(echo "$remote_url" | perl -pe's/(git@|https:\/\/)?github.com(:|\/)([-\.\w]+)\/([-.\w]+)(\.git)/$3\/$4/')
 			pr_id=$1
 
-			if ! pull_request=$(hub api "repos/$repo_with_owner/pulls/$pr_id"); then
+			if ! pull_request=$(gh api "repos/$repo_with_owner/pulls/$pr_id"); then
 				echo "PR #$pr_id not found; exiting"
 				exit 1
 			fi
